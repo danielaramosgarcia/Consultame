@@ -94,6 +94,11 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				61FA75932ADF02EC00BB6B2A /* Constants */,
+				61FA75922ADF02C100BB6B2A /* Components */,
+				61FA75912ADF02BA00BB6B2A /* ViewModels */,
+				61FA75902ADF02B500BB6B2A /* Views */,
+				61FA758F2ADF02AB00BB6B2A /* Models */,
 				61FA75652ADEFF2C00BB6B2A /* ConsultameApp.swift */,
 				61FA75672ADEFF2C00BB6B2A /* ContentView.swift */,
 				61FA75692ADEFF2E00BB6B2A /* Assets.xcassets */,
@@ -125,6 +130,41 @@
 				61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */,
 			);
 			path = ConsultameUITests;
+			sourceTree = "<group>";
+		};
+		61FA758F2ADF02AB00BB6B2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		61FA75902ADF02B500BB6B2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61FA75912ADF02BA00BB6B2A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		61FA75922ADF02C100BB6B2A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		61FA75932ADF02EC00BB6B2A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
