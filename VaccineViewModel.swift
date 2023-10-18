@@ -29,6 +29,10 @@ class VaccineViewModel : ObservableObject {
         
     }
     
+    func setVaccineToUser() async throws {
+        print("codigo")
+    }
+    
 }
 
 
