@@ -21,53 +21,77 @@ struct AddVaccineToUserFormView: View {
     var searchResults : [VaccineModel] {
         searchText.isEmpty ? vaccineArr : vaccineArr.filter{$0.name.contains(searchText)}
     }
+   
     
     var body: some View {
-        VStack {
+        
+        
+        VStack(spacing: 0) {
+            
+            VStack {
+                Text("Nombre de la vacuna")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.top, .trailing, .leading])
+                        .font(.title2)
+                        .fontWeight(.light)
+                    
+                    
+                    SearchBar(text: $searchText, placeholder: "Nombre de vacuna")
+                        .padding()
+                    Picker(selection: $vaccineSelection, label: Text("Hello")) {
+                        ForEach(searchResults, id: \.self) { item in
+                            Text(item.name).tag(item as VaccineModel?)
+                        } // for each
+                    } // Picker
+                    .pickerStyle(.inline)
+
+                    .task {
+                        do {
+                            try await VaccineVM.getVaccines()
+                            if vaccineArr.count > 0 {
+                                vaccineSelection = vaccineArr[0]
+                            }
+                            
+                        } catch {
+                            print("error")
+                        }
+                    } // task
+                
+            }
+        
             
             
-            
-        Text("Nombre de la vacuna")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.top, .trailing, .leading])
-                .font(.title)
-                .fontWeight(.light)
-            
-            
-            SearchBar(text: $searchText, placeholder: "Nombre de vacuna")
-                .padding()
-            Picker(selection: $vaccineSelection, label: Text("Hello")) {
-                ForEach(searchResults, id: \.self) { item in
-                    Text(item.name).tag(item as VaccineModel?)
-                } // for each
-            } // Picker
-            .task {
-                do {
-                    try await VaccineVM.getVaccines()
-                } catch {
-                    print("error")
-                }
-            } // task
-            
-            
-            
-            
-            Text("Fecha de aplicacion")
-                .frame(maxWidth: .infinity, alignment: .leading)
-            .padding([.top, .trailing, .leading])
-            .font(.title)
-            .fontWeight(.light)
             
             
             DatePicker(
-                    "Start Date",
+                    "Fecha de aplicacion",
                     selection: $selectedDate,
                     displayedComponents: [.date]
                 )
-                .datePickerStyle(.graphical)
-                .padding([.trailing, .leading])
+                .datePickerStyle(.compact)
+                .padding()
+                .font(.title2)
+                .fontWeight(.light)
             
-            Button(action: {print(selectedDate)}) {
+            
+            Spacer()
+            
+            
+            
+            Button {
+                Task {
+                    do {
+                        print(vaccineSelection.id)
+                        print(selectedDate)
+                        try await
+                    VaccineVM.setVaccineToUser(userId: DUMMY.user_id, vaccineId: vaccineSelection.id, date: selectedDate)
+                        
+                    } catch {
+                        print("error al asignar vacuna al usuario")
+                    }
+                } // task 
+               
+            } label: {
                 Text("Anadir")
                     .padding()
             }
@@ -76,10 +100,12 @@ struct AddVaccineToUserFormView: View {
             .foregroundColor(Color.white)
             .background(Color.blue)
             .cornerRadius(10)
+            
             .padding()
             
 
         } // vstack
+            
     } // Body
 }
 

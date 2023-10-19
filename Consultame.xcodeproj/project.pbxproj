@@ -14,9 +14,11 @@
 		61FA75772ADEFF2F00BB6B2A /* ConsultameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75762ADEFF2F00BB6B2A /* ConsultameTests.swift */; };
 		61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */; };
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
+		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
 		FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D2322ADF772D00803EB0 /* SearchBar.swift */; };
 		FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */; };
 		FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */; };
+		FBA013B72AE0B88500BC53D4 /* VaccineAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA013B62AE0B88500BC53D4 /* VaccineAddedView.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserFormView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +51,11 @@
 		61FA757C2ADEFF2F00BB6B2A /* ConsultameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsultameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITests.swift; sourceTree = "<group>"; };
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB35D2322ADF772D00803EB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = Consultame/SearchBar.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FBA013B62AE0B88500BC53D4 /* VaccineAddedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineAddedView.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserFormView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */,
+				FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		61FA75902ADF02B500BB6B2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FBA013B32AE0B81D00BC53D4 /* Profile */,
 				FBEF4AFE2ADF565800144664 /* Vaccine */,
 			);
 			path = Views;
@@ -174,10 +180,18 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FBA013B32AE0B81D00BC53D4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		FBEF4AFE2ADF565800144664 /* Vaccine */ = {
 			isa = PBXGroup;
 			children = (
 				FBEF4AFF2ADF567D00144664 /* AddVaccineToUserFormView.swift */,
+				FBA013B62AE0B88500BC53D4 /* VaccineAddedView.swift */,
 			);
 			path = Vaccine;
 			sourceTree = "<group>";
@@ -314,9 +328,11 @@
 			files = (
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
+				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				61FA75682ADEFF2C00BB6B2A /* ContentView.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
+				FBA013B72AE0B88500BC53D4 /* VaccineAddedView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserFormView.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
 			);
