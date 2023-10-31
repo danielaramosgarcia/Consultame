@@ -1,8 +1,9 @@
-//
-//  UserModel.swift
-//  Consultame
-//
-//  Created by Alumno on 31/10/23.
-//
-
 import Foundation
+
+struct UserModel : Decodable {
+    var user_id : Int
+    var name: String
+    var email : String
+    var password : String
+    var sexo : Int
+}
