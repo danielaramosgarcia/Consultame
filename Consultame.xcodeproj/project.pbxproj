@@ -17,6 +17,21 @@
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
 		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
 		FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D2322ADF772D00803EB0 /* SearchBar.swift */; };
+		FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
+		FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
+		FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
+		FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664A02AF17AB10039AA0E /* UserModel.swift */; };
+		FB7664A22AF17AB10039AA0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664A02AF17AB10039AA0E /* UserModel.swift */; };
+		FB7664A32AF17AB10039AA0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664A02AF17AB10039AA0E /* UserModel.swift */; };
+		FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3B92AF1518200DE02FD /* MainTabView.swift */; };
+		FB8ED3BB2AF1518300DE02FD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3B92AF1518200DE02FD /* MainTabView.swift */; };
+		FB8ED3BC2AF1518300DE02FD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3B92AF1518200DE02FD /* MainTabView.swift */; };
+		FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3BE2AF1580100DE02FD /* HomeView.swift */; };
+		FB8ED3C02AF1580100DE02FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3BE2AF1580100DE02FD /* HomeView.swift */; };
+		FB8ED3C12AF1580100DE02FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3BE2AF1580100DE02FD /* HomeView.swift */; };
+		FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
+		FB8ED3C42AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
+		FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
 		FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */; };
 		FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */; };
 		FBA013B72AE0B88500BC53D4 /* VaccineAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA013B62AE0B88500BC53D4 /* VaccineAddedView.swift */; };
@@ -56,6 +71,11 @@
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB35D2322ADF772D00803EB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = Consultame/SearchBar.swift; sourceTree = SOURCE_ROOT; };
+		FB76649C2AF1739F0039AA0E /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionCard.swift; path = Consultame/Views/Home/SectionCard.swift; sourceTree = SOURCE_ROOT; };
+		FB7664A02AF17AB10039AA0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Consultame/Views/Home/UserModel.swift; sourceTree = SOURCE_ROOT; };
+		FB8ED3B92AF1518200DE02FD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FB8ED3BE2AF1580100DE02FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB8ED3C22AF1581200DE02FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Consultame/Views/Home/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineViewModel.swift; sourceTree = SOURCE_ROOT; };
 		FBA013B62AE0B88500BC53D4 /* VaccineAddedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineAddedView.swift; sourceTree = "<group>"; };
@@ -155,6 +175,7 @@
 			children = (
 				FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */,
 				FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */,
+				FB7664A02AF17AB10039AA0E /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,9 +183,11 @@
 		61FA75902ADF02B500BB6B2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB8ED3BD2AF1519B00DE02FD /* Home */,
 				FBA013B32AE0B81D00BC53D4 /* Profile */,
 				FBEF4AFE2ADF565800144664 /* Vaccine */,
 				618E49FE2AE0ED90007681E5 /* SplashScreen.swift */,
+				FB8ED3B92AF1518200DE02FD /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,13 +204,23 @@
 			isa = PBXGroup;
 			children = (
 				FB35D2322ADF772D00803EB0 /* SearchBar.swift */,
+				FB76649C2AF1739F0039AA0E /* SectionCard.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FB8ED3BD2AF1519B00DE02FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FB8ED3BE2AF1580100DE02FD /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FBA013B32AE0B81D00BC53D4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				FB8ED3C22AF1581200DE02FD /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -332,14 +365,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
+				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
+				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				61FA75682ADEFF2C00BB6B2A /* ContentView.swift in Sources */,
+				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FBA013B72AE0B88500BC53D4 /* VaccineAddedView.swift in Sources */,
+				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserFormView.swift in Sources */,
+				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8ED3C42AF1581200DE02FD /* ProfileView.swift in Sources */,
+				FB8ED3C02AF1580100DE02FD /* HomeView.swift in Sources */,
 				61FA75772ADEFF2F00BB6B2A /* ConsultameTests.swift in Sources */,
+				FB8ED3BB2AF1518300DE02FD /* MainTabView.swift in Sources */,
+				FB7664A22AF17AB10039AA0E /* UserModel.swift in Sources */,
+				FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +400,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */,
+				FB7664A32AF17AB10039AA0E /* UserModel.swift in Sources */,
+				FB8ED3C12AF1580100DE02FD /* HomeView.swift in Sources */,
+				FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */,
 				61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */,
+				FB8ED3BC2AF1518300DE02FD /* MainTabView.swift in Sources */,
+				FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

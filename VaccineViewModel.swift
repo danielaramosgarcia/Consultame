@@ -13,7 +13,7 @@ class VaccineViewModel : ObservableObject {
     
     
     func getVaccines() async throws {
-        guard let url = URL(string: API.baseURL + "/vaccine/available/" + String(DUMMY.user_id)) else {
+        guard let url = URL(string: API.baseURL + "/vaccine/available/" + String(User.user_id)) else {
             print("invalid url")
             return
         }

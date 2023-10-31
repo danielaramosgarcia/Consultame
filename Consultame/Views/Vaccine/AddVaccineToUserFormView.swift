@@ -84,7 +84,7 @@ struct AddVaccineToUserFormView: View {
                         print(vaccineSelection.id)
                         print(selectedDate)
                         try await
-                    VaccineVM.setVaccineToUser(userId: DUMMY.user_id, vaccineId: vaccineSelection.id, date: selectedDate)
+                    VaccineVM.setVaccineToUser(userId: User.user_id, vaccineId: vaccineSelection.id, date: selectedDate)
                         
                     } catch {
                         print("error al asignar vacuna al usuario")

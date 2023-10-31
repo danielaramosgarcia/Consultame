@@ -6,6 +6,7 @@ struct API {
 
 
 
-struct DUMMY {
+struct User {
     static let user_id = 1
+    static let user_name = "Jhon Doe"
 }
