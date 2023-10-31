@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let columns: [GridItem] = [
+        GridItem(.flexible(), spacing: 20),
+        GridItem(.flexible(), spacing: 20)
+    ]
+
+    
     var body: some View {
         VStack {
             Text(User.user_name)
@@ -22,7 +28,16 @@ struct ProfileView: View {
                 
             } // ZStack
             
+            
+            
+            LazyVGrid(columns: columns, spacing: 20) {
+                SectionCard(text: "Vacunas", image: "syringe")
+                SectionCard(text: "Consultas", image: "stethoscope") // Imaginando que tienes otro símbolo.
+                // Añade más tarjetas según lo necesites.
+            }
+            
             Spacer()
+
             
             
             

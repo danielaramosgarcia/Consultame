@@ -18,14 +18,16 @@ import SwiftUI
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
-                        .padding()
+                        .padding([.top, .trailing, .bottom], 10)
+                        .padding(.leading, 30)
                         .foregroundColor(Color.accentColor)
                     Spacer()
                 } // hstack
                 
                 HStack {
                     Text(text)
-                        .font(.title)
+                        .font(.title3)
+                        .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding([.leading, .trailing])
                     Spacer()

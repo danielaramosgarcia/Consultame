@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddVaccineToUserFormView: View {
+struct AddVaccineToUserView: View {
     @StateObject var VaccineVM = VaccineViewModel()
     var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
     
@@ -109,8 +109,8 @@ struct AddVaccineToUserFormView: View {
     } // Body
 }
 
-struct AddVaccineToUserFormView_Previews: PreviewProvider {
+struct AddVaccineToUserView_Previews: PreviewProvider {
     static var previews: some View {
-        AddVaccineToUserFormView()
+        AddVaccineToUserView()
     }
 }

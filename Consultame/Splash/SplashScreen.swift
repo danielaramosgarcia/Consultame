@@ -14,7 +14,7 @@ struct SplashScreen: View {
     
     var body: some View {
         if isActive {
-            AddVaccineToUserFormView()
+            AddVaccineToUserView()
         } else {
             Color("morado") // Change the color to your desired color
                 .edgesIgnoringSafeArea(.all) //
