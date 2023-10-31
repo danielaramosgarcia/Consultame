@@ -27,7 +27,6 @@ import SwiftUI
                 HStack {
                     Text(text)
                         .font(.title3)
-                        .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding([.leading, .trailing])
                     Spacer()
@@ -37,7 +36,8 @@ import SwiftUI
             .padding()
             .background(Color.white)
             .cornerRadius(15)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 10)
+
         }
     }
 

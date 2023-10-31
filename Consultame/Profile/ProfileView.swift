@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     let columns: [GridItem] = [
-        GridItem(.flexible(), spacing: 20),
-        GridItem(.flexible(), spacing: 20)
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
     ]
 
     
@@ -30,11 +30,15 @@ struct ProfileView: View {
             
             
             
-            LazyVGrid(columns: columns, spacing: 20) {
+            LazyVGrid(columns: columns, spacing: 10) {
+                SectionCard(text: "Vacunas", image: "syringe")
+                SectionCard(text: "Consultas", image: "stethoscope")
                 SectionCard(text: "Vacunas", image: "syringe")
                 SectionCard(text: "Consultas", image: "stethoscope") // Imaginando que tienes otro símbolo.
-                // Añade más tarjetas según lo necesites.
+                SectionCard(text: "Vacunas", image: "syringe")
+                SectionCard(text: "Consultas", image: "stethoscope") // Imaginando que tienes otro símbolo.
             }
+            .padding()
             
             Spacer()
 
