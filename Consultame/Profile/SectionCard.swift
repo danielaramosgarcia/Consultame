@@ -26,7 +26,7 @@ import SwiftUI
                 
                 HStack {
                     Text(text)
-                        .font(.title3)
+                    
                         .multilineTextAlignment(.center)
                         .padding([.leading, .trailing])
                     Spacer()
