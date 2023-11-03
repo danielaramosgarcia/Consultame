@@ -7,24 +7,14 @@
 
 import SwiftUI
 
-struct CommonTextInput: TextFieldStyle {
-    
-    let iconImage : String
-    
-    func _body(configuration: TextField<Self._Label>) -> some View{
-        ZStack {
-            RoundedRectangle(cornerRadius: 5.0)
-                .foregroundColor(Color ("Gray text field"))
-                .frame(height: 40)
-            
-            HStack{
-                configuration
-                    .foregroundColor(Color ("Gray text"))
-                Spacer()
-                Image(systemName: iconImage)
-            }
-            .padding()
-            .foregroundColor(Color ("Gray text"))
-        }
+struct CommonTextInput: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct CommonTextInput_Previews: PreviewProvider {
+    static var previews: some View {
+        CommonTextInput()
     }
 }
