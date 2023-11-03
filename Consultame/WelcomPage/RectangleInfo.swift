@@ -10,4 +10,5 @@ import Foundation
 struct RectangleInfo : Hashable{
     var title: String
     var description: String
+    var imageName: String 
 }

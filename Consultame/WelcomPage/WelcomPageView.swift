@@ -11,10 +11,10 @@ struct WelcomPageView: View {
     @State private var currentIndex = 0
     
     var rectangleInfoArray = [
-        RectangleInfo(title: "Que gusto verte!", description: "Tu salud es lo primero, y estamos aqui para ayudarte a gestionarla de manera eficaz."),
-        RectangleInfo(title: "Prepara tu perfil", description: "Es esencial tener toda tu informacion de salud al dia. Desde alergias, medicacion actual hasta cirugias pasadas y condiciones cronicas, recopila y orgaiza todo en un solo lugar."),
-        RectangleInfo(title: "Proceso de consulta", description: "Desarrollamos funciones para favorecer una comunicacion fluida y entendible entre tu y el medico"),
-        RectangleInfo(title: "Tu historial", description: "Manten un registro de diagnosticos, recomendaciones y planes de tratamiento, todo en un solo lugar para un seguimiento eficaz y una mejor comprension de tu salud")
+        RectangleInfo(title: "Que gusto verte!", description: "Tu salud es lo primero, y estamos aqui para ayudarte a gestionarla de manera eficaz.", imageName: "welldone"),
+        RectangleInfo(title: "Prepara tu perfil", description: "Es esencial tener toda tu informacion de salud al dia. Desde alergias, medicacion actual hasta cirugias pasadas y condiciones cronicas, recopila y orgaiza todo en un solo lugar.", imageName: "modernDesign"),
+        RectangleInfo(title: "Proceso de consulta", description: "Desarrollamos funciones para favorecer una comunicacion fluida y entendible entre tu y el medico", imageName: "people"),
+        RectangleInfo(title: "Tu historial", description: "Manten un registro de diagnosticos, recomendaciones y planes de tratamiento, todo en un solo lugar para un seguimiento eficaz y una mejor comprension de tu salud", imageName: "Done")
     ]
     
     var body: some View {
@@ -34,18 +34,28 @@ struct WelcomPageView: View {
                             .font(.title)
                             .padding()
                         
+                        
+                        
+                    } .padding(.bottom, 460)
+                    
+                    VStack(spacing: 10){
+                        Image(rectangleInfoArray[index].imageName)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 200, height: 200)
+                        
                         Text(rectangleInfoArray[index].description)
                             .multilineTextAlignment(.center)
                             .padding()
-                    }
-                    .padding(.bottom, 80)
+                    } .frame(width: 280, height: 550)
+                    
                     
                     // Carrusel de bolitas
                     HStack(spacing: 10) {
                         ForEach(rectangleInfoArray.indices, id: \.self) { i in
                             Circle()
                                 .frame(width: 10, height: 10)
-                                .foregroundColor(i == currentIndex ? .black : .gray)
+                                .foregroundColor(i == currentIndex ? Color("AccentColor") : .gray)
                         }
                     }
                     .padding(.bottom, 10)
@@ -58,7 +68,7 @@ struct WelcomPageView: View {
         Button(action: {}) {
             Text("Registrarse")
                 .padding()
-                .background(Color.blue)
+                .background(Color("AccentColor"))
                 .foregroundColor(.white)
                 .cornerRadius(20)
         }
