@@ -16,6 +16,8 @@
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
 		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
 		FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D2322ADF772D00803EB0 /* SearchBar.swift */; };
+		FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB39CB5E2AF2D488002E5555 /* WelcomPageView.swift */; };
+		FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB39CB602AF2D4BC002E5555 /* RectangleInfo.swift */; };
 		FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
 		FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
 		FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
@@ -67,6 +69,8 @@
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/Vaccine/Models/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB35D2322ADF772D00803EB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = Consultame/Helper/SearchBar.swift; sourceTree = SOURCE_ROOT; };
+		FB39CB5E2AF2D488002E5555 /* WelcomPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomPageView.swift; sourceTree = "<group>"; };
+		FB39CB602AF2D4BC002E5555 /* RectangleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleInfo.swift; sourceTree = "<group>"; };
 		FB76649C2AF1739F0039AA0E /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionCard.swift; path = Consultame/Profile/SectionCard.swift; sourceTree = SOURCE_ROOT; };
 		FB7664A02AF17AB10039AA0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Consultame/Register/Models/UserModel.swift; sourceTree = SOURCE_ROOT; };
 		FB7664AC2AF186440039AA0E /* CommonTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommonTextInput.swift; path = Consultame/Helper/CommonTextInput.swift; sourceTree = SOURCE_ROOT; };
@@ -127,6 +131,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC77FA2AF2D2E0003F63AE /* WelcomPage */,
 				FB7664AE2AF187770039AA0E /* Helper */,
 				FB7664AA2AF181110039AA0E /* Register */,
 				FB7664A92AF180C80039AA0E /* Splash */,
@@ -243,6 +248,15 @@
 				FB7664AC2AF186440039AA0E /* CommonTextInput.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FBAC77FA2AF2D2E0003F63AE /* WelcomPage */ = {
+			isa = PBXGroup;
+			children = (
+				FB39CB5E2AF2D488002E5555 /* WelcomPageView.swift */,
+				FB39CB602AF2D4BC002E5555 /* RectangleInfo.swift */,
+			);
+			path = WelcomPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +395,7 @@
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
+				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
@@ -389,6 +404,7 @@
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
+				FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
