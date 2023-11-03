@@ -15,38 +15,41 @@ struct ProfileView: View {
 
     
     var body: some View {
-        VStack {
-            Text(User.user_name)
-                .font(.title)
-            ZStack{
-                Circle()
-                    .fill(Color.purple)
-                    .frame(width:120)
-                Text(String(User.user_name.first ?? " " ))
-                    .foregroundColor(.white)
+        NavigationStack {
+            
+            VStack {
+                Text(User.user_name)
                     .font(.title)
+                ZStack{
+                    Circle()
+                        .fill(Color.purple)
+                        .frame(width:120)
+                    Text(String(User.user_name.first ?? " " ))
+                        .foregroundColor(.white)
+                        .font(.title)
+                    
+                } // ZStack
                 
-            } // ZStack
-            
-            
-            
-            LazyVGrid(columns: columns, spacing: 10) {
-                SectionCard(text: "Vacunas", image: "syringe")
-                SectionCard(text: "Consultas", image: "stethoscope")
-                SectionCard(text: "Vacunas", image: "syringe")
-                SectionCard(text: "Consultas", image: "stethoscope") // Imaginando que tienes otro símbolo.
-                SectionCard(text: "Vacunas", image: "syringe")
-                SectionCard(text: "Consultas", image: "stethoscope") // Imaginando que tienes otro símbolo.
-            }
-            .padding()
-            
-            Spacer()
+                
+                
+                LazyVGrid(columns: columns, spacing: 10) {
+                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
+                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
+                }
+                .padding()
+                
+                Spacer()
 
+                
+                
+                
+            } // VStack
             
-            
-            
-        } // VStack
-        
+        } // navigation stack
     }
 }
 
