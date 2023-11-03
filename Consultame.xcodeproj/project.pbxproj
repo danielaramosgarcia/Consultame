@@ -28,6 +28,7 @@
 		FB7664A22AF17AB10039AA0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664A02AF17AB10039AA0E /* UserModel.swift */; };
 		FB7664A32AF17AB10039AA0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664A02AF17AB10039AA0E /* UserModel.swift */; };
 		FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7664AC2AF186440039AA0E /* CommonTextInput.swift */; };
+		FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB77DC9E2AF5A72B0065878B /* InicioSesion.swift */; };
 		FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3B92AF1518200DE02FD /* MainTabView.swift */; };
 		FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3BE2AF1580100DE02FD /* HomeView.swift */; };
 		FB8ED3C02AF1580100DE02FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3BE2AF1580100DE02FD /* HomeView.swift */; };
@@ -37,6 +38,7 @@
 		FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
 		FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */; };
 		FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */; };
+		FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -80,11 +82,13 @@
 		FB76649C2AF1739F0039AA0E /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionCard.swift; path = Consultame/Profile/SectionCard.swift; sourceTree = SOURCE_ROOT; };
 		FB7664A02AF17AB10039AA0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Consultame/Register/Models/UserModel.swift; sourceTree = SOURCE_ROOT; };
 		FB7664AC2AF186440039AA0E /* CommonTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommonTextInput.swift; path = Consultame/Helper/CommonTextInput.swift; sourceTree = SOURCE_ROOT; };
+		FB77DC9E2AF5A72B0065878B /* InicioSesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioSesion.swift; sourceTree = "<group>"; };
 		FB8ED3B92AF1518200DE02FD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		FB8ED3BE2AF1580100DE02FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB8ED3C22AF1581200DE02FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Consultame/Profile/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineModel.swift; path = Consultame/Vaccine/Models/VaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineViewModel.swift; path = Consultame/Vaccine/ViewModels/VaccineViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonesInicio.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				FB77DCA02AF5A72F0065878B /* InicioSesion */,
 				FB39CB622AF5744F002E5555 /* MedicalHistory */,
 				FBAC77FA2AF2D2E0003F63AE /* WelcomPage */,
 				FB7664AE2AF187770039AA0E /* Helper */,
@@ -263,8 +268,17 @@
 			children = (
 				FB35D2322ADF772D00803EB0 /* SearchBar.swift */,
 				FB7664AC2AF186440039AA0E /* CommonTextInput.swift */,
+				FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FB77DCA02AF5A72F0065878B /* InicioSesion */ = {
+			isa = PBXGroup;
+			children = (
+				FB77DC9E2AF5A72B0065878B /* InicioSesion.swift */,
+			);
+			path = InicioSesion;
 			sourceTree = "<group>";
 		};
 		FBAC77FA2AF2D2E0003F63AE /* WelcomPage */ = {
@@ -419,10 +433,12 @@
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
+				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
+				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
 				FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */,
 			);
