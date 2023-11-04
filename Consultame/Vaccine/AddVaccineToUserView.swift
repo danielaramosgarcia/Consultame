@@ -11,11 +11,10 @@ struct AddVaccineToUserView: View {
     @StateObject var VaccineVM = VaccineViewModel()
     var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
     
-    @State private var vaccineSelection = VaccineModel(id: 0, name: "Select", image: "", description: "")
+    @State private var vaccineSelection: Int = 0
     @State private var searchText = ""
     @State private var selectedDate = Date()
     
-    let dateFormatter = DateFormatter()
     
     
     var searchResults : [VaccineModel] {
@@ -39,17 +38,16 @@ struct AddVaccineToUserView: View {
                     SearchBar(text: $searchText, placeholder: "Nombre de vacuna")
                         .padding()
                     Picker(selection: $vaccineSelection, label: Text("Hello")) {
-                        ForEach(searchResults, id: \.self) { item in
-                            Text(item.name).tag(item as VaccineModel?)
+                        ForEach(searchResults, id: \.id) { item in
+                            Text(item.name).tag(item.id)
                         } // for each
                     } // Picker
                     .pickerStyle(.inline)
-
                     .task {
                         do {
                             try await VaccineVM.getVaccines()
                             if vaccineArr.count > 0 {
-                                vaccineSelection = vaccineArr[0]
+                                vaccineSelection = vaccineArr[0].id
                             }
                             
                         } catch {
@@ -59,9 +57,6 @@ struct AddVaccineToUserView: View {
                 
             }
         
-            
-            
-            
             
             DatePicker(
                     "Fecha de aplicacion",
@@ -81,10 +76,8 @@ struct AddVaccineToUserView: View {
             Button {
                 Task {
                     do {
-                        print(vaccineSelection.id)
-                        print(selectedDate)
                         try await
-                    VaccineVM.setVaccineToUser(userId: User.user_id, vaccineId: vaccineSelection.id, date: selectedDate)
+                    VaccineVM.setVaccineToUser(userId: User.user_id, vaccineId: vaccineSelection, date: selectedDate)
                         
                     } catch {
                         print("error al asignar vacuna al usuario")

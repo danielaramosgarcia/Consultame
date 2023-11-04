@@ -27,18 +27,17 @@ struct ProfileView: View {
                     Text(String(User.user_name.first ?? " " ))
                         .foregroundColor(.white)
                         .font(.title)
-                    
                 } // ZStack
                 
                 
                 
                 LazyVGrid(columns: columns, spacing: 10) {
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
-                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Cirguias", image: "stethoscope", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Medicamentos", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Antecedentes familiares", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
-                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
-                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
-                    SectionCard(text: "Consultas", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
+                    SectionCard(text: "Contactos", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
                 }
                 .padding()
                 
