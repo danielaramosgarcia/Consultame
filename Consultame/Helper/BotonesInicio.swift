@@ -12,10 +12,10 @@ struct BotonesInicio: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View{
         configuration.label
             .padding()
-            .background(Color.blue)
             .foregroundColor(.white)
-            .cornerRadius(10)
+            .frame(width: 150, height: 50)
+            .background(Color ("AccentColor"))
+            .cornerRadius(15)
             .opacity(configuration.isPressed ? 0.5 : 1)
-        
     }
 }

@@ -21,11 +21,9 @@ struct CommonTextInput: TextFieldStyle {
                 configuration
                     .foregroundColor(Color("Gray text"))
                 Image(systemName: iconImage)
-                
             }
             .padding()
             .foregroundColor(Color("Gray text"))
-            
         }
     }
 }

@@ -17,7 +17,7 @@ struct InicioSesion: View {
             Text("¡Bienvenido de vuelta!")
                 .font(.system(size: 45).bold())
                 .multilineTextAlignment(.center)
-            
+                
             Image("doctors")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -26,17 +26,20 @@ struct InicioSesion: View {
             
             TextField("Usuario", text: $username)
                 .textFieldStyle(CommonTextInput(iconImage: "tray"))
+                .padding(.horizontal, 30)
             SecureField("Contraseña", text: $password)
                 .textFieldStyle(CommonTextInput(iconImage: "lock"))
+                .padding(.horizontal, 30)
             
-            Button("Custom Button"){
-                
+            Button("Ingresar"){
+                // navegacion de paginas
             }
-                .buttonStyle(BotonesInicio())
-        } //VStack
+            .buttonStyle(BotonesInicio())
+            .padding(.top, 10)
+        }
         .padding()
-    } // View body
-} // View InicioSesion
+    }
+}
 
 struct InicioSesion_Previews: PreviewProvider {
     static var previews: some View {
