@@ -79,7 +79,7 @@ struct AddVaccineToUserView: View {
                 Task {
                     do {
                         try await
-                    VaccineVM.setVaccineToUser(userId: User.user_id, vaccineId: vaccineSelection, date: selectedDate)
+                    VaccineVM.setVaccineToUser(vaccineId: vaccineSelection, date: selectedDate)
                         
                     } catch {
                         print("error al asignar vacuna al usuario")

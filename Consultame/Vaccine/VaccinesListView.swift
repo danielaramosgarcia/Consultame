@@ -66,7 +66,7 @@ struct VaccinesListView: View {
         Task {
             for vaccine in vaccinesToDelete {
                 do {
-                    try await VaccineVM.deleteVaccineFromUser(userId: User.user_id, vaccineId: vaccine.vaccine_id)
+                    try await VaccineVM.deleteVaccineFromUser(vaccineId: vaccine.vaccine_id)
                 } catch {
                     print("error al eliminar la vacuna del usuario")
                 }

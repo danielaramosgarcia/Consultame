@@ -1,24 +1,22 @@
 import Foundation
 import SwiftUI
 
-struct SetVaccineToUserRequestBody : Codable {
-    let vaccination_date : String
-    let vaccine_id : Int
+struct CreateContactRequestBody : Codable {
+    let contact_name : String
+    let phone_number : String
+    let email : String
+    let relationship_id : Int
+    let user_id : Int
 }
 
-struct DeleteVaccineFromUser : Codable {
-    let vaccine_id : Int
-}
-
-
-class VaccineViewModel : ObservableObject {
-    @Published var vaccineArr = [VaccineModel]()
-    @Published var userVaccineArr = [UserVaccineModel]()
-    @Published var isVaccineSetToUserSuccesful: Bool? = nil
+class ContactsViewModel : ObservableObject {
+    @Published var contactsArr = [ContactModel]()
+    @Published var relationshipsArr = [RelationshipModel]()
+    @Published var userCreatedSuccessfully: Bool? = nil
     
     
-    func getVaccines() async throws {
-        guard let url = URL(string: API.baseURL + "/vaccine/available/" + String(User.user_id)) else {
+    func getContacts() async throws {
+        guard let url = URL(string: API.baseURL + "/contacts/" + String(User.user_id)) else {
             print("invalid url")
             return
         }
@@ -32,17 +30,16 @@ class VaccineViewModel : ObservableObject {
             return
         }
         
-        let results = try JSONDecoder().decode([VaccineModel].self, from: data)
+        let results = try JSONDecoder().decode([ContactModel].self, from: data)
         
         DispatchQueue.main.async {
-            self.vaccineArr = results
+            self.contactsArr = results
         
         }
-        
     }
     
-    func getUserVaccines() async throws {
-        guard let url = URL(string: API.baseURL + "/user/vaccine/" + String(User.user_id)) else {
+    func getRelationships() async throws {
+        guard let url = URL(string: API.baseURL + "/relationship") else {
             print("invalid url")
             return
         }
@@ -50,35 +47,28 @@ class VaccineViewModel : ObservableObject {
         let urlRequest = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
-    
+        
         guard(response as? HTTPURLResponse)?.statusCode == 200 else {
             print("response error")
             return
         }
         
-        
-        let results = try JSONDecoder().decode([UserVaccineModel].self, from: data)
+        let results = try JSONDecoder().decode([RelationshipModel].self, from: data)
         
         DispatchQueue.main.async {
-            self.userVaccineArr = results
-        
+            self.relationshipsArr = results
         }
     }
     
     
-    func setVaccineToUser(vaccineId: Int, date: Date) async throws {
-        guard let url = URL(string: API.baseURL + "/user/vaccine/" + String(User.user_id)) else {
-            self.isVaccineSetToUserSuccesful = false
+    func createContact(contactName: String, phoneNumber: String, email: String, relationshipId: Int) async throws {
+        guard let url = URL(string: API.baseURL + "/contacts") else {
+            self.userCreatedSuccessfully = false
             print("invalid url")
             return
         }
         
-        
-        let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.timeZone = TimeZone(identifier: "America/Mexico_City")
-        let isoDate = dateFormatter.string(from: date)
-        
-        let body = SetVaccineToUserRequestBody(vaccination_date: isoDate, vaccine_id: vaccineId)
+        let body = CreateContactRequestBody(contact_name: contactName, phone_number: phoneNumber, email: email, relationship_id: relationshipId, user_id: User.user_id)
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -90,27 +80,25 @@ class VaccineViewModel : ObservableObject {
         
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            self.isVaccineSetToUserSuccesful = false
+            self.userCreatedSuccessfully = false
             print("response error")
             return
         }
         
         
-        self.isVaccineSetToUserSuccesful = true
+        self.userCreatedSuccessfully = true
     }
     
-    func deleteVaccineFromUser(vaccineId: Int) async throws {
-        guard let url = URL(string: API.baseURL + "/user/vaccine/" + String(User.user_id)) else {
+    func deleteContactFromUser(contactId: Int) async throws {
+        guard let url = URL(string: API.baseURL + "/contacts/" + String(contactId)) else {
             print("invalid url")
             return
         }
         
-        let body = DeleteVaccineFromUser(vaccine_id: vaccineId)
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try? JSONEncoder().encode(body)
         
         
         let (_, response) = try await URLSession.shared.data(for: request)
@@ -122,6 +110,7 @@ class VaccineViewModel : ObservableObject {
         }
     }
         
+
     
 }
 

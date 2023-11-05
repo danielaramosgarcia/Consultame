@@ -33,7 +33,7 @@ struct ProfileView: View {
                 
                 LazyVGrid(columns: columns, spacing: 10) {
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
-                    SectionCard(text: "Cirguias", image: "stethoscope", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Contactos", image: "person", destinationView: AnyView(ContactsListView()))
                     SectionCard(text: "Medicamentos", image: "syringe", destinationView: AnyView(VaccinesListView()))
                     SectionCard(text: "Antecedentes familiares", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
