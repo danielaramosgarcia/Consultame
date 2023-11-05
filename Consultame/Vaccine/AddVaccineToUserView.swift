@@ -15,6 +15,10 @@ struct AddVaccineToUserView: View {
     @State private var searchText = ""
     @State private var selectedDate = Date()
     
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showAlert: Bool = false
+
+    
     
     
     var searchResults : [VaccineModel] {
@@ -23,8 +27,6 @@ struct AddVaccineToUserView: View {
    
     
     var body: some View {
-        
-        
         VStack(spacing: 0) {
             
             VStack {
@@ -98,6 +100,19 @@ struct AddVaccineToUserView: View {
             
 
         } // vstack
+        .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
+                    if let success = isSuccess {
+                        if success {
+                            presentationMode.wrappedValue.dismiss()
+                        } else {
+                            showAlert = true
+                        }
+                    }
+                } // on receive
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
+                } // alert
+    
             
     } // Body
 }

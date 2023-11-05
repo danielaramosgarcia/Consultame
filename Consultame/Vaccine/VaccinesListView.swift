@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VaccinesListView: View {
     @StateObject var VaccineVM = VaccineViewModel()
-        
+    
     var body: some View {
         VStack {
             HStack {
@@ -29,17 +29,21 @@ struct VaccinesListView: View {
                     .foregroundColor(.gray)
                     .padding()
             } else {
-                ForEach(VaccineVM.userVaccineArr, id: \.vaccine_id) { userVaccine in
-                                let colorIndex = userVaccine.vaccine_id % Utils.colors.count
-                                let hexColor = Utils.colors[colorIndex]
-                                let color = Color(hex: hexColor)
-                                if let date = userVaccine.vaccination_date.toDate() {
-                                        let formattedDate = date.toString()
-                                    VaccineCard(vaccineName: userVaccine.vaccine.name, vaccineDate: formattedDate, color: color)
-                                            .padding([.leading, .trailing])
-                                            .padding(.bottom, 5)
-                                    }
-                            } // for each
+                List {
+                    ForEach(VaccineVM.userVaccineArr, id: \.vaccine_id) { userVaccine in
+                        let colorIndex = userVaccine.vaccine_id % Utils.colors.count
+                        let hexColor = Utils.colors[colorIndex]
+                        let color = Color(hex: hexColor)
+                        if let date = userVaccine.vaccination_date.toDate() {
+                            let formattedDate = date.toString()
+                            VaccineCard(vaccineName: userVaccine.vaccine.name, vaccineDate: formattedDate, color: color)
+                                .listRowSeparator(.hidden)
+                        }
+                    } // for each
+                    .onDelete(perform: deleteVaccine)
+                } // list
+                .listStyle(.plain)
+                
             } // else
             
             
@@ -54,6 +58,22 @@ struct VaccinesListView: View {
             }
         } // task
         
+    }
+    
+    func deleteVaccine(at offsets: IndexSet) {
+        let vaccinesToDelete = offsets.map { VaccineVM.userVaccineArr[$0] }
+        
+        Task {
+            for vaccine in vaccinesToDelete {
+                do {
+                    try await VaccineVM.deleteVaccineFromUser(userId: User.user_id, vaccineId: vaccine.vaccine_id)
+                } catch {
+                    print("error al eliminar la vacuna del usuario")
+                }
+            }
+        } // task
+        
+        VaccineVM.userVaccineArr.remove(atOffsets: offsets)
     }
 }
 
@@ -100,7 +120,7 @@ extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
-
+        
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
@@ -113,7 +133,7 @@ extension Color {
         default:
             (a, r, g, b) = (255, 0, 0, 0)
         }
-
+        
         self.init(
             .sRGB,
             red: Double(r) / 255,

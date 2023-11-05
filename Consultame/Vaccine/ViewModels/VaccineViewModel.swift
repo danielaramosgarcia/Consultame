@@ -6,11 +6,15 @@ struct SetVaccineToUserRequestBody : Codable {
     let vaccine_id : Int
 }
 
+struct DeleteVaccineFromUser : Codable {
+    let vaccine_id : Int
+}
+
 
 class VaccineViewModel : ObservableObject {
     @Published var vaccineArr = [VaccineModel]()
     @Published var userVaccineArr = [UserVaccineModel]()
-    @Published var isVaccineSetToUserSuccesful: Bool = false
+    @Published var isVaccineSetToUserSuccesful: Bool? = nil
     
     
     func getVaccines() async throws {
@@ -64,6 +68,7 @@ class VaccineViewModel : ObservableObject {
     
     func setVaccineToUser(userId: Int, vaccineId: Int, date: Date) async throws {
         guard let url = URL(string: API.baseURL + "/user/vaccine/" + String(userId)) else {
+            self.isVaccineSetToUserSuccesful = false
             print("invalid url")
             return
         }
@@ -81,9 +86,11 @@ class VaccineViewModel : ObservableObject {
         request.httpBody = try? JSONEncoder().encode(body)
         
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            self.isVaccineSetToUserSuccesful = false
             print("response error")
             return
         }
@@ -91,6 +98,30 @@ class VaccineViewModel : ObservableObject {
         
         self.isVaccineSetToUserSuccesful = true
     }
+    
+    func deleteVaccineFromUser(userId: Int, vaccineId: Int) async throws {
+        guard let url = URL(string: API.baseURL + "/user/vaccine/" + String(userId)) else {
+            print("invalid url")
+            return
+        }
+        
+        let body = DeleteVaccineFromUser(vaccine_id: vaccineId)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(body)
+        
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            print("response error")
+            return
+        }
+    }
+        
     
 }
 
