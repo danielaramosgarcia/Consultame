@@ -79,6 +79,7 @@ struct ContactsListView: View {
             
             Spacer()
         } // VStack
+        .animation(.default)
         .task {
             do {
                 try await ContactsVM.getContacts()

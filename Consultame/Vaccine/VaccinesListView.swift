@@ -50,6 +50,7 @@ struct VaccinesListView: View {
             Spacer()
             
         } // vstack
+        .animation(.default)
         .task {
             do {
                 try await VaccineVM.getUserVaccines()
