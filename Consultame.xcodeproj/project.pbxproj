@@ -32,9 +32,6 @@
 		FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */; };
 		FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */; };
 		FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */; };
-		FB2890B32AF87EE200EFEF35 /* AddAllergyToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B22AF87EE200EFEF35 /* AddAllergyToUserView.swift */; };
-		FB2890B62AF8809A00EFEF35 /* FamilyHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B52AF8809A00EFEF35 /* FamilyHistoryListView.swift */; };
-		FB2890B82AF880F900EFEF35 /* FamilyDiseaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B72AF880F900EFEF35 /* FamilyDiseaseCard.swift */; };
 		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
 		FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8482AF83E0F00AF6A1B /* ContactsListView.swift */; };
 		FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D2322ADF772D00803EB0 /* SearchBar.swift */; };
@@ -114,9 +111,6 @@
 		FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAllergiesView.swift; sourceTree = "<group>"; };
 		FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugAllergiesView.swift; sourceTree = "<group>"; };
 		FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAllergiesView.swift; sourceTree = "<group>"; };
-		FB2890B22AF87EE200EFEF35 /* AddAllergyToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAllergyToUserView.swift; sourceTree = "<group>"; };
-		FB2890B52AF8809A00EFEF35 /* FamilyHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryListView.swift; sourceTree = "<group>"; };
-		FB2890B72AF880F900EFEF35 /* FamilyDiseaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiseaseCard.swift; sourceTree = "<group>"; };
 		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/Vaccine/Models/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB31B8482AF83E0F00AF6A1B /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		FB35D2322ADF772D00803EB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = Consultame/Helper/SearchBar.swift; sourceTree = SOURCE_ROOT; };
@@ -230,11 +224,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				61752F0B2AF88964007B95C1 /* SpeechToText */,
-=======
-				FB2890B42AF8806700EFEF35 /* Family */,
->>>>>>> Stashed changes
 				FB2890A92AF8683000EFEF35 /* Allergies */,
 				FB2890A62AF8666900EFEF35 /* Habits */,
 				FB31B8472AF83DF000AF6A1B /* Contacts */,
@@ -298,18 +288,8 @@
 				FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */,
 				FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */,
 				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
-				FB2890B22AF87EE200EFEF35 /* AddAllergyToUserView.swift */,
 			);
 			path = Allergies;
-			sourceTree = "<group>";
-		};
-		FB2890B42AF8806700EFEF35 /* Family */ = {
-			isa = PBXGroup;
-			children = (
-				FB2890B52AF8809A00EFEF35 /* FamilyHistoryListView.swift */,
-				FB2890B72AF880F900EFEF35 /* FamilyDiseaseCard.swift */,
-			);
-			path = Family;
 			sourceTree = "<group>";
 		};
 		FB31B8472AF83DF000AF6A1B /* Contacts */ = {
@@ -586,7 +566,6 @@
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
-				FB2890B62AF8809A00EFEF35 /* FamilyHistoryListView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
 				61752F292AF8E55D007B95C1 /* CircularButton.swift in Sources */,
 				FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */,
@@ -601,7 +580,6 @@
 				61752F252AF8D360007B95C1 /* HistoryView.swift in Sources */,
 				FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */,
 				FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */,
-				FB2890B82AF880F900EFEF35 /* FamilyDiseaseCard.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
 				61752F272AF8DAB0007B95C1 /* Coversacion.swift in Sources */,
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
@@ -615,7 +593,6 @@
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */,
 				FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */,
-				FB2890B32AF87EE200EFEF35 /* AddAllergyToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
