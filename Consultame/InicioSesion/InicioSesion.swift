@@ -34,8 +34,10 @@ struct InicioSesion: View {
             Button("Ingresar"){
                 // navegacion de paginas
             }
-            .buttonStyle(BotonesInicio())
+            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
             .padding(.top, 10)
+            .padding(.horizontal, 100)
+            
         }
         .padding()
     }
