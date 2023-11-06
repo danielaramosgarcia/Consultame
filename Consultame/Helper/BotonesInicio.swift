@@ -18,4 +18,6 @@ struct BotonesInicio: ButtonStyle {
             .cornerRadius(15)
             .opacity(configuration.isPressed ? 0.5 : 1)
     }
+    
+    
 }
