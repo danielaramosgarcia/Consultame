@@ -24,6 +24,7 @@
 		61FA75772ADEFF2F00BB6B2A /* ConsultameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75762ADEFF2F00BB6B2A /* ConsultameTests.swift */; };
 		61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */; };
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
+		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
 		FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */; };
 		FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */; };
 		FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */; };
@@ -103,6 +104,7 @@
 		61FA757C2ADEFF2F00BB6B2A /* ConsultameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsultameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITests.swift; sourceTree = "<group>"; };
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesListView.swift; sourceTree = "<group>"; };
 		FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCard.swift; sourceTree = "<group>"; };
 		FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactToUserView.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FB7664AB2AF181210039AA0E /* Models */,
+				849A16952AF995F50061A8A9 /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */,
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */,
 				61752F1F2AF8C6F8007B95C1 /* History.swift in Sources */,
