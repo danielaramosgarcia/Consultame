@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61752F0F2AF8BF1E007B95C1 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F0E2AF8BF1E007B95C1 /* SpeechRecognizer.swift */; };
+		61752F172AF8C0C5007B95C1 /* ListenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F162AF8C0C5007B95C1 /* ListenBox.swift */; };
+		61752F192AF8C473007B95C1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F182AF8C473007B95C1 /* Theme.swift */; };
+		61752F1B2AF8C60A007B95C1 /* DatosConsulta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F1A2AF8C60A007B95C1 /* DatosConsulta.swift */; };
+		61752F1F2AF8C6F8007B95C1 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F1E2AF8C6F8007B95C1 /* History.swift */; };
+		61752F232AF8CD21007B95C1 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F222AF8CD21007B95C1 /* CircleButton.swift */; };
+		61752F252AF8D360007B95C1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F242AF8D360007B95C1 /* HistoryView.swift */; };
+		61752F272AF8DAB0007B95C1 /* Coversacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F262AF8DAB0007B95C1 /* Coversacion.swift */; };
+		61752F292AF8E55D007B95C1 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F282AF8E55D007B95C1 /* CircularButton.swift */; };
+		61752F2B2AF8F5AD007B95C1 /* SpeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F2A2AF8F5AD007B95C1 /* SpeakBox.swift */; };
 		618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E49FE2AE0ED90007681E5 /* SplashScreen.swift */; };
 		61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75652ADEFF2C00BB6B2A /* ConsultameApp.swift */; };
 		61FA756A2ADEFF2E00BB6B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FA75692ADEFF2E00BB6B2A /* Assets.xcassets */; };
@@ -72,6 +82,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61752F0E2AF8BF1E007B95C1 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		61752F162AF8C0C5007B95C1 /* ListenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenBox.swift; sourceTree = "<group>"; };
+		61752F182AF8C473007B95C1 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		61752F1A2AF8C60A007B95C1 /* DatosConsulta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosConsulta.swift; sourceTree = "<group>"; };
+		61752F1E2AF8C6F8007B95C1 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		61752F222AF8CD21007B95C1 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		61752F242AF8D360007B95C1 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		61752F262AF8DAB0007B95C1 /* Coversacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coversacion.swift; sourceTree = "<group>"; };
+		61752F282AF8E55D007B95C1 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		61752F2A2AF8F5AD007B95C1 /* SpeakBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakBox.swift; sourceTree = "<group>"; };
 		618E49FE2AE0ED90007681E5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		618E4A002AE195CB007681E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		61FA75622ADEFF2C00BB6B2A /* Consultame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consultame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +160,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61752F0B2AF88964007B95C1 /* SpeechToText */ = {
+			isa = PBXGroup;
+			children = (
+				61752F132AF8BFBB007B95C1 /* View */,
+				61752F112AF8BFA5007B95C1 /* ViewModel */,
+				61752F0D2AF8BF0A007B95C1 /* Model */,
+			);
+			path = SpeechToText;
+			sourceTree = "<group>";
+		};
+		61752F0D2AF8BF0A007B95C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61752F0E2AF8BF1E007B95C1 /* SpeechRecognizer.swift */,
+				61752F182AF8C473007B95C1 /* Theme.swift */,
+				61752F1A2AF8C60A007B95C1 /* DatosConsulta.swift */,
+				61752F1E2AF8C6F8007B95C1 /* History.swift */,
+				61752F282AF8E55D007B95C1 /* CircularButton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61752F112AF8BFA5007B95C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61752F132AF8BFBB007B95C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61752F162AF8C0C5007B95C1 /* ListenBox.swift */,
+				61752F2A2AF8F5AD007B95C1 /* SpeakBox.swift */,
+				61752F222AF8CD21007B95C1 /* CircleButton.swift */,
+				61752F242AF8D360007B95C1 /* HistoryView.swift */,
+				61752F262AF8DAB0007B95C1 /* Coversacion.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		61FA75592ADEFF2C00BB6B2A = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +224,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				61752F0B2AF88964007B95C1 /* SpeechToText */,
 				FB2890A92AF8683000EFEF35 /* Allergies */,
 				FB2890A62AF8666900EFEF35 /* Habits */,
 				FB31B8472AF83DF000AF6A1B /* Contacts */,
@@ -495,29 +557,39 @@
 			files = (
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */,
+				61752F1F2AF8C6F8007B95C1 /* History.swift in Sources */,
 				FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */,
 				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,
 				FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
+				61752F172AF8C0C5007B95C1 /* ListenBox.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
+				61752F292AF8E55D007B95C1 /* CircularButton.swift in Sources */,
 				FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */,
+				61752F2B2AF8F5AD007B95C1 /* SpeakBox.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
+				61752F232AF8CD21007B95C1 /* CircleButton.swift in Sources */,
+				61752F0F2AF8BF1E007B95C1 /* SpeechRecognizer.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
+				61752F252AF8D360007B95C1 /* HistoryView.swift in Sources */,
 				FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */,
 				FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
+				61752F272AF8DAB0007B95C1 /* Coversacion.swift in Sources */,
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
+				61752F1B2AF8C60A007B95C1 /* DatosConsulta.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
+				61752F192AF8C473007B95C1 /* Theme.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */,
 				FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */,
