@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ProfileView: View {
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),

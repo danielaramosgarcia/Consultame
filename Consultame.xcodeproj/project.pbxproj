@@ -65,6 +65,8 @@
 		FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */; };
 		FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */; };
 		FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */; };
+		FBED780E2AF9DED900B4F5BA /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = FBED780D2AF9DED900B4F5BA /* SocketIO */; };
+		FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78102AF9DF1300B4F5BA /* TestWSView.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +143,7 @@
 		FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiseaseCard.swift; sourceTree = "<group>"; };
 		FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryListView.swift; sourceTree = "<group>"; };
 		FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		FBED78102AF9DF1300B4F5BA /* TestWSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWSView.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBED780E2AF9DED900B4F5BA /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +238,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				FBED780F2AF9DEF800B4F5BA /* WebSocketTests */,
 				FBED78092AF9CF6E00B4F5BA /* Personal */,
 				FBED78042AF9CE8800B4F5BA /* FamilyHistory */,
 				61752F0B2AF88964007B95C1 /* SpeechToText */,
@@ -456,6 +461,14 @@
 			path = Personal;
 			sourceTree = "<group>";
 		};
+		FBED780F2AF9DEF800B4F5BA /* WebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBED78102AF9DF1300B4F5BA /* TestWSView.swift */,
+			);
+			path = WebSocketTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +485,9 @@
 			dependencies = (
 			);
 			name = Consultame;
+			packageProductDependencies = (
+				FBED780D2AF9DED900B4F5BA /* SocketIO */,
+			);
 			productName = Consultame;
 			productReference = 61FA75622ADEFF2C00BB6B2A /* Consultame.app */;
 			productType = "com.apple.product-type.application";
@@ -544,6 +560,9 @@
 				Base,
 			);
 			mainGroup = 61FA75592ADEFF2C00BB6B2A;
+			packageReferences = (
+				FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 61FA75632ADEFF2C00BB6B2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -618,6 +637,7 @@
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
+				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				61752F1B2AF8C60A007B95C1 /* DatosConsulta.swift in Sources */,
@@ -971,6 +991,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBED780D2AF9DED900B4F5BA /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61FA755A2ADEFF2C00BB6B2A /* Project object */;
 }
