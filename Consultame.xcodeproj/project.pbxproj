@@ -61,6 +61,8 @@
 		FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */; };
 		FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9C12AF84375006E0B3D /* ContactModel.swift */; };
 		FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9C32AF843FC006E0B3D /* RelationshipModel.swift */; };
+		FBED78032AF9CE4500B4F5BA /* AddAllergyToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */; };
+		FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -133,6 +135,8 @@
 		FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		FBEAE9C12AF84375006E0B3D /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		FBEAE9C32AF843FC006E0B3D /* RelationshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipModel.swift; sourceTree = "<group>"; };
+		FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAllergyToUserView.swift; sourceTree = "<group>"; };
+		FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiseaseCard.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +230,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				FBED78042AF9CE8800B4F5BA /* FamilyHistory */,
 				61752F0B2AF88964007B95C1 /* SpeechToText */,
 				FB2890A92AF8683000EFEF35 /* Allergies */,
 				FB2890A62AF8666900EFEF35 /* Habits */,
@@ -290,6 +295,7 @@
 				FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */,
 				FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */,
 				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
+				FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */,
 			);
 			path = Allergies;
 			sourceTree = "<group>";
@@ -426,6 +432,14 @@
 				FBEAE9C32AF843FC006E0B3D /* RelationshipModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FBED78042AF9CE8800B4F5BA /* FamilyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */,
+			);
+			path = FamilyHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,6 +611,8 @@
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */,
 				FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */,
+				FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */,
+				FBED78032AF9CE4500B4F5BA /* AddAllergyToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
