@@ -17,7 +17,7 @@ struct AllergiesTabView: View {
                 Text("Mis alergías")
                     .font(.title)
                 Spacer()
-                NavigationLink(destination: AnyView(AddContactToUserView())) {
+                NavigationLink(destination: AnyView(AddAllergyToUserView())) {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(Color.accentColor)
                 }

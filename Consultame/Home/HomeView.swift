@@ -22,6 +22,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }
                 )
+                .padding(.all, 20)
                 .onTapGesture {
                     // Function goes here
                 }
@@ -33,14 +34,15 @@ struct HomeView: View {
                     .frame(width: 350, height: 300, alignment: .center)
                     .foregroundColor(.white)
                     .shadow(color: Color.gray.opacity(0.6), radius: 5, x: 0, y: 5)
-                    .padding(.vertical,20)
+
                     .overlay(
                         VStack{
                             Text("Citas Previas")
-                                .padding(.bottom,20)
+                                .padding(.all, 20)
                             RoundedRectangle(cornerRadius: 15)
                                 .frame(width: 300, height: 50, alignment: .center)
                                 .foregroundStyle(.gray)
+                            Spacer()
                         }
 
                     )

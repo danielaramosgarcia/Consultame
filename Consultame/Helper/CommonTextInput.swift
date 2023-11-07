@@ -14,16 +14,16 @@ struct CommonTextInput: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View{
         ZStack {
             RoundedRectangle(cornerRadius: 5.0)
-                .foregroundColor(Color ("Gray text box"))
+                .foregroundColor(Color ("LightGray"))
                 .frame(height: 50)
             
             HStack {
                 configuration
-                    .foregroundColor(Color("Gray text"))
+                    .foregroundColor(Color("DarkGray"))
                 Image(systemName: iconImage)
             }
             .padding()
-            .foregroundColor(Color("Gray text"))
+            .foregroundColor(Color("DarkGray"))
         }
     }
 }

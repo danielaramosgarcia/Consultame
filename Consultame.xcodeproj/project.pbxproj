@@ -61,6 +61,12 @@
 		FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */; };
 		FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9C12AF84375006E0B3D /* ContactModel.swift */; };
 		FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9C32AF843FC006E0B3D /* RelationshipModel.swift */; };
+		FBED78032AF9CE4500B4F5BA /* AddAllergyToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */; };
+		FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */; };
+		FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */; };
+		FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */; };
+		FBED780E2AF9DED900B4F5BA /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = FBED780D2AF9DED900B4F5BA /* SocketIO */; };
+		FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78102AF9DF1300B4F5BA /* TestWSView.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -133,6 +139,11 @@
 		FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		FBEAE9C12AF84375006E0B3D /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		FBEAE9C32AF843FC006E0B3D /* RelationshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipModel.swift; sourceTree = "<group>"; };
+		FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAllergyToUserView.swift; sourceTree = "<group>"; };
+		FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiseaseCard.swift; sourceTree = "<group>"; };
+		FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryListView.swift; sourceTree = "<group>"; };
+		FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		FBED78102AF9DF1300B4F5BA /* TestWSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWSView.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBED780E2AF9DED900B4F5BA /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +238,9 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				FBED780F2AF9DEF800B4F5BA /* WebSocketTests */,
+				FBED78092AF9CF6E00B4F5BA /* Personal */,
+				FBED78042AF9CE8800B4F5BA /* FamilyHistory */,
 				61752F0B2AF88964007B95C1 /* SpeechToText */,
 				FB2890A92AF8683000EFEF35 /* Allergies */,
 				FB2890A62AF8666900EFEF35 /* Habits */,
@@ -290,6 +305,7 @@
 				FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */,
 				FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */,
 				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
+				FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */,
 			);
 			path = Allergies;
 			sourceTree = "<group>";
@@ -428,6 +444,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FBED78042AF9CE8800B4F5BA /* FamilyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */,
+				FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */,
+			);
+			path = FamilyHistory;
+			sourceTree = "<group>";
+		};
+		FBED78092AF9CF6E00B4F5BA /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		FBED780F2AF9DEF800B4F5BA /* WebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBED78102AF9DF1300B4F5BA /* TestWSView.swift */,
+			);
+			path = WebSocketTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +485,9 @@
 			dependencies = (
 			);
 			name = Consultame;
+			packageProductDependencies = (
+				FBED780D2AF9DED900B4F5BA /* SocketIO */,
+			);
 			productName = Consultame;
 			productReference = 61FA75622ADEFF2C00BB6B2A /* Consultame.app */;
 			productType = "com.apple.product-type.application";
@@ -516,6 +560,9 @@
 				Base,
 			);
 			mainGroup = 61FA75592ADEFF2C00BB6B2A;
+			packageReferences = (
+				FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 61FA75632ADEFF2C00BB6B2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -561,6 +608,7 @@
 				849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */,
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */,
+				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
 				61752F1F2AF8C6F8007B95C1 /* History.swift in Sources */,
 				FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */,
 				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,
@@ -589,14 +637,18 @@
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
+				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				61752F1B2AF8C60A007B95C1 /* DatosConsulta.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
 				61752F192AF8C473007B95C1 /* Theme.swift in Sources */,
+				FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
 				FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */,
 				FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */,
+				FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */,
+				FBED78032AF9CE4500B4F5BA /* AddAllergyToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
@@ -939,6 +991,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBED780D2AF9DED900B4F5BA /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBED780C2AF9DED900B4F5BA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61FA755A2ADEFF2C00BB6B2A /* Project object */;
 }
