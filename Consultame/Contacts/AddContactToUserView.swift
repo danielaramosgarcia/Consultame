@@ -83,7 +83,7 @@ struct AddContactToUserView: View {
                 } // else
                 
             } // button
-            .buttonStyle(BotonesInicio())
+            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
             .padding(.bottom, 30)
             
             

@@ -16,7 +16,7 @@ struct AllergiesTabView: View {
             HStack {
                 Text("Mis alergías")
                 Spacer()
-                NavigationLink(destination: AnyView(AddContactToUserView())) {
+                NavigationLink(destination: AnyView(AddAllergyToUserView())) {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(Color.accentColor)
                 } // NavigationLink
