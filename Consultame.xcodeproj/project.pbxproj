@@ -201,6 +201,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		61752F2C2AF8FC58007B95C1 /* SeeTranscript */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SeeTranscript;
+			sourceTree = "<group>";
+		};
 		61FA75592ADEFF2C00BB6B2A = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +231,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				61752F2C2AF8FC58007B95C1 /* SeeTranscript */,
 				61752F0B2AF88964007B95C1 /* SpeechToText */,
 				FB2890A92AF8683000EFEF35 /* Allergies */,
 				FB2890A62AF8666900EFEF35 /* Habits */,
