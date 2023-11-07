@@ -32,12 +32,12 @@ struct ProfileView: View {
                 
                 
                 LazyVGrid(columns: columns, spacing: 10) {
-                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Personal", image: "cross.circle", destinationView: AnyView(PersonalView()))
                     SectionCard(text: "Contactos", image: "person", destinationView: AnyView(ContactsListView()))
                     SectionCard(text: "Hábitos", image: "brain.head.profile", destinationView: AnyView(HabitsListView()))
-                    SectionCard(text: "Alergías", image: "allergens", destinationView: AnyView(AllergiesTabView())) // Imaginando que tienes otro símbolo.
+                    SectionCard(text: "Alergías", image: "allergens", destinationView: AnyView(AllergiesTabView()))
+                    SectionCard(text: "Familiares", image: "person.2", destinationView: AnyView(FamilyHistoryListView()))
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
-                    SectionCard(text: "Contactos", image: "stethoscope", destinationView: AnyView(VaccinesListView())) // Imaginando que tienes otro símbolo.
                 }
                 .padding()
                 
