@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Combine
 
 struct CreateContactRequestBody : Codable {
     let contact_name : String
