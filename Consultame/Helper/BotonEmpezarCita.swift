@@ -8,10 +8,24 @@
 import SwiftUI
 
 struct BotonEmpezarCita: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        var body: some View {
+            RoundedRectangle(cornerRadius: 15)
+                .frame(width: 350, height: 60, alignment: .center)
+                .foregroundColor(.black)
+                .overlay(
+                    HStack {
+                        Image(systemName: "plus")
+                            .foregroundColor(.white)
+                        Text("Empieza una cita")
+                            .foregroundColor(.white)
+                    }
+                )
+                .padding(.all, 20)
+                .onTapGesture {
+                    // Function goes here
+                }
+        }
     }
-}
 
 #Preview {
     BotonEmpezarCita()

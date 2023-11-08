@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct CitasPrevias: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @State var citasPrevias = [1,2,2,3]
+    
+        var body: some View {
+            ZStack{
+
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: 350, alignment: .center)
+                    .foregroundColor(.white)
+
+                    .overlay(
+                        VStack{
+                            Text("Citas Previas")
+                                .padding(.all, 20)
+                            if citasPrevias.isEmpty {
+                                Text("Esta vacio el Array")
+                                    .foregroundStyle(.gray)
+                            } else {
+                                CitasPreviasCards()
+                            }
+                            Spacer()
+                        }
+                    )
+            }
+        }
     }
-}
+
 
 #Preview {
+    
     CitasPrevias()
 }

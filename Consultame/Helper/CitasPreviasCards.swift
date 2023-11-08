@@ -8,10 +8,30 @@
 import SwiftUI
 
 struct CitasPreviasCards: View {
+    let backgroundColor = Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
+    //let textColor = isColorDark(backgroundColor) ? Color.white : Color.black
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+
+        ZStack {
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(backgroundColor)
+                .frame(height: 100)
+            HStack{
+                Text("Cita sobre mi Colon")
+                    .padding(.all, 10)
+                //    .foregroundStyle(textColor)
+                Spacer()
+                Text("Fecha de Hoy")
+                    .padding(.all, 10)
+                //    .foregroundStyle(textColor)
+
+            }
+        }
+            }
+        }
+
+
 
 #Preview {
     CitasPreviasCards()

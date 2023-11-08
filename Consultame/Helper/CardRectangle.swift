@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct CardRectangle: View {
+    let backgroundColor = Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 15)
+            .foregroundColor(backgroundColor)
+            .frame(height: 100)
+        
     }
 }
 
