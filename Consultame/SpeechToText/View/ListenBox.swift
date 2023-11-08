@@ -11,7 +11,7 @@ struct ListenBox: View {
 //    @Binding var datos: DatosConsulta
 //    @StateObject var speechRecognizer = SpeechRecognizer()
     @State private var isRecording = false
-
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16.0)

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContactsListView: View {
     @StateObject var ContactsVM = ContactsViewModel()
-    
+//    @State var contacts:ContactModel? = nil
+
     var body: some View {
         VStack {
             HStack {
                 Text("Mis contactos")
                 Spacer()
-                NavigationLink(destination: AnyView(AddContactToUserView())) {
+                NavigationLink(destination: AddContactToUserView()) {
                     Image(systemName: "person.crop.circle.badge.plus")
                         .foregroundColor(Color.accentColor)
                 } // NavigationLink
