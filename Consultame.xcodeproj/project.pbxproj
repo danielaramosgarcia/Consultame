@@ -34,6 +34,8 @@
 		FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */; };
 		FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */; };
 		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
+		FB2C5E912AFAD46A00441D14 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */; };
+		FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */; };
 		FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31B8482AF83E0F00AF6A1B /* ContactsListView.swift */; };
 		FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D2322ADF772D00803EB0 /* SearchBar.swift */; };
 		FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB39CB5E2AF2D488002E5555 /* WelcomPageView.swift */; };
@@ -120,6 +122,8 @@
 		FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugAllergiesView.swift; sourceTree = "<group>"; };
 		FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAllergiesView.swift; sourceTree = "<group>"; };
 		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/Vaccine/Models/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
+		FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConsultationView.swift; sourceTree = "<group>"; };
 		FB31B8482AF83E0F00AF6A1B /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		FB35D2322ADF772D00803EB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = Consultame/Helper/SearchBar.swift; sourceTree = SOURCE_ROOT; };
 		FB39CB5E2AF2D488002E5555 /* WelcomPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomPageView.swift; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				FBED78102AF9DF1300B4F5BA /* TestWSView.swift */,
+				FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */,
+				FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */,
 			);
 			path = WebSocketTests;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
 				61752F1F2AF8C6F8007B95C1 /* History.swift in Sources */,
 				FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */,
+				FB2C5E912AFAD46A00441D14 /* WebSocketManager.swift in Sources */,
 				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,
 				FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
@@ -650,6 +657,7 @@
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				61752F1B2AF8C60A007B95C1 /* DatosConsulta.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
+				FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */,
 				61752F192AF8C473007B95C1 /* Theme.swift in Sources */,
 				FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,

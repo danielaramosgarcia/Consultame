@@ -65,22 +65,23 @@ struct WelcomPageView: View {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         
-        Button(action: {}) {
-            Text("Registrarse")
-                .padding()
-                .background(Color("AccentColor"))
-                .foregroundColor(.white)
-                .cornerRadius(20)
+      
+        
+        Button("Registrarse"){
+            // navegacion de paginas
         }
+        .buttonStyle(BotonesInicio())
         .padding(.bottom, 10)
         
-        Button(action: {}) {
-            Text("Ya tengo cuenta")
-                .padding()
-                .background(Color.gray)
-                .foregroundColor(.white)
-                .cornerRadius(20)
+        
+        
+        Button("Iniciar Sesión"){
+            // navegacion de paginas
         }
+        .buttonStyle(BotonesInicio())
+        
+        
+       
     }
 }
 

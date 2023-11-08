@@ -11,7 +11,6 @@ import SwiftUI
 struct ConsultameApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
-        }
+            ProfileView()        }
     }
 }
