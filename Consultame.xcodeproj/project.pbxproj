@@ -17,6 +17,7 @@
 		61752F272AF8DAB0007B95C1 /* Coversacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F262AF8DAB0007B95C1 /* Coversacion.swift */; };
 		61752F292AF8E55D007B95C1 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F282AF8E55D007B95C1 /* CircularButton.swift */; };
 		61752F2B2AF8F5AD007B95C1 /* SpeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F2A2AF8F5AD007B95C1 /* SpeakBox.swift */; };
+		61752F312AFB437D007B95C1 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F302AFB437D007B95C1 /* APIservice.swift */; };
 		618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E49FE2AE0ED90007681E5 /* SplashScreen.swift */; };
 		61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75652ADEFF2C00BB6B2A /* ConsultameApp.swift */; };
 		61FA756A2ADEFF2E00BB6B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FA75692ADEFF2E00BB6B2A /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		61752F262AF8DAB0007B95C1 /* Coversacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coversacion.swift; sourceTree = "<group>"; };
 		61752F282AF8E55D007B95C1 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		61752F2A2AF8F5AD007B95C1 /* SpeakBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakBox.swift; sourceTree = "<group>"; };
+		61752F302AFB437D007B95C1 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 		618E49FE2AE0ED90007681E5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		618E4A002AE195CB007681E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		61FA75622ADEFF2C00BB6B2A /* Consultame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consultame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +224,7 @@
 		61752F2F2AFAE1DD007B95C1 /* APIservices */ = {
 			isa = PBXGroup;
 			children = (
+				61752F302AFB437D007B95C1 /* APIservice.swift */,
 			);
 			path = APIservices;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
 				61752F172AF8C0C5007B95C1 /* ListenBox.swift in Sources */,
+				61752F312AFB437D007B95C1 /* APIservice.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
