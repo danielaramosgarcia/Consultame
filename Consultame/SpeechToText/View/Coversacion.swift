@@ -20,7 +20,8 @@ struct Coversacion: View {
                     
                 }
                 .foregroundColor(Color.gray)
-                .frame(alignment: .leading)
+
+//                .frame(alignment: .leading)
                 .padding(6)
                 Spacer()
             }

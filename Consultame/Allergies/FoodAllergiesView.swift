@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FoodAllergiesView: View {
     var body: some View {
-        Color.red.edgesIgnoringSafeArea(.all)
+        ZStack{
+            Text("hola")
+        }
+        
     }
 }
 

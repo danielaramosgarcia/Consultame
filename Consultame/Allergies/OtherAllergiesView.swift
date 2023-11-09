@@ -9,8 +9,9 @@ import SwiftUI
 
 struct OtherAllergiesView: View {
     var body: some View {
-        Color.green.edgesIgnoringSafeArea(.all)
-        
+        ZStack{
+            Text("hola3")
+        }
     } // body
 }
 
