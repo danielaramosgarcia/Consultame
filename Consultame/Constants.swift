@@ -13,5 +13,5 @@ struct User {
 }
 
 struct Utils {
-    static let colors = ["#7743DB", "#0C356A", "#186F65", "#088395", "#FFBB5C", "#435334", "#252B48"]
+    static let colors = ["bubblegum", "buttercup", "indigo", "lavender", "magenta", "navy", "orange", "oxblood", "periwinkle", "poppy", "purple", "seafom", "sky", "tan", "teal", "yellow"]
 }

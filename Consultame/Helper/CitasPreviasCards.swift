@@ -18,7 +18,7 @@ struct CitasPreviasCards: View {
                 .foregroundColor(backgroundColor)
                 .frame(height: 100)
             HStack{
-                Text("Cita sobre mi Colon")
+                Text("Titulo de la Cita")
                     .padding(.all, 10)
                 //    .foregroundStyle(textColor)
                 Spacer()

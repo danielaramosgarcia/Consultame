@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CardRectangle: View {
-    let backgroundColor = Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+    var backgroundColor : Color{
+        Color(randomColor)
+    }
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .foregroundColor(backgroundColor)
             .frame(height: 100)
-        
     }
 }
 
