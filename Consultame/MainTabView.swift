@@ -9,18 +9,20 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
-            ProfileView()
-                .badge("!")
-                .tabItem {
-                    Label("Perfil", systemImage: "person.crop.circle.fill")
-                }
-        } // TabView
-        .navigationBarBackButtonHidden(true)
+        NavigationView{
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                ProfileView()
+                    .badge("!")
+                    .tabItem {
+                        Label("Perfil", systemImage: "person.crop.circle.fill")
+                    }
+            } // TabView
+            .navigationBarBackButtonHidden(true)
+        }
     }
 }
 

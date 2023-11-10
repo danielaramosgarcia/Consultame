@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var consultations = ConsultationViewModel()
 
     
     @State private var isInCita = false
     
     var body: some View {
-        VStack {
-            
-            Button("+ Empieza una cita"){
-                isInCita = true
+        NavigationView{
+            VStack {
+                NavigationLink{
+                    ContentView()
+                    .navigationBarBackButtonHidden(true) // hide the back button
+                } label: {
+                    BotonEmpezarCita()
+                }
+                CitasPrevias()
             }
-            .buttonStyle(BotonesInicio(buttonColor: Color.black))
-            .padding(.top, 10)
-            .padding(.horizontal, 25)
-        
-        NavigationLink(destination: RegisterView(), isActive: $isInCita){
-            EmptyView()
-        }
-                        
-            CitasPrevias()
-                
-
         }
     }
 }

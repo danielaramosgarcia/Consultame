@@ -31,13 +31,12 @@ struct ContentView: View {
             VStack {
                 // Header with back button, profile picture, and name
                 HStack {
-                    Button(action: {
-                        // Handle back button action
-                    }) {
+                    NavigationLink(destination: MainTabView()){
                         Image(systemName: "arrow.left")
                             .foregroundColor(.blue)
+                            .navigationBarBackButtonHidden(true)
                     }
-
+                    
                     Spacer() // Push the profile picture and name to the middle
 
                     VStack {

@@ -21,9 +21,6 @@ struct BotonEmpezarCita: View {
                     }
                 )
                 .padding(.all, 20)
-                .onTapGesture {
-                    // Function goes here
-                }
         }
     }
 struct BotonEmpezarCita_Previews: PreviewProvider {
