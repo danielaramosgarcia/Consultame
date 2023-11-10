@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    @State private var isInHome = false
     @State var nombreCompleto = ""
     @State var correo = ""
     @State private var contrasena = ""
@@ -45,11 +46,17 @@ struct RegisterView: View {
                             Text(sexo)
                         }
             }
+            
             Button("Registrarme"){
-                // navegacion de paginas
+                isInHome = true
             }
             .buttonStyle(BotonesInicio())
             .padding(.top, 10)
+        
+        NavigationLink(destination: MainTabView(), isActive: $isInHome){
+            EmptyView()
+        }
+            
         }
         .padding()
     }

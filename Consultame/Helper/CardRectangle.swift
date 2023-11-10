@@ -19,6 +19,9 @@ struct CardRectangle: View {
     }
 }
 
-#Preview {
-    CardRectangle()
+
+struct CardRectangle_Previews: PreviewProvider {
+    static var previews: some View {
+        CardRectangle()
+    }
 }

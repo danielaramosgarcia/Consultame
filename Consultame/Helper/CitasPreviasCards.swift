@@ -33,6 +33,8 @@ struct CitasPreviasCards: View {
 
 
 
-#Preview {
-    CitasPreviasCards()
+struct CitasPreviasCards_Previews: PreviewProvider {
+    static var previews: some View {
+        CitasPreviasCards()
+    }
 }

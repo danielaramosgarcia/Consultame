@@ -22,7 +22,7 @@ struct BotonesInicio: ButtonStyle {
             .padding()
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 55)
             .background(buttonColor)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
