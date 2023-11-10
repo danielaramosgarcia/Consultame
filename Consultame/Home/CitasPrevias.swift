@@ -19,8 +19,13 @@ struct CitasPrevias: View {
 
                     .overlay(
                         VStack{
-                            Text("Citas Previas")
-                                .padding(.all, 20)
+                            HStack{
+                                Text("Citas Previas")
+                                    .padding(.all, 20)
+                                    .font(.title)
+                                Spacer()
+                            }
+                            
                             if citasPrevias.isEmpty {
                                 Text("Esta vacio el Array")
                                     .foregroundStyle(.gray)

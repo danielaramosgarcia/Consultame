@@ -59,6 +59,7 @@ struct RegisterView: View {
             
         }
         .padding()
+        .navigationBarHidden(true)
     }
 }
 

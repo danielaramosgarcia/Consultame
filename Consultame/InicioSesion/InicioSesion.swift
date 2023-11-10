@@ -46,6 +46,7 @@ struct InicioSesion: View {
                 
             }
             .padding()
+            .navigationBarBackButtonHidden(true)
         }
 }
     

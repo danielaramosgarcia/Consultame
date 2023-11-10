@@ -27,16 +27,9 @@ struct ContentView: View {
     @State private var newMessage = ""
 
     var body: some View {
-        NavigationView {
             VStack {
                 // Header with back button, profile picture, and name
                 HStack {
-                    NavigationLink(destination: MainTabView()){
-                        Image(systemName: "arrow.left")
-                            .foregroundColor(.blue)
-                            .navigationBarBackButtonHidden(true)
-                    }
-                    
                     Spacer() // Push the profile picture and name to the middle
 
                     VStack {
@@ -104,8 +97,6 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationBarHidden(true) // Hide the default navigation bar
-        }
     }
 
     private func sendMessage() {
