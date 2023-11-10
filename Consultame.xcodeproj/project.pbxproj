@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2596E42AFDD389007CE889 /* ConsultationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E32AFDD389007CE889 /* ConsultationModel.swift */; };
+		5C2596E62AFDD3A0007CE889 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */; };
+		5C2596E72AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
+		5C2596E82AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
+		5C2596E92AFDE9A7007CE889 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
+		5C2596EA2AFDE9A7007CE889 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
 		5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */; };
 		5CBA396A2AFAB3A700E27766 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
 		5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
@@ -97,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C2596E32AFDD389007CE889 /* ConsultationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationModel.swift; sourceTree = "<group>"; };
+		5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
 		5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonEmpezarCita.swift; sourceTree = "<group>"; };
 		5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPrevias.swift; sourceTree = "<group>"; };
 		5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPreviasCards.swift; sourceTree = "<group>"; };
@@ -190,6 +198,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2596E12AFDD049007CE889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C2596E32AFDD389007CE889 /* ConsultationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C2596E22AFDD051007CE889 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		61752F0B2AF88964007B95C1 /* SpeechToText */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +390,10 @@
 		FB7664A52AF17F2C0039AA0E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */,
+				5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */,
+				5C2596E22AFDD051007CE889 /* ViewModels */,
+				5C2596E12AFDD049007CE889 /* Models */,
 				FB8ED3BE2AF1580100DE02FD /* HomeView.swift */,
 			);
 			path = Home;
@@ -432,8 +460,6 @@
 				FB7664AC2AF186440039AA0E /* CommonTextInput.swift */,
 				FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */,
 				5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */,
-				5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */,
-				5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */,
 				5CBA396D2AFC057E00E27766 /* ColorServices.swift */,
 				5CBA39712AFC087700E27766 /* CardRectangle.swift */,
 			);
@@ -685,11 +711,13 @@
 				61752F192AF8C473007B95C1 /* Theme.swift in Sources */,
 				FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */,
 				FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */,
+				5C2596E62AFDD3A0007CE889 /* ConsultationViewModel.swift in Sources */,
 				FB31B8492AF83E0F00AF6A1B /* ContactsListView.swift in Sources */,
 				FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */,
 				FBED78062AF9CEB400B4F5BA /* FamilyDiseaseCard.swift in Sources */,
 				FBED78032AF9CE4500B4F5BA /* AddAllergyToUserView.swift in Sources */,
 				FB7664A12AF17AB10039AA0E /* UserModel.swift in Sources */,
+				5C2596E42AFDD389007CE889 /* ConsultationModel.swift in Sources */,
 				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FBEF4B022ADF591000144664 /* Constants.swift in Sources */,
 				FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */,
@@ -705,6 +733,8 @@
 				61FA75772ADEFF2F00BB6B2A /* ConsultameTests.swift in Sources */,
 				FB7664A22AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */,
+				5C2596E92AFDE9A7007CE889 /* CitasPrevias.swift in Sources */,
+				5C2596E72AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,9 +745,11 @@
 				61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */,
 				FB7664A32AF17AB10039AA0E /* UserModel.swift in Sources */,
 				FB8ED3C12AF1580100DE02FD /* HomeView.swift in Sources */,
+				5C2596EA2AFDE9A7007CE889 /* CitasPrevias.swift in Sources */,
 				FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */,
 				61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */,
 				FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */,
+				5C2596E82AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

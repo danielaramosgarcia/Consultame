@@ -25,7 +25,10 @@ struct CitasPrevias: View {
                                 Text("Esta vacio el Array")
                                     .foregroundStyle(.gray)
                             } else {
+                                
                                 CitasPreviasCards()
+                                CitasPreviasCards()
+                                
                             }
                             Spacer()
                         }

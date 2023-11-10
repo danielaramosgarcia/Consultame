@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    var consultations = ConsultationViewModel()
+
     var body: some View {
         VStack {
             BotonEmpezarCita()
