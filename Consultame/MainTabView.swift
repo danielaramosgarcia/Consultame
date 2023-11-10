@@ -20,7 +20,7 @@ struct MainTabView: View {
                     Label("Perfil", systemImage: "person.crop.circle.fill")
                 }
         } // TabView
-        
+        .navigationBarBackButtonHidden(true)
     }
 }
 

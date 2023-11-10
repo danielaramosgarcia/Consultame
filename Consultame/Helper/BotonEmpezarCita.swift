@@ -26,7 +26,8 @@ struct BotonEmpezarCita: View {
                 }
         }
     }
-
-#Preview {
-    BotonEmpezarCita()
+struct BotonEmpezarCita_Previews: PreviewProvider {
+    static var previews: some View {
+        BotonEmpezarCita()
+    }
 }

@@ -38,7 +38,9 @@ struct CitasPrevias: View {
     }
 
 
-#Preview {
-    
-    CitasPrevias()
+struct CitasPrevias_Previews: PreviewProvider {
+    static var previews: some View {
+        CitasPrevias()
+    }
 }
+
