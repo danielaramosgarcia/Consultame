@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct DrugAllergiesView: View {
-    var body: some View {
-        ZStack{
-            Text("hola2")
-        }
-    } // body
-}
+    let index = 0..<5  // Declara un rango como índice
 
+    var body: some View {
+        VStack {  // Usa VStack para alinear verticalmente
+            ForEach(index, id: \.self) { _ in
+                CardRectangle()
+            }
+        }
+    }
+}
 struct DrugAllergiesView_Previews: PreviewProvider {
     static var previews: some View {
         DrugAllergiesView()

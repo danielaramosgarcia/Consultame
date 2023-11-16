@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct FoodAllergiesView: View {
+    let index = 0..<5  // Declara un rango como índice
+
     var body: some View {
-        ZStack{
-            Text("hola")
+        VStack {  // Usa VStack para alinear verticalmente
+            ForEach(index, id: \.self) { _ in
+                CardRectangle()
+            }
         }
-        
     }
 }
 
