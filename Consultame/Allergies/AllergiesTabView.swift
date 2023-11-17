@@ -32,11 +32,11 @@ struct AllergiesTabView: View {
                         
                         Text(options[index])
                             .font(.subheadline)  // Smaller font size here
-                            .foregroundColor(selectedTab == index ? .blue : .gray)
+                            .foregroundColor(selectedTab == index ? Color("AccentColor") : .gray)
                             .overlay(
                                 selectedTab == index ?
-                                    Rectangle().frame(height: 2).foregroundColor(.blue) :
-                                    Rectangle().frame(height: 0).foregroundColor(.clear),
+                                    Rectangle().frame(height: 2).foregroundColor(Color("AccentColor")) :
+                                    Rectangle().frame(height: 0).foregroundColor(Color("AccentColor")),
                                 alignment: .bottom
                             )
                             .frame(minWidth: 0, maxWidth: .infinity) // This will cause the text to take up equal space

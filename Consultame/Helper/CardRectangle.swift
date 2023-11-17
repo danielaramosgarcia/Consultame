@@ -18,9 +18,13 @@ struct CardRectangle: View {
     }
     var cardHeight: CGFloat = 100
     var body: some View {
+        ZStack{
         RoundedRectangle(cornerRadius: 15)
             .foregroundColor(backgroundColor)
             .frame(height: cardHeight)
+        
+    
+    }
     }
 }
 

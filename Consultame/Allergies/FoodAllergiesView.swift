@@ -13,7 +13,12 @@ struct FoodAllergiesView: View {
     var body: some View {
         VStack {  // Usa VStack para alinear verticalmente
             ForEach(index, id: \.self) { _ in
-                CardRectangle()
+                VStack {
+                    CardRectangle() // Rectangle que representa la tarjeta
+                    
+                
+            
+                }
             }
         }
     }

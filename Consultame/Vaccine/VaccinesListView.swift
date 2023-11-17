@@ -17,7 +17,7 @@ struct VaccinesListView: View {
                 Spacer()
                 NavigationLink(destination: AnyView(AddVaccineToUserView())) {
                     Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.green)
+                        .foregroundColor(.accentColor)
                 }
                 
             } // hstack
