@@ -34,8 +34,8 @@ struct AddAllergyToUserView: View {
                 Text("Alergia")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.top, .trailing, .leading])
-                        .font(.title2)
-                        .fontWeight(.light)
+                        .font(.title)
+                        
                     
                     
                     SearchBar(text: $searchText, placeholder: "Nombre de alergia")
