@@ -50,8 +50,18 @@ class WebSocketManager: ObservableObject {
             
     } // setupSocketEvents
     
-    func sendMessage(_ message: String) {
-        socket.emit("Finish Doctor Message", message)
+    func sendCompleteMessage(_ message: MessageModel) {
+        let messageDict: [String: Any] = [
+                "id": message.id,
+                "message": message.message,
+                "is_starred" : message.is_starred,
+                "is_from_user": message.is_from_user,
+                "created_at" : message.created_at,
+                "consultation_id" : message.consultation_id
+            ]
+        print(messageDict)
+        
+        socket.emit("Send Complete Message", messageDict)
     }
     
     func sendWord(_ word: String) {
@@ -62,9 +72,6 @@ class WebSocketManager: ObservableObject {
         socket.emit("Send Message Being Written by User", message)
     }
     
-    func sendMessageWroteByUser(_ message: String) {
-        socket.emit("Send Message Wrote by User", message)
-    }
     
     deinit {
         socket.disconnect()

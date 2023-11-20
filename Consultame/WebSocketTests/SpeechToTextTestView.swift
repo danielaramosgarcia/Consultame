@@ -62,7 +62,7 @@ struct SpeechToTextTestView: View {
     
     func sendMessage(message: String) {
         // TODO: Aqui tambien se debe de guardar en la base de datos
-        webSocketManager.sendMessage(message)
+//        webSocketManager.sendMessage(message)
         print(message)
     }
     

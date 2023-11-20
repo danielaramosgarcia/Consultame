@@ -71,7 +71,7 @@ struct TextToSpeechTestView: View {
     } // handle Text change
     
     func sendUserMessage() {
-        webSocketManager.sendMessageWroteByUser(actualMessage)
+//        webSocketManager.sendMessageWroteByUser(actualMessage)
         actualMessage = ""
         
         timerStarted = false
