@@ -6,6 +6,7 @@ class WebSocketManager: ObservableObject {
     private var socket: SocketIOClient
     @Published var messages = [(id: UUID, msg: String)]()
     @Published var roomKey: String? = nil
+    @Published var saveMessages: Bool? = nil
     
     init() {
         self.manager = SocketManager(socketURL: URL(string: API.baseURL)!, config: [.log(true), .compress])
@@ -30,11 +31,39 @@ class WebSocketManager: ObservableObject {
                     print("Room key received: \(roomKey)")
                 }
             }
-        }
+        } // room creation
+        
+        socket.on("Save Messages Confirmation") { [weak self] (data, ack) in
+            if let saveMessages = data[0] as? Bool {
+                if(saveMessages) {
+                    print("El doctor aprobo que los mensajes se guardaran en la base de datos")
+                } else {
+                    print("El doctor NO aprobo que los mensajes se guardaran en la base de datos")
+                }
+                DispatchQueue.main.async {
+                    self?.saveMessages = saveMessages
+                }
+            }
+        } // save messages confirmation
+        
+        
+            
     } // setupSocketEvents
     
     func sendMessage(_ message: String) {
-        socket.emit("iOS Client Port", message)
+        socket.emit("Finish Doctor Message", message)
+    }
+    
+    func sendWord(_ word: String) {
+        socket.emit("Send Word to Web", word)
+    }
+    
+    func sendMessageBeingWrittenByUser(_ message: String) {
+        socket.emit("Send Message Being Written by User", message)
+    }
+    
+    func sendMessageWroteByUser(_ message: String) {
+        socket.emit("Send Message Wrote by User", message)
     }
     
     deinit {

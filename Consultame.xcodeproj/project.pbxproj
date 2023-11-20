@@ -67,6 +67,9 @@
 		FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
 		FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */; };
 		FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */; };
+		FB9F77272B0B47EB00210384 /* WebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77262B0B47EB00210384 /* WebSocketTests.swift */; };
+		FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */; };
+		FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */; };
 		FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */; };
 		FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E82B07E935007E55B3 /* AllergiesModel.swift */; };
 		FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */; };
@@ -153,6 +156,9 @@
 		FB8ED3C22AF1581200DE02FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Consultame/Profile/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineModel.swift; path = Consultame/Vaccine/Models/VaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineViewModel.swift; path = Consultame/Vaccine/ViewModels/VaccineViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FB9F77262B0B47EB00210384 /* WebSocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTests.swift; sourceTree = "<group>"; };
+		FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechTestView.swift; sourceTree = "<group>"; };
+		FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextTestView.swift; sourceTree = "<group>"; };
 		FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesCard.swift; sourceTree = "<group>"; };
 		FBA540E82B07E935007E55B3 /* AllergiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModel.swift; sourceTree = "<group>"; };
 		FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonesInicio.swift; sourceTree = "<group>"; };
@@ -501,6 +507,9 @@
 				FBED78102AF9DF1300B4F5BA /* TestWSView.swift */,
 				FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */,
 				FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */,
+				FB9F77262B0B47EB00210384 /* WebSocketTests.swift */,
+				FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */,
+				FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */,
 			);
 			path = WebSocketTests;
 			sourceTree = "<group>";
@@ -648,6 +657,7 @@
 				5CBA396A2AFAB3A700E27766 /* CitasPrevias.swift in Sources */,
 				FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */,
 				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
+				FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */,
 				5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */,
 				5CBA39722AFC087700E27766 /* CardRectangle.swift in Sources */,
 				61CE9AAE2B0AFBFC001FCF8D /* transcripcion.swift in Sources */,
@@ -679,10 +689,12 @@
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */,
+				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
+				FB9F77272B0B47EB00210384 /* WebSocketTests.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
 				FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */,
 				FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */,
