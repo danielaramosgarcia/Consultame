@@ -18,6 +18,7 @@
 		5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
 		5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396D2AFC057E00E27766 /* ColorServices.swift */; };
 		5CBA39722AFC087700E27766 /* CardRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39712AFC087700E27766 /* CardRectangle.swift */; };
+		614E6DC52B0B37A900592B08 /* voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E6DC42B0B37A900592B08 /* voice.swift */; };
 		61752F312AFB437D007B95C1 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F302AFB437D007B95C1 /* APIservice.swift */; };
 		618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E49FE2AE0ED90007681E5 /* SplashScreen.swift */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
@@ -107,6 +108,7 @@
 		5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPreviasCards.swift; sourceTree = "<group>"; };
 		5CBA396D2AFC057E00E27766 /* ColorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorServices.swift; sourceTree = "<group>"; };
 		5CBA39712AFC087700E27766 /* CardRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRectangle.swift; sourceTree = "<group>"; };
+		614E6DC42B0B37A900592B08 /* voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voice.swift; sourceTree = "<group>"; };
 		61752F302AFB437D007B95C1 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 		618E49FE2AE0ED90007681E5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		618E4A002AE195CB007681E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		614E6DC32B0B2F3200592B08 /* TextToSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				614E6DC42B0B37A900592B08 /* voice.swift */,
+			);
+			path = TextToSpeech;
+			sourceTree = "<group>";
+		};
 		61752F2F2AFAE1DD007B95C1 /* APIservices */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				614E6DC32B0B2F3200592B08 /* TextToSpeech */,
 				847BE2782AFE866C00D378A6 /* Chat.swift */,
 				61CE9AA62B0ADE48001FCF8D /* SpeechToT */,
 				61752F2F2AFAE1DD007B95C1 /* APIservices */,
@@ -658,6 +669,7 @@
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
 				847BE2792AFE866C00D378A6 /* Chat.swift in Sources */,
+				614E6DC52B0B37A900592B08 /* voice.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
 				FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */,
 				FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */,
