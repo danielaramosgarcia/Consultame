@@ -8,12 +8,14 @@
 import Foundation
 
 
-struct ConsultationModel : Codable{
-    let no: Int
-    let name: String
-    let duration: Int
-    let date: Date
-    let project: String
-    let owner: String
-    let status: String
+struct ConsultationModel : Codable {
+    let id: Int
+    let name: String?
+    let description: String?
+    let date: Date?
+    let user_id: Int
+    let doctor_id: Int?
+    let hospital_id: Int?
+    let created_at: Date
 }
+

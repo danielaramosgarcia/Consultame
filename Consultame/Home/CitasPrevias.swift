@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CitasPrevias: View {
-    @State var citasPrevias = [1,2,2,3]
+    @State var citasArray = ConsultationViewModel()
     
         var body: some View {
             ZStack{
@@ -26,18 +26,26 @@ struct CitasPrevias: View {
                                 Spacer()
                             }
                             
-                            if citasPrevias.isEmpty {
+                            if citasArray.consultations.isEmpty {
                                 Text("Esta vacio el Array")
                                     .foregroundStyle(.gray)
                             } else {
-                                
-                                CitasPreviasCards()
-                                CitasPreviasCards()
-                                
+                                Text("hay datos compare")
                             }
                             Spacer()
                         }
                     )
+                    .onAppear {
+                        Task {
+                            do {
+                                print("Calling the API")
+                                try await citasArray.getConsultations()
+                            } catch {
+                                // Handle any errors appropriately
+                                print("Error fetching consultations: \(error)")
+                            }
+                        }
+                    }
             }
         }
     }
