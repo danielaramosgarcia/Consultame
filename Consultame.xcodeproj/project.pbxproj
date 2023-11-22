@@ -38,6 +38,9 @@
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
 		847BE2792AFE866C00D378A6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BE2782AFE866C00D378A6 /* Chat.swift */; };
 		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
+		F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */; };
+		F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */; };
+		F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */; };
 		FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */; };
 		FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */; };
 		FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */; };
@@ -137,6 +140,9 @@
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		847BE2782AFE866C00D378A6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
+		F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
+		F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseModel.swift; sourceTree = "<group>"; };
 		FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesListView.swift; sourceTree = "<group>"; };
 		FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCard.swift; sourceTree = "<group>"; };
 		FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactToUserView.swift; sourceTree = "<group>"; };
@@ -346,6 +352,15 @@
 			path = ConsultameUITests;
 			sourceTree = "<group>";
 		};
+		F97AC2E92B0AFDC20072D414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */,
+				F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FB2890A62AF8666900EFEF35 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +529,8 @@
 			children = (
 				FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */,
 				FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */,
+				F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */,
+				F97AC2E92B0AFDC20072D414 /* Models */,
 			);
 			path = FamilyHistory;
 			sourceTree = "<group>";
@@ -672,6 +689,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */,
 				849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */,
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */,
@@ -699,6 +717,7 @@
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
+				F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				61752F232AF8CD21007B95C1 /* CircleButton.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
@@ -712,6 +731,7 @@
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
 				61752F272AF8DAB0007B95C1 /* Coversacion.swift in Sources */,
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
+				F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,

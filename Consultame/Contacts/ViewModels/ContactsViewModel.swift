@@ -17,52 +17,6 @@ class ContactsViewModel : ObservableObject {
     
     let apiService = APIService.shared
 
-//    func getContacts() async throws {
-//        guard let url = URL(string: API.baseURL + "/contacts/" + String(User.user_id)) else {
-//            print("invalid url")
-//            return
-//        }
-//
-//        let urlRequest = URLRequest(url: url)
-//
-//        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-//
-//        guard(response as? HTTPURLResponse)?.statusCode == 200 else {
-//            print("response error")
-//            return
-//        }
-//
-//        let results = try JSONDecoder().decode([ContactModel].self, from: data)
-//
-//        DispatchQueue.main.async {
-//            self.contactsArr = results
-//
-//        }
-//    }
-    
-//    func getContacts() async throws {
-//        guard let url = URL(string: API.baseURL + "/contacts/" + String(User.user_id)) else {
-//            print("invalid url")
-//            return
-//        }
-//
-//        let urlRequest = URLRequest(url: url)
-//
-//        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-//
-//        guard(response as? HTTPURLResponse)?.statusCode == 200 else {
-//            print("response error")
-//            return
-//        }
-//
-//        let results = try JSONDecoder().decode([ContactModel].self, from: data)
-//
-//        DispatchQueue.main.async {
-//            self.contactsArr = results
-//
-//        }
-//    }
-
     func getContacts() async throws {
         let apiService = APIService.shared
         // Don't forget to use your own key
