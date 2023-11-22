@@ -20,7 +20,7 @@ struct HomeView: View {
                 .padding(.top, 50)
                 .padding(.horizontal, 25)
                 
-                NavigationLink(destination: ContentView(), isActive: $isInCita){
+                NavigationLink(destination: transcripcion(), isActive: $isInCita){
                     EmptyView()
                 }
                 
