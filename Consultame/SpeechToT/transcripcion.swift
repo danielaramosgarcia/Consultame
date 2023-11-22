@@ -30,6 +30,7 @@ struct transcripcion: View {
               print("starting")
               self.textValue = "New Text"
               
+            
               player.seek(to: .zero)
               player.play()
 

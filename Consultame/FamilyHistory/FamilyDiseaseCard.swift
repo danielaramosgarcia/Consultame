@@ -23,7 +23,7 @@ struct FamilyDiseaseCard: View {
             .padding(.leading, 10)
 
             HStack {
-                Text("Relacion: ")
+                Text("Relación: ")
                 Text(relationship)
                 Spacer()
             }

@@ -60,7 +60,7 @@ struct TextToSpeechTestView: View {
             
             debounceTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
                 // Enviar el mensaje actual
-                self.webSocketManager.sendMessageBeingWrittenByUser(self.actualMessage)
+//                self.webSocketManager.sendMessageBeingWrittenByUser(self.actualMessage)
                 print(self.actualMessage)
                 
                 // Restablecer el estado del temporizador

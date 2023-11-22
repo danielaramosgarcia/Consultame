@@ -33,6 +33,9 @@
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
 		847BE2792AFE866C00D378A6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BE2782AFE866C00D378A6 /* Chat.swift */; };
 		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
+		F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */; };
+		F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */; };
+		F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */; };
 		FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */; };
 		FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */; };
 		FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */; };
@@ -75,6 +78,7 @@
 		FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77322B0B4C7100210384 /* MessageRowView.swift */; };
 		FB9F77362B0B525100210384 /* DuringConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77352B0B525100210384 /* DuringConsultationViewModel.swift */; };
 		FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77372B0B56C500210384 /* CreateMessageModel.swift */; };
+		FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */; };
 		FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */; };
 		FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E82B07E935007E55B3 /* AllergiesModel.swift */; };
 		FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */; };
@@ -135,6 +139,9 @@
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		847BE2782AFE866C00D378A6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
+		F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
+		F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseModel.swift; sourceTree = "<group>"; };
 		FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesListView.swift; sourceTree = "<group>"; };
 		FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCard.swift; sourceTree = "<group>"; };
 		FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactToUserView.swift; sourceTree = "<group>"; };
@@ -169,6 +176,7 @@
 		FB9F77322B0B4C7100210384 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		FB9F77352B0B525100210384 /* DuringConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringConsultationViewModel.swift; sourceTree = "<group>"; };
 		FB9F77372B0B56C500210384 /* CreateMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageModel.swift; sourceTree = "<group>"; };
+		FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromDoctorView.swift; sourceTree = "<group>"; };
 		FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesCard.swift; sourceTree = "<group>"; };
 		FBA540E82B07E935007E55B3 /* AllergiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModel.swift; sourceTree = "<group>"; };
 		FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonesInicio.swift; sourceTree = "<group>"; };
@@ -332,6 +340,15 @@
 			path = ConsultameUITests;
 			sourceTree = "<group>";
 		};
+		F97AC2E92B0AFDC20072D414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */,
+				F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FB2890A62AF8666900EFEF35 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +493,7 @@
 				FB9F772F2B0B4A1700210384 /* Models */,
 				FB9F772D2B0B49D100210384 /* ChatView.swift */,
 				FB9F77322B0B4C7100210384 /* MessageRowView.swift */,
+				FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */,
 			);
 			path = DuringConsultation;
 			sourceTree = "<group>";
@@ -529,6 +547,8 @@
 			children = (
 				FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */,
 				FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */,
+				F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */,
+				F97AC2E92B0AFDC20072D414 /* Models */,
 			);
 			path = FamilyHistory;
 			sourceTree = "<group>";
@@ -690,6 +710,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */,
 				849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */,
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB9F77362B0B525100210384 /* DuringConsultationViewModel.swift in Sources */,
@@ -711,6 +732,7 @@
 				FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */,
 				FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
+				FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
@@ -719,6 +741,7 @@
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
+				F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
 				847BE2792AFE866C00D378A6 /* Chat.swift in Sources */,
@@ -730,6 +753,7 @@
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
 				61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */,
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
+				F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */,
 				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
@@ -927,7 +951,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Consultame/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4M8Q7FFFV;
+				DEVELOPMENT_TEAM = F5K6AAFN2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Consultame/Info.plist;
@@ -938,6 +962,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,7 +984,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Consultame/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4M8Q7FFFV;
+				DEVELOPMENT_TEAM = F5K6AAFN2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Consultame/Info.plist;
@@ -970,6 +995,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

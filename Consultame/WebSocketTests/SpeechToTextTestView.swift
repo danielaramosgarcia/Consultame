@@ -55,7 +55,7 @@ struct SpeechToTextTestView: View {
     }
     
     func sendWord(word: String) {
-        webSocketManager.sendWord(word)
+//        webSocketManager.sendWord(word)
         
         print(word)
     }
