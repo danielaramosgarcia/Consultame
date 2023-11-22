@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AVFoundation
+import MediaPlayer
 
 struct ChatView: View {
     var webSocketManager: WebSocketManager
@@ -14,11 +16,15 @@ struct ChatView: View {
     @State private var actualPatientMessage = ""
     @State private var patientTimerStarted = false
     @State private var patientDebounceTimer: Timer?
-    let patientWaitTime = 5
+    let waitTime = 3
     
-    
+    @State var synthesizer = AVSpeechSynthesizer()
     
     let consultation_id = 1 // obtenerlo al darle click a la consulta especifica
+    
+    // speech to text
+    @StateObject var speechRecognizer = SpeechRecognizer()
+    @State private var player: AVPlayer = AVPlayer.sharedDingPlayer
     
     
     var body: some View {
@@ -36,6 +42,18 @@ struct ChatView: View {
                         .font(.caption)
                         .foregroundColor(.black)
                 }
+                .onAppear {
+                    // Iniciar la reproducción de audio
+                    player.seek(to: .zero)
+                    player.play()
+                    
+                    // Iniciar la transcripción de voz
+                    speechRecognizer.stopTranscribing()
+                    speechRecognizer.transcribe()
+                }
+                .onDisappear{
+                    speechRecognizer.stopTranscribing()
+                }
                 
                 Spacer()
             }
@@ -48,7 +66,7 @@ struct ChatView: View {
                     MessageRowView(message: message)
                         .contextMenu {
                             Button("Summary") {
-                                // Handle summary action
+                                
                             }
                             
                             Button("Save as Important") {
@@ -58,8 +76,23 @@ struct ChatView: View {
                             Button("Reply") {
                                 // Handle reply action
                             }
+                            
+                            Button("Text to Speech") {
+                                let utterance = AVSpeechUtterance(string: message.message)
+                                
+                                utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.es-MX.Paulina")
+                                utterance.pitchMultiplier = 1.2
+                                utterance.rate = 0.55
+                                synthesizer.speak(utterance)
+                            }
                         }
                 }
+                MessageFromDoctorView(
+                    DuringConsultationVM: DuringConsultationVM,
+                    consultation_id: consultation_id,
+                    webSocketManager: webSocketManager,
+                    waitTime: waitTime,
+                    speechRecognizer: speechRecognizer)
             }
             .padding(.top, -8)
             .padding(.bottom, -8)
@@ -107,14 +140,14 @@ struct ChatView: View {
     } // sendMessage
     
     func handleUserMessageChange(message: String) {
-        if(!patientTimerStarted) {
+        if(!patientTimerStarted && !actualPatientMessage.isEmpty) {
             patientTimerStarted = true
             
             patientDebounceTimer?.invalidate()
             
-            patientDebounceTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(patientWaitTime), repeats: false) { _ in
+            patientDebounceTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(waitTime), repeats: false) { _ in
                 // Enviar el mensaje actual
-                self.webSocketManager.sendMessageBeingWrittenByUser(self.actualPatientMessage)
+                self.webSocketManager.sendMessageBeingWritten(message: self.actualPatientMessage, is_from_user: true)
                 // Restablecer el estado del temporizador
                 self.patientTimerStarted = false
             }

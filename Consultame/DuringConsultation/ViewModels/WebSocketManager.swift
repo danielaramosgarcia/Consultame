@@ -59,17 +59,17 @@ class WebSocketManager: ObservableObject {
                 "created_at" : message.created_at,
                 "consultation_id" : message.consultation_id
             ]
-        print(messageDict)
         
         socket.emit("Send Complete Message", messageDict)
     }
     
-    func sendWord(_ word: String) {
-        socket.emit("Send Word to Web", word)
-    }
-    
-    func sendMessageBeingWrittenByUser(_ message: String) {
-        socket.emit("Send Message Being Written by User", message)
+    func sendMessageBeingWritten(message: String, is_from_user: Bool) {
+        let messageDict: [String: Any] = [
+            "message": message,
+            "is_from_user": is_from_user
+        ]
+        
+        socket.emit("Send Message Being Written", messageDict)
     }
     
     

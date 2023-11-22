@@ -32,7 +32,7 @@ class SpeechRecognizer: ObservableObject {
         }
     }
     
-    @Published var transcript: String = "hhh"
+    @Published var transcript: String = ""
     
     private var audioEngine: AVAudioEngine?
     private var request: SFSpeechAudioBufferRecognitionRequest?
@@ -80,6 +80,7 @@ class SpeechRecognizer: ObservableObject {
                 return
             }
             
+            
             do {
                 let (audioEngine, request) = try Self.prepareEngine()
                 self.audioEngine = audioEngine
@@ -99,6 +100,7 @@ class SpeechRecognizer: ObservableObject {
     
     /// Reset the speech recognizer.
     func reset() {
+        transcript = ""
         task?.cancel()
         audioEngine?.stop()
         audioEngine = nil

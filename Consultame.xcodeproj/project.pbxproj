@@ -78,6 +78,7 @@
 		FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77322B0B4C7100210384 /* MessageRowView.swift */; };
 		FB9F77362B0B525100210384 /* DuringConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77352B0B525100210384 /* DuringConsultationViewModel.swift */; };
 		FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77372B0B56C500210384 /* CreateMessageModel.swift */; };
+		FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */; };
 		FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */; };
 		FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E82B07E935007E55B3 /* AllergiesModel.swift */; };
 		FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */; };
@@ -175,6 +176,7 @@
 		FB9F77322B0B4C7100210384 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		FB9F77352B0B525100210384 /* DuringConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringConsultationViewModel.swift; sourceTree = "<group>"; };
 		FB9F77372B0B56C500210384 /* CreateMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMessageModel.swift; sourceTree = "<group>"; };
+		FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromDoctorView.swift; sourceTree = "<group>"; };
 		FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesCard.swift; sourceTree = "<group>"; };
 		FBA540E82B07E935007E55B3 /* AllergiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModel.swift; sourceTree = "<group>"; };
 		FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonesInicio.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				FB9F772F2B0B4A1700210384 /* Models */,
 				FB9F772D2B0B49D100210384 /* ChatView.swift */,
 				FB9F77322B0B4C7100210384 /* MessageRowView.swift */,
+				FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */,
 			);
 			path = DuringConsultation;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */,
 				FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
+				FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
@@ -947,7 +951,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Consultame/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4M8Q7FFFV;
+				DEVELOPMENT_TEAM = F5K6AAFN2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Consultame/Info.plist;
@@ -958,6 +962,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -979,7 +984,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Consultame/Preview Content\"";
-				DEVELOPMENT_TEAM = Y4M8Q7FFFV;
+				DEVELOPMENT_TEAM = F5K6AAFN2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Consultame/Info.plist;
@@ -990,6 +995,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
