@@ -64,6 +64,7 @@ struct ChatView: View {
             List {
                 ForEach(DuringConsultationVM.messagesArr) { message in
                     MessageRowView(message: message)
+                        .listRowSeparator(.hidden)
                         .contextMenu {
                             Button("Summary") {
                                 
@@ -93,7 +94,10 @@ struct ChatView: View {
                     webSocketManager: webSocketManager,
                     waitTime: waitTime,
                     speechRecognizer: speechRecognizer)
-            }
+                .listRowSeparator(.hidden)
+            } // list
+            .listStyle(PlainListStyle())
+            
             .padding(.top, -8)
             .padding(.bottom, -8)
             
