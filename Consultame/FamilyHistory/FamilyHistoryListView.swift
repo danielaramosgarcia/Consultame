@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FamilyHistoryListView: View {
     let index = 0..<5
-
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+    var backgroundColor : Color{
+        Color(randomColor)
+    }
     var body: some View {
         VStack {
             HStack {
@@ -25,8 +28,11 @@ struct FamilyHistoryListView: View {
             .font(.title)
             
             ForEach(index, id: \.self) { _ in
-                FamilyDiseaseCard(relationship: "Madre", disease: "Asma", color: .cyan)
+                FamilyDiseaseCard(relationship: "Madre", disease: "Asma")
             }
+            .padding(3)
+            .padding(.horizontal,10)
+
             Spacer()
         }
     }

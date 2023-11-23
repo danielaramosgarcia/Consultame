@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct ColumnView: View {
+    var number: Int
+    var label: String
+
+    var body: some View {
+        VStack {
+            Text("\(number)")
+                .font(.title)
+                .fontWeight(.bold)
+            Text(label)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity,  minHeight: 50)
+        .padding(5)
+    }
+}
+
 
 struct ProfileView: View {
     let columns: [GridItem] = [
@@ -30,7 +48,17 @@ struct ProfileView: View {
                         .font(.title)
                 } // ZStack
                 
-                
+                HStack(spacing: 0) {
+                    ColumnView(number: 1, label: "Edad")
+                    Divider().background(Color.gray)
+                    ColumnView(number: 2, label: "Altura (m)")
+                    Divider().background(Color.gray)
+                    ColumnView(number: 3, label: "Peso (kg)")
+                    Divider().background(Color.gray)
+                    ColumnView(number: 4, label: "Sangre")
+                }
+                .padding(10)
+                .frame(height: 100)
                 
                 LazyVGrid(columns: columns, spacing: 10) {
                     SectionCard(text: "Personal", image: "cross.circle", destinationView: AnyView(PersonalView()))

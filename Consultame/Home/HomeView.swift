@@ -23,7 +23,6 @@ struct HomeView: View {
                 NavigationLink(destination: transcripcion(), isActive: $isInCita){
                     EmptyView()
                 }
-                
                 CitasPrevias()
             }
         }
