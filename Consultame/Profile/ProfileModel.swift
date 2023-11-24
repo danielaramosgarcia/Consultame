@@ -19,7 +19,7 @@ struct ProfileModel : Identifiable, Decodable, Hashable {
     var birth_date : String
     var height : String
     var weight : String
-    var blood_type : Blood_typeModel
+    var blood_type : Blood_typeModel?
     var age : Int
     
 }

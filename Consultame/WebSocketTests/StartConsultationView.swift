@@ -33,6 +33,7 @@ struct StartConsultationView: View {
                         .padding()
                 }
                 
+                
                 Button("Saltar") {
                     navigationPath = [.goToNextView]
                 }
@@ -48,6 +49,8 @@ struct StartConsultationView: View {
                     navigationPath = [.goToNextView]
                 }
             }
+            
+            
             .navigationDestination(for: NavigationState.self) { state in
                 switch state {
                 case .goToNextView:
@@ -55,6 +58,7 @@ struct StartConsultationView: View {
                     ChatView(webSocketManager: webSocketManager)
                 }
             }
+            
             
             
         } // navigation stack

@@ -27,6 +27,8 @@ struct ColumnView: View {
 
 
 struct ProfileView: View {
+    @StateObject var ProfileVM = ProfileViewModel()
+    
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),
         GridItem(.flexible(), spacing: 10)
@@ -49,13 +51,13 @@ struct ProfileView: View {
                 } // ZStack
                 
                 HStack(spacing: 0) {
-                    ColumnView(number: 1, label: "Edad")
+                    ColumnView(number: ProfileVM.profile.age, label: "Edad")
                     Divider().background(Color.gray)
-                    ColumnView(number: 2, label: "Altura (m)")
+                    ColumnView(number: ProfileVM.profile.height, label: "Altura (m)")
                     Divider().background(Color.gray)
-                    ColumnView(number: 3, label: "Peso (kg)")
+                    ColumnView(number: 55, label: "Peso (kg)")
                     Divider().background(Color.gray)
-                    ColumnView(number: 4, label: "Sangre")
+                    ColumnView(number: 2, label: "Sangre")
                 }
                 .padding(10)
                 .frame(height: 100)
@@ -77,7 +79,14 @@ struct ProfileView: View {
                 
             } // VStack
             
-        } // navigation stack
+        }
+        .task {
+            do {
+                try await ProfileVM.getProfile()
+            } catch {
+                print("error")
+            }
+        }// navigation stack
     }
 }
 
