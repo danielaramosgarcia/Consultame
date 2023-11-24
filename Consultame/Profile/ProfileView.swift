@@ -53,7 +53,7 @@ struct ProfileView: View {
                 HStack(spacing: 0) {
                     ColumnView(number: ProfileVM.profile.age, label: "Edad")
                     Divider().background(Color.gray)
-                    ColumnView(number: ProfileVM.profile.height, label: "Altura (m)")
+                    ColumnView(number: 2, label: "Altura (m)")
                     Divider().background(Color.gray)
                     ColumnView(number: 55, label: "Peso (kg)")
                     Divider().background(Color.gray)
