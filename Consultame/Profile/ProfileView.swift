@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ColumnView: View {
-    var number: Int
+    var number: Int?
+    var string : String?
     var label: String
 
     var body: some View {
         VStack {
-            Text("\(number)")
-                .font(.title)
-                .fontWeight(.bold)
+            if let actualNumber = number {
+                Text("\(actualNumber)")
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+
+            if let actualString = string {
+                Text(actualString)
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
             Text(label)
                 .font(.subheadline)
                 .foregroundColor(.gray)
@@ -39,13 +48,13 @@ struct ProfileView: View {
         NavigationStack {
             
             VStack {
-                Text(User.user_name)
+                Text(ProfileVM.profile.contact_name)
                     .font(.title)
                 ZStack{
                     Circle()
                         .fill(Color.purple)
                         .frame(width:120)
-                    Text(String(User.user_name.first ?? " " ))
+                    Text(String(ProfileVM.profile.contact_name.first ?? " " ))
                         .foregroundColor(.white)
                         .font(.title)
                 } // ZStack
@@ -53,11 +62,11 @@ struct ProfileView: View {
                 HStack(spacing: 0) {
                     ColumnView(number: ProfileVM.profile.age, label: "Edad")
                     Divider().background(Color.gray)
-                    ColumnView(number: 2, label: "Altura (m)")
+                    ColumnView(string: ProfileVM.profile.height, label: "Altura (m)")
                     Divider().background(Color.gray)
-                    ColumnView(number: 55, label: "Peso (kg)")
+                    ColumnView(string: ProfileVM.profile.weight, label: "Peso (kg)")
                     Divider().background(Color.gray)
-                    ColumnView(number: 2, label: "Sangre")
+                    ColumnView(string: ProfileVM.profile.blood_type.type, label: "Sangre")
                 }
                 .padding(10)
                 .frame(height: 100)
@@ -73,8 +82,6 @@ struct ProfileView: View {
                 .padding()
                 
                 Spacer()
-
-                
                 
                 
             } // VStack
