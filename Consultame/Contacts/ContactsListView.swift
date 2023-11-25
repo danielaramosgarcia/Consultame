@@ -10,7 +10,10 @@ import SwiftUI
 struct ContactsListView: View {
     @StateObject var ContactsVM = ContactsViewModel()
 //    @State var contacts:ContactModel? = nil
-
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+//    var backgroundColor : Color{
+//        Color(randomColor)
+//    }
     var body: some View {
         VStack {
             HStack {
@@ -33,9 +36,9 @@ struct ContactsListView: View {
             } else {
                 List {
                     ForEach(ContactsVM.contactsArr, id: \.id) { contact in
-                        let colorIndex = contact.id % Utils.colors.count
-                        let hexColor = Utils.colors[colorIndex]
-                        let color = Color(hex: hexColor)
+//                        let colorIndex = contact.id % Utils.colors.count
+//                        let hexColor = Utils.colors[colorIndex]
+                        let color = Color(randomColor)
                         HStack {
                             ZStack{
                                 Circle()

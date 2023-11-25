@@ -21,6 +21,8 @@
 		614E6DC52B0B37A900592B08 /* voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E6DC42B0B37A900592B08 /* voice.swift */; };
 		61752F312AFB437D007B95C1 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F302AFB437D007B95C1 /* APIservice.swift */; };
 		618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E49FE2AE0ED90007681E5 /* SplashScreen.swift */; };
+		61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AE82B0F2DDB0044ECD1 /* ProfileViewModel.swift */; };
+		61C53AEB2B0F2E010044ECD1 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AEA2B0F2E010044ECD1 /* ProfileModel.swift */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
 		61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */; };
 		61CE9AAC2B0AFBA1001FCF8D /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61CE9AAB2B0AFBA1001FCF8D /* ding.wav */; };
@@ -124,6 +126,8 @@
 		61752F302AFB437D007B95C1 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 		618E49FE2AE0ED90007681E5 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		618E4A002AE195CB007681E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		61C53AE82B0F2DDB0044ECD1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		61C53AEA2B0F2E010044ECD1 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		61CE9AAB2B0AFBA1001FCF8D /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -248,6 +252,14 @@
 				61752F302AFB437D007B95C1 /* APIservice.swift */,
 			);
 			path = APIservices;
+			sourceTree = "<group>";
+		};
+		61C53AE72B0F2DB80044ECD1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61C53AE82B0F2DDB0044ECD1 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		61CE9AA62B0ADE48001FCF8D /* SpeechToT */ = {
@@ -393,8 +405,10 @@
 		FB7664A42AF17EC70039AA0E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				61C53AE72B0F2DB80044ECD1 /* ViewModel */,
 				FB76649C2AF1739F0039AA0E /* SectionCard.swift */,
 				FB8ED3C22AF1581200DE02FD /* ProfileView.swift */,
+				61C53AEA2B0F2E010044ECD1 /* ProfileModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -740,6 +754,7 @@
 				FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
+				61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
 				F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
@@ -751,6 +766,7 @@
 				FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */,
 				FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
+				61C53AEB2B0F2E010044ECD1 /* ProfileModel.swift in Sources */,
 				61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */,
 				FB2890AD2AF86BB300EFEF35 /* FoodAllergiesView.swift in Sources */,
 				F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */,

@@ -9,50 +9,40 @@ import SwiftUI
 struct FamilyDiseaseCard: View {
     let relationship: String
     let disease: String
-    let color : Color
-
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+    var backgroundColor : Color{
+        Color(randomColor)
+    }
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
             HStack {
                 Text("Asma")
+                    .font(.title2)
+                    .fontWeight(.bold)
                 Spacer()
-            } // HStack
-            .font(.title2)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .padding(.leading, 10)
-
-            HStack {
                 Text("Relación: ")
                 Text(relationship)
-                Spacer()
-            }
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .padding(.leading, 10)
-
+            } // HStack
+            .foregroundColor(.black)
             HStack {
                 Text("Diagnosticado: 32/11/2003")
                 Spacer()
             } // hstack
-            .foregroundColor(.white)
-            .padding(.top, 10)
+            .foregroundColor(.black)
 
 
-        } // VStack
+        }
+        .padding(.leading, 10)
+// VStack
         .padding()
         .frame(maxWidth: .infinity)
-        .background(color)
+        .background(backgroundColor)
         .cornerRadius(15)
-
-
-
-
     } // body
 }
 
 struct FamilyDiseaseCard_Previews: PreviewProvider {
     static var previews: some View {
-        FamilyDiseaseCard(relationship: "Madre", disease: "Asma", color: .cyan)
+        FamilyDiseaseCard(relationship: "Madre", disease: "Asma")
     }
 }
