@@ -23,6 +23,7 @@
 		618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E49FE2AE0ED90007681E5 /* SplashScreen.swift */; };
 		61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AE82B0F2DDB0044ECD1 /* ProfileViewModel.swift */; };
 		61C53AEB2B0F2E010044ECD1 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AEA2B0F2E010044ECD1 /* ProfileModel.swift */; };
+		61C53AED2B12C8640044ECD1 /* PersonalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AEC2B12C8640044ECD1 /* PersonalModel.swift */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
 		61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */; };
 		61CE9AAC2B0AFBA1001FCF8D /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61CE9AAB2B0AFBA1001FCF8D /* ding.wav */; };
@@ -37,7 +38,6 @@
 		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
 		F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */; };
 		F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */; };
-		F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */; };
 		FB1C5EB32AF5720E00EA7EDA /* VaccinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */; };
 		FB1C5EB52AF576CF00EA7EDA /* VaccineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */; };
 		FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */; };
@@ -128,6 +128,7 @@
 		618E4A002AE195CB007681E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		61C53AE82B0F2DDB0044ECD1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		61C53AEA2B0F2E010044ECD1 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		61C53AEC2B12C8640044ECD1 /* PersonalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalModel.swift; sourceTree = "<group>"; };
 		61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		61CE9AAB2B0AFBA1001FCF8D /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
 		F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
-		F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseModel.swift; sourceTree = "<group>"; };
 		FB1C5EB22AF5720E00EA7EDA /* VaccinesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesListView.swift; sourceTree = "<group>"; };
 		FB1C5EB42AF576CF00EA7EDA /* VaccineCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCard.swift; sourceTree = "<group>"; };
 		FB2890A42AF84DB900EFEF35 /* AddContactToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactToUserView.swift; sourceTree = "<group>"; };
@@ -356,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */,
-				F97AC2E72B0AFDBB0072D414 /* DiseaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -571,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */,
+				61C53AEC2B12C8640044ECD1 /* PersonalModel.swift */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -725,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */,
+				61C53AED2B12C8640044ECD1 /* PersonalModel.swift in Sources */,
 				849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */,
 				618E49FF2AE0ED90007681E5 /* SplashScreen.swift in Sources */,
 				FB9F77362B0B525100210384 /* DuringConsultationViewModel.swift in Sources */,
@@ -756,7 +757,6 @@
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
 				61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
-				F97AC2E82B0AFDBB0072D414 /* DiseaseModel.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
 				847BE2792AFE866C00D378A6 /* Chat.swift in Sources */,
