@@ -7,12 +7,21 @@
 
 import Foundation
 
+struct Chronic_Disease : Identifiable, Decodable, Hashable {
+    var id : Int
+    var name : String
+}
+
+struct Relationship : Identifiable, Decodable, Hashable {
+    var id : Int
+    var type : String
+}
+
+
 struct FamilyModel : Identifiable, Decodable, Hashable {
     var id : Int
-    var chronic_disease_id : Int
     var diagnosis_date : String
-    var relationship_id : Int
     var description : String?
-    var user_id : Int
-    var disease : DiseaseModel
+    var chronic_disease : Chronic_Disease
+    var relationship : Relationship
 }

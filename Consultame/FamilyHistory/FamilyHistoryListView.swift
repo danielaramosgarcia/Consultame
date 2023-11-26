@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FamilyHistoryListView: View {
-    let index = 0..<5
+    @StateObject var FamilyVM = FamilyViewModel()
     var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
     var backgroundColor : Color{
         Color(randomColor)
@@ -26,16 +26,38 @@ struct FamilyHistoryListView: View {
             } // hstack
             .padding()
             .font(.title)
-            
-            ForEach(index, id: \.self) { _ in
-                FamilyDiseaseCard(relationship: "Madre", disease: "Asma")
+            VStack{
+                if FamilyVM.familyArray.isEmpty {
+                    Text("No tienes antecedente familiar guardado")
+                        .foregroundColor(.gray)
+                        .padding()
+                } else {
+                    List {
+                        ForEach(FamilyVM.familyArray, id: \.id) { family in
+                            //                        let colorIndex = contact.id % Utils.colors.count
+                            //                        let hexColor = Utils.colors[colorIndex]
+//                            let color = Color(randomColor)
+                            FamilyDiseaseCard(relationship: family.relationship.type, chronic_disease: family.chronic_disease.name, diagnosis_date: family.diagnosis_date, description: family.description)
+                        }
+                        .listRowSeparator(.hidden)
+// for each
+                    } // list
+                    .listStyle(.plain)
+                } // else
+                Spacer()
             }
-            .padding(3)
-            .padding(.horizontal,10)
+            .animation(.default)
+            .task {
+                do {
+                    try await FamilyVM.getFamily()
+                } catch {
+                    print("error")
+                }
+            }
 
-            Spacer()
         }
     }
+    
 }
 struct FamilyHistoryListView_Previews: PreviewProvider {
     static var previews: some View {

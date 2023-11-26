@@ -48,13 +48,13 @@ struct ProfileView: View {
         NavigationStack {
             
             VStack {
-                Text(ProfileVM.profile.contact_name)
+                Text(ProfileVM.profile.name)
                     .font(.title)
                 ZStack{
                     Circle()
                         .fill(Color.purple)
                         .frame(width:120)
-                    Text(String(ProfileVM.profile.contact_name.first ?? " " ))
+                    Text(String(ProfileVM.profile.name.first ?? " " ))
                         .foregroundColor(.white)
                         .font(.title)
                 } // ZStack
@@ -62,7 +62,7 @@ struct ProfileView: View {
                 HStack(spacing: 0) {
                     ColumnView(number: ProfileVM.profile.age, label: "Edad")
                     Divider().background(Color.gray)
-                    ColumnView(string: ProfileVM.profile.height, label: "Altura (m)")
+                    ColumnView(string: ProfileVM.profile.height, label: "Altura (cm)")
                     Divider().background(Color.gray)
                     ColumnView(string: ProfileVM.profile.weight, label: "Peso (kg)")
                     Divider().background(Color.gray)
@@ -76,7 +76,7 @@ struct ProfileView: View {
                     SectionCard(text: "Contactos", image: "person", destinationView: AnyView(ContactsListView()))
                     SectionCard(text: "Hábitos", image: "brain.head.profile", destinationView: AnyView(HabitsListView()))
                     SectionCard(text: "Alergías", image: "allergens", destinationView: AnyView(AllergiesTabView()))
-                    SectionCard(text: "Familiares", image: "person.2", destinationView: AnyView(FamilyHistoryListView()))
+                    SectionCard(text: "Historial Fam", image: "person.2", destinationView: AnyView(FamilyHistoryListView()))
                     SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
                 }
                 .padding()
