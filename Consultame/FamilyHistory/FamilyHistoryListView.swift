@@ -38,7 +38,9 @@ struct FamilyHistoryListView: View {
                             //                        let hexColor = Utils.colors[colorIndex]
 //                            let color = Color(randomColor)
                             FamilyDiseaseCard(relationship: family.relationship.type, chronic_disease: family.chronic_disease.name, diagnosis_date: family.diagnosis_date, description: family.description)
-                        } // for each
+                        }
+                        .listRowSeparator(.hidden)
+// for each
                     } // list
                     .listStyle(.plain)
                 } // else
