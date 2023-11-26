@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VaccinesListView: View {
     @StateObject var VaccineVM = VaccineViewModel()
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -31,12 +31,12 @@ struct VaccinesListView: View {
             } else {
                 List {
                     ForEach(VaccineVM.userVaccineArr, id: \.vaccine_id) { userVaccine in
-                        let colorIndex = userVaccine.vaccine_id % Utils.colors.count
-                        let hexColor = Utils.colors[colorIndex]
-                        let color = Color(hex: hexColor)
+//                        let colorIndex = userVaccine.vaccine_id % Utils.colors.count
+//                        let hexColor = Utils.colors[colorIndex]
+//                        let color = Color(hex: hexColor)
                         if let date = userVaccine.vaccination_date.toDate() {
                             let formattedDate = date.toString()
-                            VaccineCard(vaccineName: userVaccine.vaccine.name, vaccineDate: formattedDate, color: color)
+                            VaccineCard(vaccineName: userVaccine.vaccine.name, vaccineDate: formattedDate)
                                 .listRowSeparator(.hidden)
                         }
                     } // for each

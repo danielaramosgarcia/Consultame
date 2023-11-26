@@ -10,15 +10,17 @@ import SwiftUI
 struct VaccineCard: View {
     let vaccineName: String
     let vaccineDate: String
-    let color : Color
     
-    
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+    var backgroundColor : Color{
+        Color(randomColor)
+    }
     var body: some View {
         VStack(spacing: 10) {
             HStack {
                 Text(vaccineName)
                     .font(.title2)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 Spacer()
             } // hstack
             .padding(.leading, 10)
@@ -32,21 +34,21 @@ struct VaccineCard: View {
             } // hstack
             .padding(.leading, 10)
             .font(.caption)
-            .foregroundColor(.white.opacity(0.8))
+            .foregroundColor(.black.opacity(0.8))
                     
                     
                     
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(color)
+                .background(backgroundColor)
                 .cornerRadius(15)
             }
 }
 
 struct VaccineCard_Previews: PreviewProvider {
     static var previews: some View {
-        VaccineCard(vaccineName: "Hepatitis B", vaccineDate: "03/11/23", color: .pink)
+        VaccineCard(vaccineName: "Hepatitis B", vaccineDate: "03/11/23")
             .padding()
             }
 }
