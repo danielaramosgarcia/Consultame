@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CitasPreviasCards: View {
-    var rectangle = CardRectangle(cardHeight: 70)
     var cita: ConsultationModel
+    var rectangle = CardRectangle(cardHeight: 70)
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -22,11 +22,11 @@ struct CitasPreviasCards: View {
         ZStack {
             rectangle
             HStack{
-                Text(cita.name)
+                Text(cita.name ?? "No Name Found")
                     .padding(.all, 10)
                     .foregroundStyle(rectangle.textColor)
                 Spacer()
-                Text(dateFormatter.string(from: cita.date))
+                Text(cita.formatted_date)
                     .padding(.all, 10)
                     .foregroundStyle(rectangle.textColor)
             }
@@ -34,21 +34,23 @@ struct CitasPreviasCards: View {
     }
 }
 
+
 struct CitasPreviasCards_Previews: PreviewProvider {
     static var previews: some View {
-        // Declare and define a sample ConsultationModel
-        let sampleCita = ConsultationModel(no: 1,
+        // Declare and define a sample ConsultationModel correctly
+        let sampleCita = ConsultationModel(id: 1,
                                            name: "Sample Consultation",
-                                           duration: 60,
+                                           description: "Sample Description",
                                            date: Date(),
-                                           project: "Sample Project",
-                                           owner: "Owner Name",
-                                           status: "Pending")
+                                           user_id: 1,
+                                           doctor_id: 1,
+                                           hospital_id: 1,
+                                           created_at: "\(Date())")
 
-        // Pass the sample data to CitasPreviasCards using the correct parameter name
         CitasPreviasCards(cita: sampleCita)
     }
 }
+
 
 
 
