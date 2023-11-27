@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FamilyCoverView: View {
+struct PersonalCoverView: View {
     var body: some View {
         
         VStack{
@@ -30,7 +30,7 @@ struct FamilyCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(FamilyQuestionsView())
+                destinationView: AnyView(PersonalQuestionsView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)
@@ -40,16 +40,19 @@ struct FamilyCoverView: View {
                 borderColor : Color("AccentColor"),
                 text : "Saltar",
                 textColor : Color("AccentColor"),
-                destinationView: AnyView(MainTabView())
+                destinationView: AnyView(ContactsCoverView())
             )
             .bold()
             .padding(.top, 20)
             .padding(.horizontal, 60)
+            .navigationBarBackButtonHidden(true)
         }
-       
     }
 }
 
-#Preview {
-    FamilyCoverView()
+struct PersonalCoverView_Previews: PreviewProvider {
+    static var previews: some View {
+        PersonalCoverView()
+    }
 }
+
