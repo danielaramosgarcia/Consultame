@@ -67,6 +67,7 @@ struct StartConsultationView: View {
             
             
         } // navigation stack
+        .navigationBarBackButtonHidden(true)
     } // body
         
 }

@@ -43,16 +43,15 @@ struct AppointmentNameView: View {
                     borderColor: Color.clear,
                     text: "Siguiente",
                     textColor: Color.white,
+                    destinationView: AnyView(StartConsultationView()),
                     action: {
                         if appointmentName.isEmpty {
                             showError = true
                         } else {
                             let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
                             createConsultation(consultation: newConsultation)
-                            // shouldNavigate logic would be handled by the navigation action of CustomButton
                         }
-                    },
-                    destinationView: AnyView(StartConsultationView()) // Maintained from the incoming change
+                    }
                 )
                 .padding(.top, 50)
                 .padding(.horizontal, 25)
