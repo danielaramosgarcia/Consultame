@@ -9,13 +9,13 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State private var isInHome = false
     @State var nombreCompleto = ""
     @State var correo = ""
     @State private var contrasena = ""
     @State private var contrasenaRepetida = ""
     @State var sexo = ""
     let opcionesSexo = ["Hombre", "Mujer", "No especificar"]
+    
     var body: some View {
         VStack {
             Image("register")
