@@ -7,7 +7,7 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 NavigationLink(
-                    destination: StartConsultationView(),
+                    destination: AppointmentNameView(),
                     isActive: $isInCita,
                     label: { EmptyView() }
                 )

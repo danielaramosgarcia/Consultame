@@ -43,5 +43,49 @@ completion: @escaping (Result<T,APIError>) -> Void) {
             
         }.resume()
     }
+    public func postJSON<T: Decodable, U: Encodable>(
+        urlString: String,
+        requestBody: U,
+        completion: @escaping (Result<T, APIError>) -> Void
+    ) {
+        guard let url = URL(string: urlString) else {
+            completion(.failure(.error("Error: Invalid URL")))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(requestBody)
+            request.httpBody = jsonData
+        } catch {
+            completion(.failure(.error("Error: Encoding request body")))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(.failure(.error("Error: \(error.localizedDescription)")))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.error(NSLocalizedString("Error: Data us corrupt.", comment: ""))))
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let decodedData = try decoder.decode(T.self, from: data)
+                completion(.success(decodedData))
+                return
+            } catch let decodingError {
+                completion(.failure(APIError.error("Error: \(decodingError.localizedDescription)... ")))
+                return
+            }
+        }.resume()
+    }
+
 }
 
