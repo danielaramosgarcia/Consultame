@@ -49,7 +49,9 @@ struct FamilyCoverView: View {
        
     }
 }
-
-#Preview {
-    FamilyCoverView()
+struct FamilyCoverView_Previews: PreviewProvider {
+    static var previews: some View {
+        FamilyCoverView()
+    }
 }
+

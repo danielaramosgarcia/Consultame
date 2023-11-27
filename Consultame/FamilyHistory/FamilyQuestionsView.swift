@@ -63,6 +63,8 @@ struct FamilyQuestionsView: View {
     }
 }
 
-#Preview {
-    FamilyQuestionsView()
+struct FamilyQuestionsView_Previews: PreviewProvider {
+    static var previews: some View {
+        FamilyQuestionsView()
+    }
 }
