@@ -17,9 +17,6 @@ struct WelcomPageView: View {
         RectangleInfo(title: "Tu historial", description: "Manten un registro de diagnosticos, recomendaciones y planes de tratamiento, todo en un solo lugar para un seguimiento eficaz y una mejor comprension de tu salud", imageName: "Done")
     ]
     
-    @State private var isRegister = false
-    @State private var isLogIn = false
-    
     var body: some View {
         NavigationView{
             
@@ -71,32 +68,32 @@ struct WelcomPageView: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
-                Button("Registrarse"){
-                    isRegister = true
-                }
-                .buttonStyle(BotonesInicio())
+                CustomButton(
+                    buttonColor : Color("AccentColor"),
+                    borderColor : Color.clear,
+                    text : "Registrarse",
+                    textColor : Color.white,
+                    destinationView: AnyView(RegisterView())
+                )
                 .padding(.top, 10)
                 .padding(.horizontal, 100)
-            
-                NavigationLink(destination: RegisterView(), isActive: $isRegister){
-                    EmptyView()
-                }
                 
-                Button("Ya tengo cuenta"){
-                    isLogIn = true
-                }
-                .buttonStyle(BotonesInicio(buttonColor: Color("DarkGray")))
+                CustomButton(
+                    buttonColor : Color("DarkGray"),
+                    borderColor : Color.clear,
+                    text : "Ya tengo cuenta",
+                    textColor : Color.white,
+                    destinationView: AnyView(InicioSesion())
+                )
                 .padding(.top, 10)
+                .padding(.bottom, 15)
                 .padding(.horizontal, 100)
-            
-                NavigationLink(destination: InicioSesion(), isActive: $isLogIn){
-                    EmptyView()
-                }
                 
-
-                }
+                
                 
             }
+            
+        }
         
     }
 }

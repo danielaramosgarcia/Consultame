@@ -11,7 +11,6 @@ struct InicioSesion: View {
     
     @State var username = ""
     @State private var password = ""
-    @State private var isInHome = false
     
     var body: some View {
             VStack {
@@ -32,21 +31,19 @@ struct InicioSesion: View {
                     .textFieldStyle(CommonTextInput(iconImage: "lock"))
                     .padding(.horizontal, 30)
                 
-                Button("Ingresar"){
-                    isInHome = true
-                }
-                .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
-                .padding(.top, 10)
+                CustomButton(
+                    buttonColor : Color("AccentColor"),
+                    borderColor : Color.clear,
+                    text : "Ingresar",
+                    textColor : Color.white,
+                    destinationView: AnyView(MainTabView())
+                )
+                .padding(.top, 40)
                 .padding(.horizontal, 100)
-            
-            NavigationLink(destination: MainTabView(), isActive: $isInHome){
-                EmptyView()
-            }
-                
+
                 
             }
             .padding()
-            .navigationBarBackButtonHidden(true)
         }
 }
     

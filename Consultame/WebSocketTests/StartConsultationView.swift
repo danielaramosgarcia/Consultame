@@ -19,6 +19,12 @@ struct StartConsultationView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             VStack {
+                Image("doctor")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 180)
+                    .padding()
+                
                 Text("Inicio de consulta")
                     .font(.title)
                 Text("Proporciona la siguiente clave a tu medico")
@@ -33,12 +39,12 @@ struct StartConsultationView: View {
                         .padding()
                 }
                 
-                
                 Button("Saltar") {
                     navigationPath = [.goToNextView]
                 }
                 .buttonStyle(BotonesInicio())
                 .padding(.horizontal, 30)
+                .padding(.top, 70)
                 
                 
                 
@@ -61,7 +67,6 @@ struct StartConsultationView: View {
             
             
         } // navigation stack
-        .navigationBarBackButtonHidden(true)
     } // body
         
 }
