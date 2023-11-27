@@ -37,15 +37,15 @@ struct AppointmentNameView: View {
                     .background(Color.white)
                     .cornerRadius(8)
                 Button(action: {
-//                    if appointmentName.isEmpty {
-//                        showError = true
-                   // } else {
+                    if appointmentName.isEmpty {
+                        showError = true
+                    } else {
                         
-//                        let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
-//                        createConsultation(consultation: newConsultation)
+                        let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
+                        createConsultation(consultation: newConsultation)
                         shouldNavigate = true
                         
-//                    }
+                    }
                 }) {
                     Text("Siguiente")
                         .foregroundColor(.white)
