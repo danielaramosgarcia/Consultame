@@ -8,17 +8,17 @@
 import Foundation
 
 struct ConsultationModel: Codable, Identifiable {
-    let id: Int
-    let name: String?
+    let id: Int?
+    let name: String? // Para crear una consulta necesito esto
     let description: String?
     let date: Date?
-    let user_id: Int?
+    let user_id: Int? // Para crear una consulta necesito esto
     let doctor_id: Int?
     let hospital_id: Int?
     let created_at: String?
     var processedCreatedAt: String?
-
-    var formatted_date: String {
+    
+    var formatted_date: String? {
         let displayFormatter = DateFormatter()
         displayFormatter.dateFormat = "MMM dd, yyyy"
 
@@ -33,6 +33,7 @@ struct ConsultationModel: Codable, Identifiable {
         
         return displayFormatter.string(from: date)
     }
+    var messages: MessageModel?
 }
 
 

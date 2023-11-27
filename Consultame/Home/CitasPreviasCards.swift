@@ -26,7 +26,7 @@ struct CitasPreviasCards: View {
                     .padding(.all, 10)
                     .foregroundStyle(rectangle.textColor)
                 Spacer()
-                Text(cita.formatted_date)
+                Text(cita.formatted_date ?? "")
                     .padding(.all, 10)
                     .foregroundStyle(rectangle.textColor)
             }

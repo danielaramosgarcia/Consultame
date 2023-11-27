@@ -13,6 +13,8 @@
 		5C2596E82AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
 		5C2596E92AFDE9A7007CE889 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
 		5C2596EA2AFDE9A7007CE889 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
+		5C8236322B1408AD003742AA /* QuestionarioInicialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8236312B1408AD003742AA /* QuestionarioInicialView.swift */; };
+		5C8236342B140D08003742AA /* creaConsulta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8236332B140D08003742AA /* creaConsulta.swift */; };
 		5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */; };
 		5CBA396A2AFAB3A700E27766 /* CitasPrevias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */; };
 		5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
@@ -120,6 +122,8 @@
 /* Begin PBXFileReference section */
 		5C2596E32AFDD389007CE889 /* ConsultationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationModel.swift; sourceTree = "<group>"; };
 		5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
+		5C8236312B1408AD003742AA /* QuestionarioInicialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarioInicialView.swift; sourceTree = "<group>"; };
+		5C8236332B140D08003742AA /* creaConsulta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creaConsulta.swift; sourceTree = "<group>"; };
 		5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonEmpezarCita.swift; sourceTree = "<group>"; };
 		5CBA39692AFAB3A700E27766 /* CitasPrevias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPrevias.swift; sourceTree = "<group>"; };
 		5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPreviasCards.swift; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 				5CBA39672AFAB1A100E27766 /* BotonEmpezarCita.swift */,
 				5CBA396D2AFC057E00E27766 /* ColorServices.swift */,
 				5CBA39712AFC087700E27766 /* CardRectangle.swift */,
+				5C8236332B140D08003742AA /* creaConsulta.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				FB9F772D2B0B49D100210384 /* ChatView.swift */,
 				FB9F77322B0B4C7100210384 /* MessageRowView.swift */,
 				FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */,
+				5C8236312B1408AD003742AA /* QuestionarioInicialView.swift */,
 			);
 			path = DuringConsultation;
 			sourceTree = "<group>";
@@ -768,7 +774,9 @@
 				FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */,
 				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
 				FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */,
+				5C8236322B1408AD003742AA /* QuestionarioInicialView.swift in Sources */,
 				5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */,
+				5C8236342B140D08003742AA /* creaConsulta.swift in Sources */,
 				61C53AEF2B12CD8C0044ECD1 /* HabitsModel.swift in Sources */,
 				5CBA39722AFC087700E27766 /* CardRectangle.swift in Sources */,
 				61CE9AAE2B0AFBFC001FCF8D /* transcripcion.swift in Sources */,

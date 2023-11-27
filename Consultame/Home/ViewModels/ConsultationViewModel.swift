@@ -21,7 +21,6 @@ class ConsultationViewModel: ObservableObject {
         apiService.getJSON(urlString: API.baseURL + "/consultation/\(User.user_id)") { (result: Result<[ConsultationModel],APIService.APIError>) in
             switch result {
             case .success(let consultationsArr):
-                print("success")
                 DispatchQueue.main.async {
                     self.consultations = consultationsArr
                 }
@@ -30,7 +29,6 @@ class ConsultationViewModel: ObservableObject {
                 case .error(let errorString):
                     DispatchQueue.main.async {
                         self.apiError = errorString
-                        print("Error")
                         print(errorString)
                     }
                 }

@@ -50,7 +50,6 @@ struct StartConsultationView: View {
                 }
             }
             
-            
             .navigationDestination(for: NavigationState.self) { state in
                 switch state {
                 case .goToNextView:
@@ -62,7 +61,9 @@ struct StartConsultationView: View {
             
             
         } // navigation stack
+        .navigationBarBackButtonHidden(true)
     } // body
+        
 }
 
 struct StartConsultationView_Previews: PreviewProvider {

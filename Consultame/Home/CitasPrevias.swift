@@ -26,8 +26,7 @@ struct CitasPrevias: View {
                             }
                             
                             if citasArray.consultations.isEmpty {
-                                Text("Loading...")
-                                    .foregroundStyle(.gray)
+                                ProgressView()
                             }else {
                                 ForEach(citasArray.consultations) { cita in
                                     CitasPreviasCards(cita: cita)
