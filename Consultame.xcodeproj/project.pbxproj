@@ -27,6 +27,8 @@
 		61C53AEF2B12CD8C0044ECD1 /* HabitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AEE2B12CD8C0044ECD1 /* HabitsModel.swift */; };
 		61C53AF22B12D1760044ECD1 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF12B12D1760044ECD1 /* HabitsViewModel.swift */; };
 		61C53AF42B12D4C00044ECD1 /* HabitsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */; };
+		61C53AF92B131F460044ECD1 /* AllergiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */; };
+		61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B002B1324720044ECD1 /* PersonalViewModel.swift */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
 		61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */; };
 		61CE9AAC2B0AFBA1001FCF8D /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61CE9AAB2B0AFBA1001FCF8D /* ding.wav */; };
@@ -135,6 +137,8 @@
 		61C53AEE2B12CD8C0044ECD1 /* HabitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsModel.swift; sourceTree = "<group>"; };
 		61C53AF12B12D1760044ECD1 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
 		61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCardView.swift; sourceTree = "<group>"; };
+		61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesViewModel.swift; sourceTree = "<group>"; };
+		61C53B002B1324720044ECD1 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
 		61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		61CE9AAB2B0AFBA1001FCF8D /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -293,6 +297,59 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		61C53AFA2B131F4C0044ECD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBA540E82B07E935007E55B3 /* AllergiesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61C53AFB2B131F510044ECD1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61C53AFC2B131F580044ECD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB2890AA2AF8696500EFEF35 /* AllergiesTabView.swift */,
+				FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */,
+				FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */,
+				FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */,
+				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
+				FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61C53AFD2B13226F0044ECD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61C53AEC2B12C8640044ECD1 /* PersonalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61C53AFE2B13227E0044ECD1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61C53B002B1324720044ECD1 /* PersonalViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61C53AFF2B1322870044ECD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		61CE9AA62B0ADE48001FCF8D /* SpeechToT */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,13 +461,9 @@
 		FB2890A92AF8683000EFEF35 /* Allergies */ = {
 			isa = PBXGroup;
 			children = (
-				FB2890AA2AF8696500EFEF35 /* AllergiesTabView.swift */,
-				FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */,
-				FB2890AC2AF86BB300EFEF35 /* FoodAllergiesView.swift */,
-				FB2890AE2AF86BCB00EFEF35 /* DrugAllergiesView.swift */,
-				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
-				FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */,
-				FBA540E82B07E935007E55B3 /* AllergiesModel.swift */,
+				61C53AFC2B131F580044ECD1 /* Views */,
+				61C53AFB2B131F510044ECD1 /* ViewModel */,
+				61C53AFA2B131F4C0044ECD1 /* Model */,
 			);
 			path = Allergies;
 			sourceTree = "<group>";
@@ -602,8 +655,9 @@
 		FBED78092AF9CF6E00B4F5BA /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */,
-				61C53AEC2B12C8640044ECD1 /* PersonalModel.swift */,
+				61C53AFF2B1322870044ECD1 /* Views */,
+				61C53AFE2B13227E0044ECD1 /* ViewModel */,
+				61C53AFD2B13226F0044ECD1 /* Model */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -767,6 +821,7 @@
 				5CBA396A2AFAB3A700E27766 /* CitasPrevias.swift in Sources */,
 				FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */,
 				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
+				61C53AF92B131F460044ECD1 /* AllergiesViewModel.swift in Sources */,
 				FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */,
 				5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */,
 				61C53AEF2B12CD8C0044ECD1 /* HabitsModel.swift in Sources */,
@@ -786,6 +841,7 @@
 				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
 				5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */,
+				61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */,
 				FB2890AF2AF86BCB00EFEF35 /* DrugAllergiesView.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
