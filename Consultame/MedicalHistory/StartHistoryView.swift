@@ -9,38 +9,33 @@ import SwiftUI
 
 struct StartHistoryView: View {
     var body: some View {
-        ZStack {
-            Color.white
-                Image("heart")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 400, height: 800)
-             Text("Primero te preguntaré algunas cosas sobre tu historial médico, lo ouedes saltar pero te recomiento que lo contestemos de una vez")
-                .padding(.top, 550)
+        VStack {
+            
+            Image("heart")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 280)
+                .padding(.horizontal, 30)
+    
+             Text("Primero te preguntaré algunas cosas sobre tu historial médico, lo ouedes saltar pero te recomiento que lo contestemos de una vez.")
                 .multilineTextAlignment(.center)
-                .frame(width: 240, height: 800)
-                .font(.system(size:26))
-                
-            Button("¡Vamos!"){
-                // navegacion de paginas
+                .font(.system(size: 25, weight: .semibold))
+                .padding(.horizontal, 60)
+            
+            
+            CustomButton(
+                buttonColor : Color("AccentColor"),
+                borderColor : Color.clear,
+                text : "¡Vamos!",
+                textColor : Color.white,
+                destinationView: AnyView(FamilyCoverView())
+            )
+            .padding(.top, 40)
+            .padding(.horizontal, 60)
+            
+            
+            
             }
-            .buttonStyle(BotonesInicio())
-            .padding(.top, 910)
-            
-            Button("Omitir"){
-                // navegacion de paginas
-            }
-            .buttonStyle(BotonesInicio())
-            .padding(.top, 1040)
-            
-            
-            
-            
-            } .padding(.bottom, 390)
-        
-        
-        
-      
         
         }
         

@@ -1,58 +1,61 @@
 //
-//  RegisterView.swift
+//  FamilyQuestionsView.swift
 //  Consultame
 //
-//  Created by admin on 06/11/23.
+//  Created by Toño on 27/11/23.
 //
 
 import SwiftUI
 
-struct RegisterView: View {
-    
-    @State private var isInHome = false
-    @State var nombreCompleto = ""
-    @State var correo = ""
-    @State private var contrasena = ""
-    @State private var contrasenaRepetida = ""
-    @State var sexo = ""
+struct FamilyQuestionsView: View {
+    @State private var diagnosisDate = Date()
+       @State private var description = ""
+       @State private var chronicDiseaseName = ""
+       @State private var relationshipType = ""
     let opcionesSexo = ["Hombre", "Mujer", "No especificar"]
+    
     var body: some View {
         VStack {
-            Image("register")
+            Image("familytree")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 180)
+                .frame(height: 200)
                 .padding()
-            Text("Regístrate")
+            
+            Text("Agrega")
                 .font(.system(size: 45).bold())
                 .multilineTextAlignment(.center)
-            Text("Crea tu cuenta y comienza a usar la app")
+            Text("Antecedentes Médicos Familiares")
                 .font(.system(size: 15))
                 .multilineTextAlignment(.center)
-            TextField("Nombre completo", text: $nombreCompleto)
+            TextField("Nombre de enfermedad:", text: $chronicDiseaseName)
                 .textFieldStyle(CommonTextInput(iconImage: "tray"))
                 .padding(.horizontal, 30)
-            TextField("Correo", text: $correo)
+                .padding(.top, 40)
+            TextField("Descripción", text: $description)
                 .textFieldStyle(CommonTextInput(iconImage: "tray"))
                 .padding(.horizontal, 30)
-            SecureField("Contraseña", text: $contrasena)
+                .padding(.top, 10)
+
+            DatePicker("Fecha diagnosticado", selection: $diagnosisDate, displayedComponents: .date)
                 .textFieldStyle(CommonTextInput(iconImage: "lock"))
                 .padding(.horizontal, 30)
-            SecureField("Repetir contraseña", text: $contrasenaRepetida)
-                .textFieldStyle(CommonTextInput(iconImage: "lock"))
-                .padding(.horizontal, 30)
-            Picker("Sexo", selection: $sexo) {
+                .padding(.top, 10)
+
+            Picker("Sexo", selection: $relationshipType) {
                 ForEach(opcionesSexo, id: \.self) { sexo in
                     Text(sexo)
                 }
             }
+            .padding(.top, 10)
+
             
             CustomButton(
                 buttonColor : Color("AccentColor"),
                 borderColor : Color.clear,
-                text : "Registrarme",
+                text : "Agregar",
                 textColor : Color.white,
-                destinationView: AnyView(StartHistoryView())
+                destinationView: AnyView(MainTabView())
             )
             .padding(.top, 40)
             .padding(.horizontal, 20)
@@ -60,8 +63,6 @@ struct RegisterView: View {
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
-    }
+#Preview {
+    FamilyQuestionsView()
 }
