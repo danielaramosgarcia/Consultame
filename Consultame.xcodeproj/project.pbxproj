@@ -107,7 +107,6 @@
 		FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */; };
 		FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */; };
 		FBED780E2AF9DED900B4F5BA /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = FBED780D2AF9DED900B4F5BA /* SocketIO */; };
-		FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED78102AF9DF1300B4F5BA /* TestWSView.swift */; };
 		FBEF4B002ADF567D00144664 /* AddVaccineToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */; };
 		FBEF4B022ADF591000144664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF4B012ADF591000144664 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -221,7 +220,6 @@
 		FBED78052AF9CEB400B4F5BA /* FamilyDiseaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiseaseCard.swift; sourceTree = "<group>"; };
 		FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryListView.swift; sourceTree = "<group>"; };
 		FBED780A2AF9CF8A00B4F5BA /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
-		FBED78102AF9DF1300B4F5BA /* TestWSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWSView.swift; sourceTree = "<group>"; };
 		FBEF4AFF2ADF567D00144664 /* AddVaccineToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVaccineToUserView.swift; sourceTree = "<group>"; };
 		FBEF4B012ADF591000144664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -759,7 +757,6 @@
 		FBED780F2AF9DEF800B4F5BA /* WebSocketTests */ = {
 			isa = PBXGroup;
 			children = (
-				FBED78102AF9DF1300B4F5BA /* TestWSView.swift */,
 				FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */,
 				FB9F77262B0B47EB00210384 /* WebSocketTests.swift */,
 				FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */,
@@ -965,7 +962,6 @@
 				61C53B0C2B157EC10044ECD1 /* DataController.swift in Sources */,
 				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
-				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,
 				F9DD697A2B1495A30087B729 /* FamilyCoverView.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,

@@ -20,7 +20,11 @@ struct ChatView: View {
     
     @State var synthesizer = AVSpeechSynthesizer()
     
+<<<<<<< Updated upstream
     let consultation_id = ConsultationStore().newConsultation?.id ?? 1 // obtenerlo al darle click a la consulta especifica
+=======
+    
+>>>>>>> Stashed changes
     
     // speech to text
     @StateObject var speechRecognizer = SpeechRecognizer()
@@ -90,7 +94,7 @@ struct ChatView: View {
                 }
                 MessageFromDoctorView(
                     DuringConsultationVM: DuringConsultationVM,
-                    consultation_id: consultation_id,
+                    
                     webSocketManager: webSocketManager,
                     waitTime: waitTime,
                     speechRecognizer: speechRecognizer)
@@ -130,7 +134,7 @@ struct ChatView: View {
     
     private func sendMessage() async {
         if !actualPatientMessage.isEmpty {
-            if let newMessage = await DuringConsultationVM.createMessage(message: actualPatientMessage, is_from_user: true, consultation_id: consultation_id) {
+            if let newMessage = await DuringConsultationVM.createMessage(message: actualPatientMessage, is_from_user: true, consultation_id: webSocketManager.consultationID) {
                 
                 webSocketManager.sendCompleteMessage(newMessage)
                 actualPatientMessage = ""
@@ -162,7 +166,7 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        let webSocketManager = WebSocketManager()
+        let webSocketManager = WebSocketManager(consultationID: 1)
         
         ChatView(webSocketManager: webSocketManager)
     }

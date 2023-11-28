@@ -22,7 +22,7 @@ struct WebSocketTests: View {
 
 struct WebSocketTests_Previews: PreviewProvider {
     static var previews: some View {
-        let webSocketManager = WebSocketManager()
+        let webSocketManager = WebSocketManager(consultationID: 1)
 
         WebSocketTests(webSocketManager: webSocketManager)
     }
