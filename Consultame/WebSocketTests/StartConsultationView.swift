@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+enum NavigationState: Hashable {
+    case goToNextView
+}
+
 struct StartConsultationView: View {
     @StateObject var webSocketManager = WebSocketManager()
+    @State private var navigationPath = [NavigationState]()
     
     var body: some View {
+        NavigationStack(path: $navigationPath) {
             VStack {
                 Image("doctor")
                     .resizable()
@@ -50,15 +56,16 @@ struct StartConsultationView: View {
             .navigationDestination(for: NavigationState.self) { state in
                 switch state {
                 case .goToNextView:
-//                    SendMessageView()
+                    //                    SendMessageView()
                     ChatView(webSocketManager: webSocketManager )
                 }
+                
+                
             }
-            
-            
+            .navigationBarBackButtonHidden(true)
+
             
         } // navigation stack
-        .navigationBarBackButtonHidden(true)
     } // body
         
 }

@@ -20,7 +20,8 @@ completion: @escaping (Result<T,APIError>) -> Void) {
             completion(.failure(.error(NSLocalizedString("Error: Invalid URL", comment: ""))))
             return
         }
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.addValue("Bearer \(User().JWT)", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(.failure(.error("Error: \(error.localizedDescription)")))
@@ -54,6 +55,7 @@ completion: @escaping (Result<T,APIError>) -> Void) {
         }
         
         var request = URLRequest(url: url)
+        request.addValue("Bearer \(User().JWT)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
