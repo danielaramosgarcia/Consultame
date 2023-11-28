@@ -7,13 +7,10 @@
 
 import Foundation
 
-struct AllergiesModel : Codable{
-    let no: Int
-    let name: String
-    let duration: Int
-    let date: Date
-    let project: String
-    let owner: String
-    let status: String
+struct AllergiesModel : Identifiable, Decodable, Hashable{
+    var id: Int
+    var name: String
+    var allergy_type_id: Int
+    var description: String
 }
 
