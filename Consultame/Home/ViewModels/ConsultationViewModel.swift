@@ -13,7 +13,7 @@ import Foundation
 class ConsultationViewModel: ObservableObject {
     @Published var consultations = [ConsultationModel]()
     @Published var apiError: String?
-
+    
     // This Function is getting all the consultations in the DB, not only the ones from a specific user
     func getConsultations() async throws {
         let apiService = APIService.shared
