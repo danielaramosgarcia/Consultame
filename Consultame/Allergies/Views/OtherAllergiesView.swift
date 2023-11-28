@@ -13,7 +13,7 @@ struct OtherAllergiesView: View {
     var body: some View {
         VStack {
             ForEach(index, id: \.self) { _ in
-                AllergiesCard()
+                AllergiesCard(allergy: <#T##Allergy#>)
             }
             Spacer()
         }

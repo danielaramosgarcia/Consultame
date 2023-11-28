@@ -13,12 +13,11 @@ struct AllergiesListView: View {
 
 
     var body: some View {
+        
         VStack {
-            ForEach(allergies){ allergy in
-                VStack {
-                    AllergiesCard() 
             
-                }
+            ForEach(allergies){ allergy in
+                    AllergiesCard(alergia: allergy)
             }
             Spacer()
         }

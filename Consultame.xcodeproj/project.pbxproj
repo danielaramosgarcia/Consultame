@@ -57,7 +57,6 @@
 		FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890A72AF8668800EFEF35 /* HabitsListView.swift */; };
 		FB2890AB2AF8696500EFEF35 /* AllergiesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890AA2AF8696500EFEF35 /* AllergiesTabView.swift */; };
 		FB2890AD2AF86BB300EFEF35 /* AllergiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890AC2AF86BB300EFEF35 /* AllergiesListView.swift */; };
-		FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */; };
 		FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */; };
 		FB2C5E912AFAD46A00441D14 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */; };
 		FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */; };
@@ -183,7 +182,6 @@
 		FB2890A72AF8668800EFEF35 /* HabitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListView.swift; sourceTree = "<group>"; };
 		FB2890AA2AF8696500EFEF35 /* AllergiesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesTabView.swift; sourceTree = "<group>"; };
 		FB2890AC2AF86BB300EFEF35 /* AllergiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesListView.swift; sourceTree = "<group>"; };
-		FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAllergiesView.swift; sourceTree = "<group>"; };
 		FB2952DA2AE06C3F00D1A798 /* UserVaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVaccineModel.swift; path = Consultame/Vaccine/Models/UserVaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConsultationView.swift; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 				FB2890AA2AF8696500EFEF35 /* AllergiesTabView.swift */,
 				FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */,
 				FB2890AC2AF86BB300EFEF35 /* AllergiesListView.swift */,
-				FB2890B02AF86E9400EFEF35 /* OtherAllergiesView.swift */,
 				FBED78022AF9CE4500B4F5BA /* AddAllergyToUserView.swift */,
 			);
 			path = Views;
@@ -973,7 +970,6 @@
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
-				FB2890B12AF86E9400EFEF35 /* OtherAllergiesView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
 				5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */,
 				61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */,
