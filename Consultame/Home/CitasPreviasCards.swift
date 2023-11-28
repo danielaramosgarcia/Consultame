@@ -18,17 +18,18 @@ struct CitasPreviasCards: View {
     }()
     
     var body: some View {
-
-        ZStack {
-            rectangle
-            HStack{
-                Text(cita.name ?? "No Name Found")
-                    .padding(.all, 10)
-                    .foregroundStyle(rectangle.textColor)
-                Spacer()
-                Text(cita.formatted_date ?? "")
-                    .padding(.all, 10)
-                    .foregroundStyle(rectangle.textColor)
+        NavigationLink(destination: ChatHistory(consultation_id: cita.id ?? 2)){
+            ZStack {
+                rectangle
+                HStack{
+                    Text(cita.name ?? "No Name Found")
+                        .padding(.all, 10)
+                        .foregroundStyle(rectangle.textColor)
+                    Spacer()
+                    Text(cita.formatted_date ?? "")
+                        .padding(.all, 10)
+                        .foregroundStyle(rectangle.textColor)
+                }
             }
         }
     }
