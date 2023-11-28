@@ -20,8 +20,6 @@ struct ChatView: View {
     
     @State var synthesizer = AVSpeechSynthesizer()
     
-    let consultation_id = ConsultationStore().newConsultation?.id ?? 1 // obtenerlo al darle click a la consulta especifica
-    
     
     // speech to text
     @StateObject var speechRecognizer = SpeechRecognizer()
