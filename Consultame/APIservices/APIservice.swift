@@ -39,6 +39,7 @@ completion: @escaping (Result<T,APIError>) -> Void) {
                 return
             } catch let decodingError {
                 completion(.failure(APIError.error("Error: \(decodingError.localizedDescription)... ")))
+                print(APIError.error("Error: \(decodingError.localizedDescription)... "))
                 return
             }
             

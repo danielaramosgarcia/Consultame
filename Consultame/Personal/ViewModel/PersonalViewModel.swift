@@ -8,7 +8,18 @@
 import Foundation
 
 class PersonalViewModel : ObservableObject {
-    @Published var personal = PersonalModel(id : 1, email : "email", password : "123", name : "Dani Ramos", birth_date : "07052003", phone_number : "9611382118", sex_id : 1, weight: 55, height : 162, address : DireccionModel(id : 1, street_line_1: "agua pasa por mi casa", street_line_2: "cate de mi corazon", city: "Tuxtla Gtz", state_providence: "Chiapas", postal_code: "5555", country: "mexico", additional_info: "lmao", user_id: 1))
+    @Published var personal = PersonalModel(
+        id: 1,
+        email: "dummy@email.com",
+        name: "Dummy Name",
+        birth_date: "2003-11-23T00:00:00.000Z",
+        phone_number: "1234567890",
+        sex: SexModel(id: 1, type: "Male"),
+        height: "175",
+        weight: "70",
+        blood_type: Blood_typeModel(id: 1, type: "O+"),
+        addresses: [DireccionModel(id: 1, street_line_1: "123 Main St", street_line_2: "Apt 4", city: "Dummy City", state_providence_region: "Dummy State", postal_code: "12345", country: "Dummy Country", additional_info: "Dummy Info")]
+    )
     
     let apiService = APIService.shared
 
