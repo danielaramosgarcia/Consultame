@@ -12,12 +12,10 @@ enum NavigationState: Hashable {
 }
 
 struct StartConsultationView: View {
-<<<<<<< Updated upstream
-    @StateObject var webSocketManager = WebSocketManager()
+
     @State private var navigationPath = [NavigationState]()
-=======
     @StateObject var webSocketManager = WebSocketManager(consultationID: 2) // TODO: obtenerlo al darle click a la consulta
->>>>>>> Stashed changes
+
     
     var body: some View {
         NavigationStack(path: $navigationPath) {

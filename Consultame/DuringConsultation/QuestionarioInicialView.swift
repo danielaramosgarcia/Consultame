@@ -52,6 +52,7 @@ struct AppointmentNameView: View {
                             ConsultationStore().createConsultation(consultation: newConsultation)
                         }
                     }
+                    
                 )
                 .padding(.top, 50)
                 .padding(.horizontal, 25)

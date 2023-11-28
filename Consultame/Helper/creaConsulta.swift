@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 class ConsultationStore: ObservableObject {
     @Published var newConsultation: ConsultationModel?
     

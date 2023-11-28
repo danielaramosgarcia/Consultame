@@ -10,7 +10,10 @@ import SwiftUI
 struct ColumnView: View {
     var number: Int?
     var string : String?
+    @Environment(\.managedObjectContext) var moc
+
     var label: String
+    @FetchRequest(sortDescriptors: []) var usuarios: FetchedResults<Usuario>
 
     var body: some View {
         VStack {
@@ -82,10 +85,18 @@ struct ProfileView: View {
                 .padding()
                 
                 Spacer()
-                
+                Button("Prueba nombre Core") {
+                    let firstNames = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
+                    let lastNames = ["Granger", "Lovegood", "Potter", "Weasley"]
+
+                    let chosenFirstName = firstNames.randomElement()!
+                    let chosenLastName = lastNames.randomElement()!
+
+                    // more code to come
+                }
                 
             } // VStack
-            
+
         }
         .task {
             do {
