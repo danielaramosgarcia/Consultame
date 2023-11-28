@@ -13,45 +13,70 @@ struct MainTabView: View {
     var body: some View {
         NavigationView{
             TabView {
-                
-                VStack {
-                 HStack{
-                     if isSideMenuOpen {
-                         SideMenuView()
-                             
-                             .frame(width: UIScreen.main.bounds.height * 0.4) // Set width to half the screen width
-//                                .transition(.push(from: .trailing))
-                             .onTapGesture {
-                                 withAnimation {
-                                     self.isSideMenuOpen.toggle()
-                                 }
-                             }
-                     }
-                        HomeView()
-                            .navigationBarItems(trailing:
-                                Button(action: {
-                                    withAnimation {
-                                        self.isSideMenuOpen.toggle()
-                                    }
-                                }) {
-                                    Image(systemName: "line.horizontal.3")
-                                        .imageScale(.large)
-                                        .padding()
+                VStack{
+                ZStack {
+                    HomeView()
+                        .navigationBarItems(trailing:
+                                                Button(action: {
+                            withAnimation {
+                                self.isSideMenuOpen.toggle()
+                            }
+                        }) {
+                            Image(systemName: "line.horizontal.3")
+                                .imageScale(.large)
+                                .padding()
+                        }
+                        )
+                    if isSideMenuOpen {
+                        SideMenuView()
+                            .frame(width: UIScreen.main.bounds.width * 0.5) // Set width to 1/3 of the screen width
+                            .offset(x: isSideMenuOpen ? -97 : -UIScreen.main.bounds.width * 0.5)
+                            .onTapGesture {
+                                withAnimation {
+                                    self.isSideMenuOpen.toggle()
                                 }
-                            )
-
+                            }
+                            .transition(.move(edge: .leading))
+                            .zIndex(1)
                     }
-
+                }
                     Spacer()
-
                 }
                 .tabItem{
                     Label("Home", systemImage: "house.fill")
                                         
                     }
                 
-                ProfileView()
-                    .badge("!")
+                VStack{
+                ZStack {
+                    
+                    ProfileView()
+                        .navigationBarItems(trailing:
+                                                Button(action: {
+                            withAnimation {
+                                self.isSideMenuOpen.toggle()
+                            }
+                        }) {
+                            Image(systemName: "line.horizontal.3")
+                                .imageScale(.large)
+                                .padding()
+                        }
+                        )
+                    if isSideMenuOpen {
+                        SideMenuView()
+                            .frame(width: UIScreen.main.bounds.width * 0.5) // Set width to 1/3 of the screen width
+                            .offset(x: isSideMenuOpen ? -97 : -UIScreen.main.bounds.width * 0.5)
+                            .onTapGesture {
+                                withAnimation {
+                                    self.isSideMenuOpen.toggle()
+                                }
+                            }
+                            .transition(.move(edge: .leading))
+                            .zIndex(1)
+                    }
+                }
+                    Spacer()
+                }
                     .tabItem {
                         Label("Perfil", systemImage: "person.crop.circle.fill")
                     }
