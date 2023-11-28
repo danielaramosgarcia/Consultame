@@ -18,7 +18,7 @@ struct VaccineCoverView: View {
                 .font(.system(size: 25, weight: .light))
             
             
-            Image("VaccinePic")
+            Image("vaccines")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 320)
@@ -29,7 +29,7 @@ struct VaccineCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(VaccineQuestionView())
+                destinationView: AnyView(AddVaccineToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)

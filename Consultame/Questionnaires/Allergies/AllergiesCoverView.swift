@@ -30,7 +30,7 @@ struct AllergiesCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(AllergiesQuestionsView())
+                destinationView: AnyView(AddAllergyToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)

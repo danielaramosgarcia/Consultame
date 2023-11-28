@@ -30,7 +30,7 @@ struct FamilyCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(FamilyQuestionsView())
+                destinationView: AnyView(AddVaccineToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)

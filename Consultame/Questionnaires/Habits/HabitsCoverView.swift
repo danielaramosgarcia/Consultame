@@ -30,7 +30,7 @@ struct HabitsCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(HabitsQuestionsView())
+                destinationView: AnyView(AddVaccineToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)

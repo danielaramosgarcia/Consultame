@@ -11,7 +11,7 @@ struct ContactsCoverView: View {
     var body: some View {
         
         VStack{
-            Text("Contacos")
+            Text("Contactos")
                 .font(.system(size: 45, weight: .bold))
 
             
@@ -30,7 +30,7 @@ struct ContactsCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(ContactsQuestionsView())
+                destinationView: AnyView(AddContactToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)
