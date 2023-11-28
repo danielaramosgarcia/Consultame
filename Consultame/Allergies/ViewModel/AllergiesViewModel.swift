@@ -9,12 +9,23 @@ import Foundation
 
 class AllergiesViewModel : ObservableObject {
     @Published var alergies = [AllergiesModel]()
+    var drugAllergies: [AllergiesModel] {
+        return alergies.filter { $0.allergy.allergy_type_id == 1 }
+    }
+
+    var foodAllergies: [AllergiesModel] {
+        return alergies.filter { $0.allergy.allergy_type_id == 2 }
+    }
+
+    var otherAllergies: [AllergiesModel] {
+        return alergies.filter { $0.allergy.allergy_type_id != 1 && $0.allergy.allergy_type_id != 2 }
+    }
     
     let apiService = APIService.shared
 
-    func getProfile() async throws {
+    func getAllergy() async throws {
         let apiService = APIService.shared
-        apiService.getJSON(urlString: API.baseURL + "/allergy/" + String(User.user_id)) { (result: Result<[AllergiesModel],APIService.APIError>) in
+        apiService.getJSON(urlString: API.baseURL + "/user/allergy/" + String(User.user_id)) { (result: Result<[AllergiesModel],APIService.APIError>) in
             switch result {
             case .success(let alergies):
                 DispatchQueue.main.async {

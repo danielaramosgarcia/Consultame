@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AllergiesTabView: View {
+    @StateObject private var allergiesVM = AllergiesViewModel()
+
     private let options = ["Medicamentos", "Alimentos", "Otros"]
     @State private var selectedTab = 0
 
@@ -51,11 +53,18 @@ struct AllergiesTabView: View {
             .padding(.vertical, 10)
 
             TabView(selection: $selectedTab) {
-                DrugAllergiesView().tag(0)
-                FoodAllergiesView().tag(1)
-                OtherAllergiesView().tag(2)
+                AllergiesListView(allergies: allergiesVM.drugAllergies).tag(0)
+                AllergiesListView(allergies: allergiesVM.foodAllergies).tag(1)
+                AllergiesListView(allergies: allergiesVM.otherAllergies).tag(2)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        }
+        .task {
+            do {
+                try await allergiesVM.getAllergy()
+            } catch {
+                print("Error: \(error)")
+            }
         }
         .padding()
     }
