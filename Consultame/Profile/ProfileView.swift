@@ -51,16 +51,18 @@ struct ProfileView: View {
         NavigationStack {
             
             VStack {
-                Text(ProfileVM.profile.name)
-                    .font(.title)
+                
                 ZStack{
                     Circle()
-                        .fill(Color.purple)
+                        .fill(Color("AccentColor"))
                         .frame(width:120)
                     Text(String(ProfileVM.profile.name.first ?? " " ))
                         .foregroundColor(.white)
                         .font(.title)
                 } // ZStack
+                
+                Text(ProfileVM.profile.name)
+                    .font(.title)
                 
                 HStack(spacing: 0) {
                     ColumnView(number: ProfileVM.profile.age, label: "Edad")

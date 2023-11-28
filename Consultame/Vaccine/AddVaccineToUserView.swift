@@ -11,6 +11,9 @@ struct AddVaccineToUserView: View {
     @StateObject var VaccineVM = VaccineViewModel()
     var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
     
+    @State private var showDatePicker = false
+    @State private var datePickerOffset: CGFloat = 0
+    
     @State private var vaccineSelection: Int = 0
     @State private var searchText = ""
     @State private var selectedDate = Date()
@@ -27,19 +30,21 @@ struct AddVaccineToUserView: View {
    
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack() {
             
             VStack {
-                Text("Nombre de la vacuna")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding([.top, .trailing, .leading])
-                        .font(.title2)
-                        .fontWeight(.light)
+                Text("Añadir nueva vacuna")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.top, .trailing, .leading])
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                
+                SearchBar(text: $searchText, placeholder: "Buscar")
+                    .padding()
+                List{
                     
-                    
-                    SearchBar(text: $searchText, placeholder: "Nombre de vacuna")
-                        .padding()
-                    Picker(selection: $vaccineSelection, label: Text("Hello")) {
+                    Picker(selection: $vaccineSelection, label: Text("Tipo de vacuna")) {
                         ForEach(searchResults, id: \.id) { item in
                             Text(item.name).tag(item.id)
                         } // for each
@@ -56,27 +61,38 @@ struct AddVaccineToUserView: View {
                             print("error")
                         }
                     } // task
+                    
+                    VStack{
+    
+                        Button {
+                            showDatePicker.toggle()
+
+                        } label: {
+                            Text("+ Añadir fecha de aplicación")
+                        }
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .offset(y: datePickerOffset)
+
+                        
+                        if showDatePicker {
+                            
+                            DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
+                                .datePickerStyle(.graphical)
+                                .environment(\.locale, Locale(identifier: "es_ES"))
+
+                        }
+                    }
+                                    
+                    
+                    
+                } // List
+                    
+            } //VStack
                 
-            }
-        
-      
-            Text("Fecha de aplicación:")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding([.trailing, .leading])
-                                    .font(.title2)
-                DatePicker(
-                    "",
-                    selection: $selectedDate,
-                    displayedComponents: [.date]
-                )
-                .datePickerStyle(.wheel)
-                .padding()
-                .padding(.trailing,15)
-                .font(.title2)
-                .fontWeight(.light)
-                .environment(\.locale, Locale(identifier: "es_ES"))
-                
-                Spacer()
+    
+            Spacer()
+
             
             CustomButton(
                 buttonColor : Color("AccentColor"),
