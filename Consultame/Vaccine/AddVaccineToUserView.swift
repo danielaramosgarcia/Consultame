@@ -42,81 +42,75 @@ struct AddVaccineToUserView: View {
                 
                 SearchBar(text: $searchText, placeholder: "Buscar")
                     .padding()
-                List{
-                    
-                    Picker(selection: $vaccineSelection, label: Text("Tipo de vacuna")) {
-                        ForEach(searchResults, id: \.id) { item in
-                            Text(item.name).tag(item.id)
-                        } // for each
-                    } // Picker
-                    .pickerStyle(.inline)
-                    .task {
-                        do {
-                            try await VaccineVM.getVaccines()
-                            if vaccineArr.count > 0 {
-                                vaccineSelection = vaccineArr[0].id
+                
+                    List{
+                        
+                        Picker(selection: $vaccineSelection, label: Text("Tipo de vacuna")) {
+                            ForEach(searchResults, id: \.id) { item in
+                                Text(item.name).tag(item.id)
+                            } // for each
+                        } // Picker
+                        .pickerStyle(.inline)
+                        .task {
+                            do {
+                                try await VaccineVM.getVaccines()
+                                if vaccineArr.count > 0 {
+                                    vaccineSelection = vaccineArr[0].id
+                                }
+                                
+                            } catch {
+                                print("error")
                             }
+                        } // task
+                        
+                        VStack{
                             
-                        } catch {
-                            print("error")
-                        }
-                    } // task
-                    
-                    VStack{
-    
-                        Button {
-                            showDatePicker.toggle()
-
-                        } label: {
-                            Text("+ Añadir fecha de aplicación")
-                        }
+                            Button {
+                                showDatePicker.toggle()
+                                
+                            } label: {
+                                Text("+ Añadir fecha de aplicación")
+                            }
                             .frame(maxWidth: .infinity)
                             .bold()
                             .offset(y: datePickerOffset)
-
-                        
-                        if showDatePicker {
                             
-                            DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
-                                .datePickerStyle(.graphical)
-                                .environment(\.locale, Locale(identifier: "es_ES"))
-
+                            
+                            if showDatePicker {
+                                
+                                DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
+                                    .datePickerStyle(.graphical)
+                                    .environment(\.locale, Locale(identifier: "es_ES"))
+                                
+                            }
                         }
-                    }
-                                    
-                    
-                    
-                } // List
+                        
+                        
+                        
+                    } // List
                     
             } //VStack
                 
     
             Spacer()
-
             
-            CustomButton(
-                buttonColor : Color("AccentColor"),
-                borderColor : Color("AccentColor"),
-                text : "Anadir",
-                textColor : Color(.white),
-                destinationView: AnyView(MainTabView())
-            ){
+            Button("Confirmar"){
                 Task {
                     do {
                         try await
-                    VaccineVM.setVaccineToUser(vaccineId: vaccineSelection, date: selectedDate)
-                        
+                        VaccineVM.setVaccineToUser(vaccineId: vaccineSelection, date: selectedDate)
                     } catch {
-                        print("error al asignar vacuna al usuario")
+                        print("error al crear el contacto")
                     }
                 } // task
-            }
+                
+            } // button
+            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
             .frame(maxWidth: .infinity)
             .font(.title2)
             .padding(.horizontal, 30)
-            
             .padding()
-
+            
         } // vstack
         .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
                     if let success = isSuccess {

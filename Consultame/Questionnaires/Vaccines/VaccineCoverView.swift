@@ -21,7 +21,7 @@ struct VaccineCoverView: View {
             Image("vaccines")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 320)
+                .frame(height: 280)
                 .padding()
             
             CustomButton(
