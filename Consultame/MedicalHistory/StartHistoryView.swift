@@ -28,7 +28,7 @@ struct StartHistoryView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(FamilyCoverView())
+                destinationView: AnyView(PersonalCoverView())
             )
             .padding(.top, 40)
             .padding(.horizontal, 60)

@@ -7,17 +7,10 @@
 
 import SwiftUI
 
-enum NavigationState: Hashable {
-    case goToNextView
-}
-
 struct StartConsultationView: View {
     @StateObject var webSocketManager = WebSocketManager()
-    @State private var navigationPath = [NavigationState]()
-    
     
     var body: some View {
-        NavigationStack(path: $navigationPath) {
             VStack {
                 Image("doctor")
                     .resizable()
@@ -39,22 +32,20 @@ struct StartConsultationView: View {
                         .padding()
                 }
                 
-                Button("Saltar") {
-                    navigationPath = [.goToNextView]
-                }
-                .buttonStyle(BotonesInicio())
+                CustomButton(
+                    buttonColor : Color("AccentColor"),
+                    borderColor : Color.clear,
+                    text : "Saltar",
+                    textColor : Color.white,
+                    destinationView: AnyView(ChatView(webSocketManager: webSocketManager))
+                )
                 .padding(.horizontal, 30)
                 .padding(.top, 70)
                 
                 
-                
             } // vstack
+            
             .padding(.bottom, 50)
-            .onChange(of: webSocketManager.saveMessages) { newValue in
-                if newValue != nil {
-                    navigationPath = [.goToNextView]
-                }
-            }
             
             .navigationDestination(for: NavigationState.self) { state in
                 switch state {

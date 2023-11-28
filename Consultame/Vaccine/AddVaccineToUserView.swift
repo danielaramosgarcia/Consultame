@@ -59,23 +59,32 @@ struct AddVaccineToUserView: View {
                 
             }
         
-            
-            DatePicker(
-                    "Fecha de aplicacion",
+      
+            Text("Fecha de aplicación:")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding([.trailing, .leading])
+                                    .font(.title2)
+                DatePicker(
+                    "",
                     selection: $selectedDate,
                     displayedComponents: [.date]
                 )
-                .datePickerStyle(.compact)
+                .datePickerStyle(.wheel)
                 .padding()
+                .padding(.trailing,15)
                 .font(.title2)
                 .fontWeight(.light)
+                .environment(\.locale, Locale(identifier: "es_ES"))
+                
+                Spacer()
             
-            
-            Spacer()
-            
-            
-            
-            Button {
+            CustomButton(
+                buttonColor : Color("AccentColor"),
+                borderColor : Color("AccentColor"),
+                text : "Anadir",
+                textColor : Color(.white),
+                destinationView: AnyView(MainTabView())
+            ){
                 Task {
                     do {
                         try await
@@ -84,20 +93,13 @@ struct AddVaccineToUserView: View {
                     } catch {
                         print("error al asignar vacuna al usuario")
                     }
-                } // task 
-               
-            } label: {
-                Text("Anadir")
-                    .padding()
+                } // task
             }
             .frame(maxWidth: .infinity)
             .font(.title2)
-            .foregroundColor(Color.white)
-            .background(Color.blue)
-            .cornerRadius(10)
+            .padding(.horizontal, 30)
             
             .padding()
-            
 
         } // vstack
         .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in

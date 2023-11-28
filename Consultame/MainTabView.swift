@@ -11,9 +11,17 @@ struct MainTabView: View {
     var body: some View {
         NavigationView{
             TabView {
-                HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
+                
+                VStack {
+                    HomeView()
+                       
+                    
+                    Spacer()
+
+                }
+                .tabItem{
+                    Label("Home", systemImage: "house.fill")
+                                        
                     }
                 
                 ProfileView()

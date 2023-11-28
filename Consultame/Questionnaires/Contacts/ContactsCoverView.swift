@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct FamilyCoverView: View {
+struct ContactsCoverView: View {
     var body: some View {
         
         VStack{
-            Text("Antecedentes")
+            Text("Contactos")
                 .font(.system(size: 45, weight: .bold))
 
             
-            Text("medicos familiares")
-                .font(.system(size: 30, weight: .light))
+            Text("de emergencia")
+                .font(.system(size: 25, weight: .light))
             
             
-            Image("familypic")
+            Image("contactspic")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 280)
@@ -30,7 +30,7 @@ struct FamilyCoverView: View {
                 borderColor : Color.clear,
                 text : "¡Vamos!",
                 textColor : Color.white,
-                destinationView: AnyView(FamilyQuestionsView())
+                destinationView: AnyView(AddContactToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)
@@ -40,16 +40,20 @@ struct FamilyCoverView: View {
                 borderColor : Color("AccentColor"),
                 text : "Saltar",
                 textColor : Color("AccentColor"),
-                destinationView: AnyView(MainTabView())
+                destinationView: AnyView(HabitsCoverView())
             )
             .bold()
             .padding(.top, 20)
             .padding(.horizontal, 60)
+            .navigationBarBackButtonHidden(true)
         }
        
     }
 }
 
-#Preview {
-    FamilyCoverView()
+struct ContactsCoverView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContactsCoverView()
+    }
 }
+
