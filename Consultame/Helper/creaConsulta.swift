@@ -8,18 +8,23 @@
 import Foundation
 
 
-func createConsultation(consultation: ConsultationModel) {
-    let apiService = APIService.shared
-    let urlString = API.baseURL + "/consultation/"
+class ConsultationStore: ObservableObject {
+    @Published var newConsultation: ConsultationModel?
     
-    apiService.postJSON(urlString: urlString, requestBody: consultation) { (result: Result<ConsultationModel, APIService.APIError>) in
-        switch result {
-        case .success(let newConsultation):
-            // Handle the success case, e.g., update UI or state
-            print("Successfully created consultation with ID \(newConsultation.id)")
-        case .failure(let error):
-            // Handle the error case
-            print("Error occurred: \(error)")
+    func createConsultation(consultation: ConsultationModel) {
+        let apiService = APIService.shared
+        let urlString = API.baseURL + "/consultation/"
+
+        apiService.postJSON(urlString: urlString, requestBody: consultation) { [weak self] (result: Result<ConsultationModel, APIService.APIError>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let createdConsultation):
+                    self?.newConsultation = createdConsultation
+                    print("Successfully created consultation with ID \(createdConsultation.id)")
+                case .failure(let error):
+                    print("Error occurred: \(error)")
+                }
+            }
         }
     }
 }

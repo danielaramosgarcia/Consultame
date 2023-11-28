@@ -60,7 +60,7 @@ struct StartConsultationView: View {
                 switch state {
                 case .goToNextView:
 //                    SendMessageView()
-                    ChatView(webSocketManager: webSocketManager)
+                    ChatView(webSocketManager: webSocketManager )
                 }
             }
             
