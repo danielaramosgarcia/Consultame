@@ -39,6 +39,7 @@ struct VaccineQuestionView: View {
                     .frame(height: 320)
                     .padding()
                 
+                
                 Picker(selection: $vaccineSelection, label: Text("Hello")) {
                     ForEach(searchResults, id: \.id) { item in
                         Text(item.name).tag(item.id)
@@ -55,19 +56,19 @@ struct VaccineQuestionView: View {
                     } catch {
                         print("error")
                     }
-                } // task
-                .frame(maxHeight: 50)
+                }
                 .padding(.horizontal, 30)
                 
                 DatePicker(
-                    "Fecha de aplicacion",
+                    "Fecha de aplicación",
                     selection: $selectedDate,
                     displayedComponents: [.date]
                 )
                 .datePickerStyle(.compact)
-                .padding()
                 .font(.title2)
                 .fontWeight(.light)
+                .padding(.horizontal, 30)
+                .padding(.top, 30)
                 
                 CustomButton(
                     buttonColor : Color("AccentColor"),
@@ -95,7 +96,7 @@ struct VaccineQuestionView: View {
                 CustomButton(
                     buttonColor : Color.clear,
                 borderColor : Color("AccentColor"),
-                    text : "+ Añadir otra",
+                    text : "+ Añadir otra vacuna",
                     textColor : Color("AccentColor"),
                     destinationView: AnyView(VaccineQuestionView())
                 ){
