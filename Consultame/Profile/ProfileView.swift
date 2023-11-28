@@ -51,16 +51,18 @@ struct ProfileView: View {
         NavigationStack {
             
             VStack {
-                Text(ProfileVM.profile.name)
-                    .font(.title)
+                
                 ZStack{
                     Circle()
-                        .fill(Color.purple)
+                        .fill(Color("AccentColor"))
                         .frame(width:120)
                     Text(String(ProfileVM.profile.name.first ?? " " ))
                         .foregroundColor(.white)
                         .font(.title)
                 } // ZStack
+                
+                Text(ProfileVM.profile.name)
+                    .font(.title)
                 
                 HStack(spacing: 0) {
                     ColumnView(number: ProfileVM.profile.age, label: "Edad")
@@ -77,10 +79,10 @@ struct ProfileView: View {
                 LazyVGrid(columns: columns, spacing: 10) {
                     SectionCard(text: "Personal", image: "cross.circle", destinationView: AnyView(PersonalView()))
                     SectionCard(text: "Contactos", image: "person", destinationView: AnyView(ContactsListView()))
-                    SectionCard(text: "Hábitos", image: "brain.head.profile", destinationView: AnyView(HabitsListView()))
-                    SectionCard(text: "Alergías", image: "allergens", destinationView: AnyView(AllergiesTabView()))
+                    SectionCard(text: "Mis hábitos", image: "brain.head.profile", destinationView: AnyView(HabitsListView()))
+                    SectionCard(text: "Mis alergias", image: "allergens", destinationView: AnyView(AllergiesTabView()))
                     SectionCard(text: "Historial Fam", image: "person.2", destinationView: AnyView(FamilyHistoryListView()))
-                    SectionCard(text: "Vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
+                    SectionCard(text: "Mis vacunas", image: "syringe", destinationView: AnyView(VaccinesListView()))
                 }
                 .padding()
                 
