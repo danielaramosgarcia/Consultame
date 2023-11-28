@@ -8,85 +8,49 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State private var isSideMenuOpen: Bool = false // State variable to track side menu visibility
-
+    @State var presentSideMenu = false
+    @State var selectedSideMenuTab = 0
+    
     var body: some View {
-        NavigationView{
-            TabView {
-                VStack{
-                ZStack {
-                    HomeView()
-                        .navigationBarItems(trailing:
-                                                Button(action: {
-                            withAnimation {
-                                self.isSideMenuOpen.toggle()
-                            }
-                        }) {
-                            Image(systemName: "line.horizontal.3")
-                                .imageScale(.large)
-                                .padding()
+        
+        
+        
+        VStack{
+            //SideTabView()
+
+            NavigationView(){
+                ZStack{
+                    TabView(selection: $selectedSideMenuTab) {
+                        VStack {
+                            HomeView(presentSideMenu: $presentSideMenu)
+                            
+                            Spacer()
+                            
                         }
-                        )
-                    if isSideMenuOpen {
-                        SideMenuView()
-                            .frame(width: UIScreen.main.bounds.width * 0.5) // Set width to 1/3 of the screen width
-                            .offset(x: isSideMenuOpen ? -97 : -UIScreen.main.bounds.width * 0.5)
-                            .onTapGesture {
-                                withAnimation {
-                                    self.isSideMenuOpen.toggle()
-                                }
+                        .tabItem{
+                            Label("Inicio", systemImage: "house")
+                                .font(.title)
+                        }
+                        .tag(0)
+                        
+                        ProfileView(presentSideMenu: $presentSideMenu)
+                            .tabItem{
+                                Label("Perfil", systemImage: "person")
                             }
-                            .transition(.move(edge: .leading))
-                            .zIndex(1)
+                            .tag(1)
+                        
                     }
-                }
-                    Spacer()
-                }
-                .tabItem{
-                    Label("Home", systemImage: "house.fill")
-                                        
-                    }
-                
-                VStack{
-                ZStack {
                     
-                    ProfileView()
-                        .navigationBarItems(trailing:
-                                                Button(action: {
-                            withAnimation {
-                                self.isSideMenuOpen.toggle()
-                            }
-                        }) {
-                            Image(systemName: "line.horizontal.3")
-                                .imageScale(.large)
-                                .padding()
-                        }
-                        )
-                    if isSideMenuOpen {
-                        SideMenuView()
-                            .frame(width: UIScreen.main.bounds.width * 0.5) // Set width to 1/3 of the screen width
-                            .offset(x: isSideMenuOpen ? -97 : -UIScreen.main.bounds.width * 0.5)
-                            .onTapGesture {
-                                withAnimation {
-                                    self.isSideMenuOpen.toggle()
-                                }
-                            }
-                            .transition(.move(edge: .leading))
-                            .zIndex(1)
-                    }
+                        SideBar(isShowing: $presentSideMenu, content: AnyView(SideBarView(selectedSideMenuTab: $selectedSideMenuTab, presentSideMenu: $presentSideMenu)))
+//                    }
                 }
-                    Spacer()
-                }
-                    .tabItem {
-                        Label("Perfil", systemImage: "person.crop.circle.fill")
-                    }
-            } // TabView
+            }
             
-        }
+        }//NavigationView
         .navigationBarBackButtonHidden(true)
         
-    }
-}
+    } // body
+} // MainTabView
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
