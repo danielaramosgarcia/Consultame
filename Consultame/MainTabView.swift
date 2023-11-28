@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @State private var isSideMenuOpen: Bool = false // State variable to track side menu visibility
+
     var body: some View {
         NavigationView{
             TabView {
                 
                 VStack {
-                    HomeView()
-                       
-                    
+                 HStack{
+                     if isSideMenuOpen {
+                         SideMenuView()
+                             
+                             .frame(width: UIScreen.main.bounds.height * 0.4) // Set width to half the screen width
+//                                .transition(.push(from: .trailing))
+                             .onTapGesture {
+                                 withAnimation {
+                                     self.isSideMenuOpen.toggle()
+                                 }
+                             }
+                     }
+                        HomeView()
+                            .navigationBarItems(trailing:
+                                Button(action: {
+                                    withAnimation {
+                                        self.isSideMenuOpen.toggle()
+                                    }
+                                }) {
+                                    Image(systemName: "line.horizontal.3")
+                                        .imageScale(.large)
+                                        .padding()
+                                }
+                            )
+
+                    }
+
                     Spacer()
 
                 }
@@ -33,6 +59,7 @@ struct MainTabView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        
     }
 }
 
