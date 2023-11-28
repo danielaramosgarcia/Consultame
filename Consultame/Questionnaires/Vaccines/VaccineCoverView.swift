@@ -15,10 +15,10 @@ struct VaccineCoverView: View {
 
             
             Text("al día de hoy")
-                .font(.system(size: 30, weight: .light))
+                .font(.system(size: 25, weight: .light))
             
             
-            Image("vaccinecover")
+            Image("VaccinePic")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 320)

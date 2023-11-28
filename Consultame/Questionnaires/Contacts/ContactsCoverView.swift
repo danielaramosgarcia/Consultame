@@ -16,7 +16,7 @@ struct ContactsCoverView: View {
 
             
             Text("de emergencia")
-                .font(.system(size: 30, weight: .light))
+                .font(.system(size: 25, weight: .light))
             
             
             Image("contactspic")

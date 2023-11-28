@@ -25,7 +25,7 @@ struct FamilyQuestionsView: View {
 //
     var body: some View {
        VStack {
-            Image("familytree")
+            Image("familypic")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 200)

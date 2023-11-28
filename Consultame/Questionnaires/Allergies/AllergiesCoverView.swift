@@ -11,15 +11,15 @@ struct AllergiesCoverView: View {
     var body: some View {
         
         VStack{
-            Text("Antecedentes")
-                .font(.system(size: 45, weight: .bold))
-
+                Text("Alergias")
+                    .font(.system(size: 45, weight: .bold))
+                
+                
+                Text("medicamentos, alimentos y otros...")
+                    .font(.system(size: 25, weight: .light))
             
-            Text("medicos familiares")
-                .font(.system(size: 30, weight: .light))
             
-            
-            Image("familypic")
+            Image("foodAllergies")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 280)
