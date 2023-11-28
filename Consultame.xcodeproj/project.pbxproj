@@ -31,6 +31,8 @@
 		61C53AF42B12D4C00044ECD1 /* HabitsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */; };
 		61C53AF92B131F460044ECD1 /* AllergiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */; };
 		61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B002B1324720044ECD1 /* PersonalViewModel.swift */; };
+		61C53B0C2B157EC10044ECD1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B0B2B157EC10044ECD1 /* DataController.swift */; };
+		61C53B0F2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B0D2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
 		61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */; };
 		61CE9AAC2B0AFBA1001FCF8D /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61CE9AAB2B0AFBA1001FCF8D /* ding.wav */; };
@@ -155,6 +157,8 @@
 		61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCardView.swift; sourceTree = "<group>"; };
 		61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesViewModel.swift; sourceTree = "<group>"; };
 		61C53B002B1324720044ECD1 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
+		61C53B0B2B157EC10044ECD1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		61C53B0E2B157EE20044ECD1 /* ConsultameBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConsultameBook.xcdatamodel; sourceTree = "<group>"; };
 		61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		61CE9AAB2B0AFBA1001FCF8D /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -378,6 +382,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		61C53B0A2B157E990044ECD1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				61C53B0B2B157EC10044ECD1 /* DataController.swift */,
+				61C53B0D2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		61CE9AA62B0ADE48001FCF8D /* SpeechToT */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +425,7 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				61C53B0A2B157E990044ECD1 /* Core */,
 				FB37D2562B1547FA0067B871 /* Questionnaires */,
 				FB9F772C2B0B49B900210384 /* DuringConsultation */,
 				614E6DC32B0B2F3200592B08 /* TextToSpeech */,
@@ -954,6 +968,7 @@
 				FB37D2642B15523C0067B871 /* PersonalCoverView.swift in Sources */,
 				61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
+				61C53B0F2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
 				614E6DC52B0B37A900592B08 /* voice.swift in Sources */,
@@ -968,6 +983,7 @@
 				F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */,
+				61C53B0C2B157EC10044ECD1 /* DataController.swift in Sources */,
 				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				FBED78112AF9DF1300B4F5BA /* TestWSView.swift in Sources */,
@@ -1364,6 +1380,19 @@
 			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		61C53B0D2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61C53B0E2B157EE20044ECD1 /* ConsultameBook.xcdatamodel */,
+			);
+			currentVersion = 61C53B0E2B157EE20044ECD1 /* ConsultameBook.xcdatamodel */;
+			path = ConsultameBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 61FA755A2ADEFF2C00BB6B2A /* Project object */;
 }

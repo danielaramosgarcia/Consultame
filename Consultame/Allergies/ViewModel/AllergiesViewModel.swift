@@ -14,7 +14,7 @@ class AllergiesViewModel : ObservableObject {
 
     func getProfile() async throws {
         let apiService = APIService.shared
-        apiService.getJSON(urlString: API.baseURL + "/allergies/" + String(User.user_id)) { (result: Result<[AllergiesModel],APIService.APIError>) in
+        apiService.getJSON(urlString: API.baseURL + "/allergy/" + String(User.user_id)) { (result: Result<[AllergiesModel],APIService.APIError>) in
             switch result {
             case .success(let alergies):
                 DispatchQueue.main.async {
