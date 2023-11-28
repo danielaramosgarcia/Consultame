@@ -31,6 +31,8 @@
 		61C53AF42B12D4C00044ECD1 /* HabitsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */; };
 		61C53AF92B131F460044ECD1 /* AllergiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */; };
 		61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B002B1324720044ECD1 /* PersonalViewModel.swift */; };
+		61C53B042B15522E0044ECD1 /* ConsultameBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B022B15522E0044ECD1 /* ConsultameBook.xcdatamodeld */; };
+		61C53B072B1557530044ECD1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C53B062B1557530044ECD1 /* DataController.swift */; };
 		61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */; };
 		61CE9AAA2B0AFB85001FCF8D /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */; };
 		61CE9AAC2B0AFBA1001FCF8D /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 61CE9AAB2B0AFBA1001FCF8D /* ding.wav */; };
@@ -41,7 +43,6 @@
 		61FA75772ADEFF2F00BB6B2A /* ConsultameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75762ADEFF2F00BB6B2A /* ConsultameTests.swift */; };
 		61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */; };
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
-		847BE2792AFE866C00D378A6 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BE2782AFE866C00D378A6 /* Chat.swift */; };
 		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
 		F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */; };
 		F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */; };
@@ -146,6 +147,8 @@
 		61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCardView.swift; sourceTree = "<group>"; };
 		61C53AF82B131F460044ECD1 /* AllergiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesViewModel.swift; sourceTree = "<group>"; };
 		61C53B002B1324720044ECD1 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
+		61C53B032B15522E0044ECD1 /* ConsultameBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConsultameBook.xcdatamodel; sourceTree = "<group>"; };
+		61C53B062B1557530044ECD1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		61CE9AA72B0AFB1B001FCF8D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		61CE9AA92B0AFB85001FCF8D /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		61CE9AAB2B0AFBA1001FCF8D /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -159,7 +162,6 @@
 		61FA757C2ADEFF2F00BB6B2A /* ConsultameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsultameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITests.swift; sourceTree = "<group>"; };
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		847BE2782AFE866C00D378A6 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
 		F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
@@ -360,6 +362,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		61C53B052B1552E90044ECD1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				61C53B022B15522E0044ECD1 /* ConsultameBook.xcdatamodeld */,
+				61C53B062B1557530044ECD1 /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		61CE9AA62B0ADE48001FCF8D /* SpeechToT */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,9 +405,9 @@
 		61FA75642ADEFF2C00BB6B2A /* Consultame */ = {
 			isa = PBXGroup;
 			children = (
+				61C53B052B1552E90044ECD1 /* CoreData */,
 				FB9F772C2B0B49B900210384 /* DuringConsultation */,
 				614E6DC32B0B2F3200592B08 /* TextToSpeech */,
-				847BE2782AFE866C00D378A6 /* Chat.swift */,
 				61CE9AA62B0ADE48001FCF8D /* SpeechToT */,
 				61752F2F2AFAE1DD007B95C1 /* APIservices */,
 				FBED780F2AF9DEF800B4F5BA /* WebSocketTests */,
@@ -851,6 +862,7 @@
 				FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
 				61752F312AFB437D007B95C1 /* APIservice.swift in Sources */,
+				61C53B042B15522E0044ECD1 /* ConsultameBook.xcdatamodeld in Sources */,
 				FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */,
 				FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
@@ -867,10 +879,10 @@
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
-				847BE2792AFE866C00D378A6 /* Chat.swift in Sources */,
 				614E6DC52B0B37A900592B08 /* voice.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,
 				FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */,
+				61C53B072B1557530044ECD1 /* DataController.swift in Sources */,
 				FBEAE9C42AF843FC006E0B3D /* RelationshipModel.swift in Sources */,
 				FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */,
 				61FA75662ADEFF2C00BB6B2A /* ConsultameApp.swift in Sources */,
@@ -1272,6 +1284,19 @@
 			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		61C53B022B15522E0044ECD1 /* ConsultameBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61C53B032B15522E0044ECD1 /* ConsultameBook.xcdatamodel */,
+			);
+			currentVersion = 61C53B032B15522E0044ECD1 /* ConsultameBook.xcdatamodel */;
+			path = ConsultameBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 61FA755A2ADEFF2C00BB6B2A /* Project object */;
 }
