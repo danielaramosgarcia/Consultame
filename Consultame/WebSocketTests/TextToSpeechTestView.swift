@@ -81,7 +81,7 @@ struct TextToSpeechTestView: View {
 
 struct TextToSpeechTestView_Previews: PreviewProvider {
     static var previews: some View {
-        let webSocketManager = WebSocketManager()
+        let webSocketManager = WebSocketManager(consultationID: 1)
         
         TextToSpeechTestView(webSocketManager: webSocketManager)
     }

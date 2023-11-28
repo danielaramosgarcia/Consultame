@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+enum NavigationState: Hashable {
+    case goToNextView
+}
+
 struct StartConsultationView: View {
+<<<<<<< Updated upstream
     @StateObject var webSocketManager = WebSocketManager()
+    @State private var navigationPath = [NavigationState]()
+=======
+    @StateObject var webSocketManager = WebSocketManager(consultationID: 2) // TODO: obtenerlo al darle click a la consulta
+>>>>>>> Stashed changes
     
     var body: some View {
+        NavigationStack(path: $navigationPath) {
             VStack {
                 Image("doctor")
                     .resizable()
@@ -47,6 +57,19 @@ struct StartConsultationView: View {
             
             .padding(.bottom, 50)
             
+            .navigationDestination(for: NavigationState.self) { state in
+                switch state {
+                case .goToNextView:
+                    //                    SendMessageView()
+                    ChatView(webSocketManager: webSocketManager )
+                }
+                
+                
+            }
+            .navigationBarBackButtonHidden(true)
+
+            
+        } // navigation stack
     } // body
         
 }

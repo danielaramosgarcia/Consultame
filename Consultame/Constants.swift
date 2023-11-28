@@ -1,9 +1,8 @@
 import Foundation
 
 struct API {
-   // static let baseURL = "http://localhost:3000"
-
-    static let baseURL = "https://consultame-api.onrender.com"
+    static let baseURL = "http://localhost:3000"
+//    static let baseURL = "https://consultame-api.onrender.com"
     static let wsURL = "ws://consultame-api.onrender.com"
 }
 
@@ -12,6 +11,10 @@ struct API {
 struct User {
     static let user_id = 1
     static let user_name = "Jhon Doe"
+<<<<<<< Updated upstream
+    var JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxMTQyMjkwLCJleHAiOjE3MDIzNTE4OTB9.7qT_vWjKoezaG3qBKVf4c08lnUyJq3IJijnTGZsSAAQ"
+=======
+>>>>>>> Stashed changes
 }
 
 struct Utils {

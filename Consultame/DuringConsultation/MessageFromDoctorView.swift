@@ -11,7 +11,6 @@ import SwiftUI
 
 struct MessageFromDoctorView: View {
     var DuringConsultationVM: DuringConsultationViewModel
-    var consultation_id: Int
     var webSocketManager : WebSocketManager
     var waitTime : Int
     @State private var messageTimer: Timer?
@@ -74,7 +73,7 @@ struct MessageFromDoctorView: View {
             sendCompleteMessageTimer?.invalidate()
             sendCompleteMessageTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(sendCompleteMessageWaitTime), repeats: false) { _ in
                 Task {
-                    if let newMessage = await self.DuringConsultationVM.createMessage(message: message, is_from_user: false, consultation_id: self.consultation_id) {
+                    if let newMessage = await self.DuringConsultationVM.createMessage(message: message, is_from_user: false, consultation_id: self.webSocketManager.consultationID) {
                         self.webSocketManager.sendCompleteMessage(newMessage)
                         self.speechRecognizer.stopTranscribing()
                         self.speechRecognizer.transcribe()
@@ -110,10 +109,10 @@ struct MessageFromDoctorView_Previews: PreviewProvider {
     static var previews: some View {
         let mockDuringConsultationVM = DuringConsultationViewModel()
         let speechRecognizer = SpeechRecognizer()
-        let mockWebSocketManager = WebSocketManager()
+        let mockWebSocketManager = WebSocketManager(consultationID: 1)
         let mockWaitTime = 3
 
         
-        MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, consultation_id: 1, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: speechRecognizer)
+        MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: speechRecognizer)
     }
 }

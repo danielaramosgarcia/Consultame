@@ -7,8 +7,10 @@ class WebSocketManager: ObservableObject {
     @Published var messages = [(id: UUID, msg: String)]()
     @Published var roomKey: String? = nil
     @Published var saveMessages: Bool? = nil
+    @Published var consultationID : Int
     
-    init() {
+    init(consultationID: Int) {
+        self.consultationID = consultationID
         self.manager = SocketManager(socketURL: URL(string: API.baseURL)!, config: [.log(true), .compress])
         self.socket = manager.defaultSocket
         
@@ -32,6 +34,15 @@ class WebSocketManager: ObservableObject {
                 }
             }
         } // room creation
+        
+        socket.on("Request Consultation Data") { [weak self] (data, ack) in
+            let consultationInfoDict: [String: Any] = [
+                "consultationID": self?.consultationID
+            ]
+            
+            self?.socket.emit("Send Consultation Data", consultationInfoDict)
+    } // request consultation data
+        
         
         socket.on("Save Messages Confirmation") { [weak self] (data, ack) in
             if let saveMessages = data[0] as? Bool {

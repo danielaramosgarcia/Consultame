@@ -49,7 +49,7 @@ struct AppointmentNameView: View {
                             showError = true
                         } else {
                             let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
-                            createConsultation(consultation: newConsultation)
+                            ConsultationStore().createConsultation(consultation: newConsultation)
                         }
                     }
                 )
