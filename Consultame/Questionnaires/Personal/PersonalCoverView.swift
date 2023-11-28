@@ -11,15 +11,15 @@ struct PersonalCoverView: View {
     var body: some View {
         
         VStack{
-            Text("Antecedentes")
-                .font(.system(size: 45, weight: .bold))
+            Text("Datos")
+                .font(.system(size: 25, weight: .light))
 
             
-            Text("medicos familiares")
-                .font(.system(size: 30, weight: .light))
+            Text("Personales")
+                .font(.system(size: 45, weight: .bold))
             
             
-            Image("familypic")
+            Image("profile")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 280)

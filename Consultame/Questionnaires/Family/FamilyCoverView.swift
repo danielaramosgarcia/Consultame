@@ -16,7 +16,7 @@ struct FamilyCoverView: View {
 
             
             Text("medicos familiares")
-                .font(.system(size: 30, weight: .light))
+                .font(.system(size: 25, weight: .light))
             
             
             Image("familypic")

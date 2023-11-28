@@ -11,15 +11,15 @@ struct HabitsCoverView: View {
     var body: some View {
         
         VStack{
-            Text("Antecedentes")
+            Text("Hábitos")
                 .font(.system(size: 45, weight: .bold))
 
             
-            Text("medicos familiares")
-                .font(.system(size: 30, weight: .light))
+            Text("saludables y no saludables")
+                .font(.system(size: 25, weight: .light))
             
             
-            Image("familypic")
+            Image("habits")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 280)
