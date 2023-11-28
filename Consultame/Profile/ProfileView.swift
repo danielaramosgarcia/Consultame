@@ -40,6 +40,7 @@ struct ColumnView: View {
 
 struct ProfileView: View {
     @StateObject var ProfileVM = ProfileViewModel()
+    @Binding var presentSideMenu: Bool
     
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),
@@ -53,13 +54,30 @@ struct ProfileView: View {
             VStack {
                 
                 ZStack{
-                    Circle()
-                        .fill(Color("AccentColor"))
-                        .frame(width:120)
-                    Text(String(ProfileVM.profile.name.first ?? " " ))
-                        .foregroundColor(.white)
-                        .font(.title)
+                    HStack {
+                        Button{
+                            presentSideMenu.toggle()
+                        } label: {
+                            Image(systemName: "line.horizontal.3")
+                                .imageScale(.large)
+                                .padding()
+                                .foregroundColor(.black)
+                        }
+                        Spacer()
+                    }
+                    
+                }
+                ZStack{
+                        Circle()
+                            .fill(Color("AccentColor"))
+                            .frame(width:120)
+                        Text(String(ProfileVM.profile.name.first ?? " " ))
+                            .foregroundColor(.white)
+                            .font(.title)
+                    
                 } // ZStack
+                
+                
                 
                 Text(ProfileVM.profile.name)
                     .font(.title)
@@ -103,6 +121,9 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        
+        let isSideMenuOpen = Binding.constant(false)
+        
+        ProfileView(presentSideMenu: isSideMenuOpen)
     }
 }

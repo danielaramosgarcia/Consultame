@@ -1,27 +1,40 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Binding var presentSideMenu: Bool
     
     var body: some View {
-        NavigationView {
             ZStack{
                 
                 VStack {
-                    HStack {
-                        Spacer()
-                        Image("manoSmall")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                        
-                        Spacer()
+                    ZStack{
+                        HStack {
+                            Button{
+                                presentSideMenu.toggle()
+                            } label: {
+                                Image(systemName: "line.horizontal.3")
+                                    .imageScale(.large)
+                                    .padding()
+                                    .foregroundColor(.black)
+                            }
+                            Spacer()
+                        }
+                        HStack{
+                            Spacer()
+                            Image("manoSmall")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                            
+                            Spacer()
+                        }
+                        .foregroundColor(.white)
+                        .toolbar{
+                        }
                     }
-                    .foregroundColor(.white)
-                    .toolbar{
-                    }
-                    Text("ConsultaMe")
-                        .foregroundColor(.black)
-                        .bold()
+                        Text("ConsultaMe")
+                            .foregroundColor(.black)
+                            .bold()
                     
                     
                     
@@ -36,16 +49,17 @@ struct HomeView: View {
                     .padding(.horizontal, 25)
                     
                     CitasPrevias()
-                }
-            }
-        }
-    
+                    
+                } // VStack
+            } //ZStack
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        let isSideMenuOpen = Binding.constant(false)
+
+        // Pass the binding to HomeView
+        HomeView(presentSideMenu: isSideMenuOpen)
     }
 }
-

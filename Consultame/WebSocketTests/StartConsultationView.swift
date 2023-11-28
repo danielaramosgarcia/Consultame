@@ -10,10 +10,7 @@ import SwiftUI
 
 struct StartConsultationView: View {
     @StateObject var webSocketManager = WebSocketManager(consultationID: 2) // TODO: obtenerlo al darle click a la consulta
-    
-    
 
-    
     var body: some View {
         VStack {
             Image("doctor")
