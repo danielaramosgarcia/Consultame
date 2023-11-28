@@ -35,7 +35,7 @@ struct PersonalView: View {
                             Text("Línea de Calle 1: \(address.street_line_1)")
                             Text("Línea de Calle 2: \(address.street_line_2 ?? "")")
                             Text("Ciudad: \(address.city ?? "")")
-                            Text("Estado/Provincia: \(address.state_providence_region)")
+                            Text("Estado/Provincia: \(address.state_province_region)")
                             Text("Código Postal: \(address.postal_code ?? "")")
                             Text("País: \(address.country)")
                             Text("Información Adicional: \(address.additional_info ?? "")")
@@ -43,7 +43,7 @@ struct PersonalView: View {
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
+            .listStyle(.insetGrouped)
             .navigationTitle("Información Personal")
         }
         .task {

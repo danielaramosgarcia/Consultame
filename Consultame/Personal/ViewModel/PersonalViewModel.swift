@@ -18,7 +18,7 @@ class PersonalViewModel : ObservableObject {
         height: "175",
         weight: "70",
         blood_type: Blood_typeModel(id: 1, type: "O+"),
-        addresses: [DireccionModel(id: 1, street_line_1: "123 Main St", street_line_2: "Apt 4", city: "Dummy City", state_providence_region: "Dummy State", postal_code: "12345", country: "Dummy Country", additional_info: "Dummy Info")]
+        addresses: [DireccionModel(id: 1, street_line_1: "123 Main St", street_line_2: "Apt 4", city: "Dummy City", state_province_region: "Dummy State", postal_code: "12345", country: "Dummy Country", additional_info: "Dummy Info")]
     )
     
     let apiService = APIService.shared

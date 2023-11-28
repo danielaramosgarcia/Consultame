@@ -12,7 +12,7 @@ struct DireccionModel : Identifiable, Decodable, Hashable {
     var street_line_1 : String
     var street_line_2 : String?
     var city : String?
-    var state_providence_region : String
+    var state_province_region : String
     var postal_code : String?
     var country : String
     var additional_info : String?
