@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ConsultameApp: App {
+//    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomPageView()
+//                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
