@@ -20,6 +20,7 @@ struct AppointmentNameView: View {
     @State private var appointmentName: String = ""
     @State private var showError = false
     
+    
     var body: some View {
         VStack {
             

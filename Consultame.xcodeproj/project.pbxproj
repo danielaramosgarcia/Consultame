@@ -10,6 +10,9 @@
 		5C0142A82B16292A00C1E3F4 /* ChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142A72B16292A00C1E3F4 /* ChatHistory.swift */; };
 		5C0142AC2B163C2200C1E3F4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142AB2B163C2200C1E3F4 /* ChatHistoryViewModel.swift */; };
 		5C0142AF2B16BF0500C1E3F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */; };
+		5C0142B32B17282600C1E3F4 /* InicioSesionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142B22B17282600C1E3F4 /* InicioSesionViewModel.swift */; };
+		5C0142B52B172BF100C1E3F4 /* InicioSesionRealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142B42B172BF100C1E3F4 /* InicioSesionRealViewModel.swift */; };
+		5C0142B72B172F6D00C1E3F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142B62B172F6D00C1E3F4 /* LoginView.swift */; };
 		5C2596E42AFDD389007CE889 /* ConsultationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E32AFDD389007CE889 /* ConsultationModel.swift */; };
 		5C2596E62AFDD3A0007CE889 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */; };
 		5C2596E72AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
@@ -153,6 +156,9 @@
 		5C0142A72B16292A00C1E3F4 /* ChatHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistory.swift; sourceTree = "<group>"; };
 		5C0142AB2B163C2200C1E3F4 /* ChatHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewModel.swift; sourceTree = "<group>"; };
 		5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		5C0142B22B17282600C1E3F4 /* InicioSesionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioSesionViewModel.swift; sourceTree = "<group>"; };
+		5C0142B42B172BF100C1E3F4 /* InicioSesionRealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioSesionRealViewModel.swift; sourceTree = "<group>"; };
+		5C0142B62B172F6D00C1E3F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5C2596E32AFDD389007CE889 /* ConsultationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationModel.swift; sourceTree = "<group>"; };
 		5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
 		5C8236312B1408AD003742AA /* QuestionarioInicialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarioInicialView.swift; sourceTree = "<group>"; };
@@ -749,6 +755,9 @@
 			isa = PBXGroup;
 			children = (
 				FB77DC9E2AF5A72B0065878B /* InicioSesion.swift */,
+				5C0142B22B17282600C1E3F4 /* InicioSesionViewModel.swift */,
+				5C0142B42B172BF100C1E3F4 /* InicioSesionRealViewModel.swift */,
+				5C0142B62B172F6D00C1E3F4 /* LoginView.swift */,
 			);
 			path = InicioSesion;
 			sourceTree = "<group>";
@@ -1040,6 +1049,7 @@
 				61752F312AFB437D007B95C1 /* APIservice.swift in Sources */,
 				FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */,
 				FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */,
+				5C0142B72B172F6D00C1E3F4 /* LoginView.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */,
 				FBB69AF42B16C052000ACE05 /* LightTextInput.swift in Sources */,
@@ -1049,6 +1059,7 @@
 				61C53B012B1324720044ECD1 /* PersonalViewModel.swift in Sources */,
 				FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */,
 				FB2952DB2AE06C3F00D1A798 /* UserVaccineModel.swift in Sources */,
+				5C0142B52B172BF100C1E3F4 /* InicioSesionRealViewModel.swift in Sources */,
 				FB37D2642B15523C0067B871 /* PersonalCoverView.swift in Sources */,
 				61C53AE92B0F2DDB0044ECD1 /* ProfileViewModel.swift in Sources */,
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
@@ -1079,6 +1090,7 @@
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				F9DD69782B148C650087B729 /* ButtonNavigation.swift in Sources */,
+				5C0142B32B17282600C1E3F4 /* InicioSesionViewModel.swift in Sources */,
 				FB9F77272B0B47EB00210384 /* WebSocketTests.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
 				FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */,
