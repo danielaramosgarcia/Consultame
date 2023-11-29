@@ -10,8 +10,6 @@ import AVFoundation
 import MediaPlayer
 
 struct ChatHistory: View {
-    @StateObject var DuringConsultationVM = DuringConsultationViewModel()
-    
     @State private var actualPatientMessage = ""
     @State private var patientTimerStarted = false
     @State private var patientDebounceTimer: Timer?
