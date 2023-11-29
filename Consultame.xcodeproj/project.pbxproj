@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C0142A82B16292A00C1E3F4 /* ChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142A72B16292A00C1E3F4 /* ChatHistory.swift */; };
 		5C0142AC2B163C2200C1E3F4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142AB2B163C2200C1E3F4 /* ChatHistoryViewModel.swift */; };
+		5C0142AF2B16BF0500C1E3F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */; };
 		5C2596E42AFDD389007CE889 /* ConsultationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E32AFDD389007CE889 /* ConsultationModel.swift */; };
 		5C2596E62AFDD3A0007CE889 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */; };
 		5C2596E72AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
@@ -150,6 +151,7 @@
 /* Begin PBXFileReference section */
 		5C0142A72B16292A00C1E3F4 /* ChatHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistory.swift; sourceTree = "<group>"; };
 		5C0142AB2B163C2200C1E3F4 /* ChatHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewModel.swift; sourceTree = "<group>"; };
+		5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		5C2596E32AFDD389007CE889 /* ConsultationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationModel.swift; sourceTree = "<group>"; };
 		5C2596E52AFDD3A0007CE889 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
 		5C8236312B1408AD003742AA /* QuestionarioInicialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarioInicialView.swift; sourceTree = "<group>"; };
@@ -219,7 +221,7 @@
 		FB3D14012AF5B9050013DDD4 /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
 		FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCoverView.swift; sourceTree = "<group>"; };
 		FB5B67B32B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyDiseaseToUserView.swift; sourceTree = "<group>"; };
-		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Consultame/Preview Content/Constants.swift"; sourceTree = SOURCE_ROOT; };
+		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Consultame/Constants.swift; sourceTree = SOURCE_ROOT; };
 		FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP1.mp4; sourceTree = "<group>"; };
 		FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP2.mp4; sourceTree = "<group>"; };
 		FB5CE3D62B16A8E400B3EFB3 /* gerardoP3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP3.mp4; sourceTree = "<group>"; };
@@ -303,6 +305,14 @@
 				5C0142AB2B163C2200C1E3F4 /* ChatHistoryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5C0142AD2B16BEED00C1E3F4 /* NewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */,
+			);
+			path = NewModels;
 			sourceTree = "<group>";
 		};
 		5C2596E12AFDD049007CE889 /* Models */ = {
@@ -492,6 +502,7 @@
 				61FA75652ADEFF2C00BB6B2A /* ConsultameApp.swift */,
 				61FA75692ADEFF2E00BB6B2A /* Assets.xcassets */,
 				61FA756B2ADEFF2E00BB6B2A /* Preview Content */,
+				FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */,
 				FB3D14012AF5B9050013DDD4 /* TrashView.swift */,
 				FBB69AEA2B167C7B000ACE05 /* SideBar */,
 			);
@@ -501,7 +512,6 @@
 		61FA756B2ADEFF2E00BB6B2A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */,
 				61FA756C2ADEFF2E00BB6B2A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -702,6 +712,7 @@
 		FB7664AA2AF181110039AA0E /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				5C0142AD2B16BEED00C1E3F4 /* NewModels */,
 				FB7664AB2AF181210039AA0E /* Models */,
 				849A16952AF995F50061A8A9 /* RegisterView.swift */,
 			);
@@ -1055,6 +1066,7 @@
 				FB2890AD2AF86BB300EFEF35 /* AllergiesListView.swift in Sources */,
 				F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */,
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
+				5C0142AF2B16BF0500C1E3F4 /* RegisterViewModel.swift in Sources */,
 				61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */,
 				61C53B0C2B157EC10044ECD1 /* DataController.swift in Sources */,
 				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
