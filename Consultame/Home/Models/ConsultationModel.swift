@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ConsultationModel: Codable, Identifiable {
+struct ConsultationModel: Codable ,Identifiable {
     let id: Int?
     let name: String? // Para crear una consulta necesito esto
     let description: String?

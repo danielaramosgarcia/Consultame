@@ -88,7 +88,6 @@ struct RegisterView: View {
                         showError = false
                         var userOp = RegisterViewModel(UserInfo: userModel)
                         userOp.createUser()
-                        print("Register Completed")
                     }
 
                 }
