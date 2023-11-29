@@ -103,8 +103,6 @@
 		FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77372B0B56C500210384 /* CreateMessageModel.swift */; };
 		FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77392B0BCB9E00210384 /* MessageFromDoctorView.swift */; };
 		FB9F82A92B16688A00ED771D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F82A82B16688A00ED771D /* VideoPlayerView.swift */; };
-		FB9F82B22B167BEA00ED771D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F82A82B16688A00ED771D /* VideoPlayerView.swift */; };
-		FB9F82B32B167BEA00ED771D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F82A82B16688A00ED771D /* VideoPlayerView.swift */; };
 		FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E62B07DBDD007E55B3 /* AllergiesCard.swift */; };
 		FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E82B07E935007E55B3 /* AllergiesModel.swift */; };
 		FBB69AE72B167C40000ACE05 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB69AE62B167C40000ACE05 /* SideBarView.swift */; };
@@ -1057,7 +1055,6 @@
 				FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				5C2596E92AFDE9A7007CE889 /* CitasPrevias.swift in Sources */,
 				5C2596E72AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */,
-				FB9F82B22B167BEA00ED771D /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,7 +1067,6 @@
 				FB8ED3C12AF1580100DE02FD /* HomeView.swift in Sources */,
 				5C2596EA2AFDE9A7007CE889 /* CitasPrevias.swift in Sources */,
 				FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */,
-				FB9F82B32B167BEA00ED771D /* VideoPlayerView.swift in Sources */,
 				61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */,
 				FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				5C2596E82AFDE9A7007CE889 /* CitasPreviasCards.swift in Sources */,
