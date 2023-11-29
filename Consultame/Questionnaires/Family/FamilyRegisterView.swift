@@ -13,6 +13,8 @@ struct FamilyRegisterView: View {
     }
 }
 
-#Preview {
-    FamilyRegisterView()
+struct FamilyRegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        FamilyRegisterView()
+    }
 }

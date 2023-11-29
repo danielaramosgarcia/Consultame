@@ -5,12 +5,12 @@ struct CustomButton<Content: View>: View {
     let borderColor: Color
     let text: String
     let textColor: Color
-    let destinationView: Content
+    var destinationView: Content?
     var action: (() -> Void)? // Action closure is now Optional
     var asyncAction: (() -> Void)? // Action closure is now Optional
 
     
-    init(buttonColor: Color, borderColor: Color, text: String, textColor: Color, destinationView: Content, action: (() -> Void)? = nil) {
+    init(buttonColor: Color, borderColor: Color, text: String, textColor: Color, destinationView: Content? = nil, action: (() -> Void)? = nil) {
         self.buttonColor = buttonColor
         self.borderColor = borderColor
         self.text = text

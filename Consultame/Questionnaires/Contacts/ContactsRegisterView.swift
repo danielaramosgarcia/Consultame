@@ -13,6 +13,8 @@ struct ContactsRegisterView: View {
     }
 }
 
-#Preview {
-    ContactsRegisterView()
+struct ContactsRegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContactsRegisterView()
+    }
 }

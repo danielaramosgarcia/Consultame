@@ -13,6 +13,8 @@ struct PersonalRegisterView: View {
     }
 }
 
-#Preview {
-    PersonalRegisterView()
+struct PersonalRegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        PersonalRegisterView()
+    }
 }

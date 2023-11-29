@@ -13,6 +13,8 @@ struct AllergiesRegisterView: View {
     }
 }
 
-#Preview {
-    AllergiesRegisterView()
+struct AllergiesRegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        AllergiesRegisterView()
+    }
 }

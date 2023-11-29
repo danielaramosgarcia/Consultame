@@ -8,7 +8,7 @@ class FamilyViewModel : ObservableObject {
     
     func getFamily() async throws {
         let apiService = APIService.shared
-        apiService.getJSON(urlString: API.baseURL + "/family/" + String(User.user_id)) { (result: Result<[FamilyModel],APIService.APIError>) in
+        apiService.getJSON(urlString: API.baseURL + "/disease/chronics" + String(User.user_id)) { (result: Result<[FamilyModel],APIService.APIError>) in
             switch result {
             case .success(let familyarr):
                 DispatchQueue.main.async {

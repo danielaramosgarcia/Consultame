@@ -13,6 +13,8 @@ struct HabitsRegisterView: View {
     }
 }
 
-#Preview {
-    HabitsRegisterView()
+struct HabitsRegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        HabitsRegisterView()
+    }
 }

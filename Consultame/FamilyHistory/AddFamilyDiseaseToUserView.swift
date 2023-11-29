@@ -14,6 +14,9 @@ struct AddFamilyDiseaseToUserView: View {
     @StateObject var ContactsVM = ContactsViewModel()
     var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
     
+    @StateObject var FamilyVM = FamilyViewModel()
+    var familyArray : [FamilyModel] { FamilyVM.familyArray }
+    
     @State private var showDatePicker = false
     @State private var datePickerOffset: CGFloat = 0
     
