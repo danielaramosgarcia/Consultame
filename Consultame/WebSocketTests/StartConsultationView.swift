@@ -9,17 +9,8 @@ import SwiftUI
 
 
 struct StartConsultationView: View {
-    @StateObject var messageManager = MessageManager()
-    @StateObject var duringConsultationVM: DuringConsultationViewModel
-    @StateObject var webSocketManager:  WebSocketManager // TODO: obtenerlo al darle click a la consulta
-    
-    init() {
-                let messageManager = MessageManager()
-                _messageManager = StateObject(wrappedValue: messageManager)
-                _duringConsultationVM = StateObject(wrappedValue: DuringConsultationViewModel(messageManager: messageManager))
-                _webSocketManager = StateObject(wrappedValue: WebSocketManager(consultationID: 2, messageManager: messageManager))
-            } // init
-    
+    @StateObject var webSocketManager = WebSocketManager(consultationID: 2) // TODO: obtenerlo al darle click a la consulta
+
     var body: some View {
         VStack {
             Image("doctor")
@@ -47,7 +38,7 @@ struct StartConsultationView: View {
                 borderColor : Color.clear,
                 text : "Saltar",
                 textColor : Color.white,
-                destinationView: AnyView(ChatView(messageManager: messageManager, duringConsultationVM: duringConsultationVM, webSocketManager: webSocketManager))
+                destinationView: AnyView(ChatView(webSocketManager: webSocketManager))
             )
             .padding(.horizontal, 30)
             .padding(.top, 70)
@@ -59,7 +50,7 @@ struct StartConsultationView: View {
         
         
     } // body
-    
+        
 }
 
 struct StartConsultationView_Previews: PreviewProvider {

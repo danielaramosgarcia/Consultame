@@ -10,19 +10,15 @@ import AVFoundation
 import MediaPlayer
 
 struct ChatView: View {
-    var messageManager: MessageManager
-    var duringConsultationVM: DuringConsultationViewModel
     var webSocketManager: WebSocketManager
+    @StateObject var DuringConsultationVM = DuringConsultationViewModel()
     
-
     @State private var actualPatientMessage = ""
     @State private var patientTimerStarted = false
     @State private var patientDebounceTimer: Timer?
     let waitTime = 3
     
-    @State var synthesizerDelegate = SpeechSynthesizerDelegate()
     @State var synthesizer = AVSpeechSynthesizer()
-    
     
     
     // speech to text
@@ -46,11 +42,6 @@ struct ChatView: View {
                         .foregroundColor(.black)
                 }
                 .onAppear {
-                    synthesizer.delegate = synthesizerDelegate
-                    synthesizerDelegate.onDidFinish = {
-                        speechRecognizer.transcribe()
-                    }
-                    
                     // Iniciar la reproducción de audio
                     player.seek(to: .zero)
                     player.play()
@@ -70,7 +61,7 @@ struct ChatView: View {
             
             // Chat messages
             List {
-                ForEach(messageManager.messages) { message in
+                ForEach(DuringConsultationVM.messagesArr) { message in
                     MessageRowView(message: message)
                         .listRowSeparator(.hidden)
                         .contextMenu {
@@ -87,7 +78,6 @@ struct ChatView: View {
                             }
                             
                             Button("Text to Speech") {
-                                speechRecognizer.stopTranscribing()
                                 let utterance = AVSpeechUtterance(string: message.message)
                                 
                                 utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.es-MX.Paulina")
@@ -98,7 +88,7 @@ struct ChatView: View {
                         }
                 }
                 MessageFromDoctorView(
-                    DuringConsultationVM: duringConsultationVM,
+                    DuringConsultationVM: DuringConsultationVM,
                     
                     webSocketManager: webSocketManager,
                     waitTime: waitTime,
@@ -139,7 +129,7 @@ struct ChatView: View {
     
     private func sendMessage() async {
         if !actualPatientMessage.isEmpty {
-            if let newMessage = await duringConsultationVM.createMessage(message: actualPatientMessage, is_from_user: true, consultation_id: webSocketManager.consultationID) {
+            if let newMessage = await DuringConsultationVM.createMessage(message: actualPatientMessage, is_from_user: true, consultation_id: webSocketManager.consultationID) {
                 
                 webSocketManager.sendCompleteMessage(newMessage)
                 actualPatientMessage = ""
@@ -167,23 +157,12 @@ struct ChatView: View {
         } // if
         
     } // handle Text change
-    
-    
 }
-
-
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        // Crear instancias de las dependencias requeridas por ChatView
-        let messageManager = MessageManager()
-        let duringConsultationVM = DuringConsultationViewModel(messageManager: messageManager)
-        let webSocketManager = WebSocketManager(consultationID: 1, messageManager: messageManager)
-
-        // Inicializar ChatView con las dependencias
-        ChatView(messageManager: messageManager, duringConsultationVM: duringConsultationVM, webSocketManager: webSocketManager)
+        let webSocketManager = WebSocketManager(consultationID: 1)
+        
+        ChatView(webSocketManager: webSocketManager)
     }
 }
-
-
-

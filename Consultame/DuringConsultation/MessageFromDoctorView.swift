@@ -107,14 +107,12 @@ struct MessageFromDoctorView: View {
 
 struct MessageFromDoctorView_Previews: PreviewProvider {
     static var previews: some View {
-              // Crear instancias simuladas de las dependencias requeridas por MessageFromDoctorView
-                let mockMessageManager = MessageManager()
-                let mockDuringConsultationVM = DuringConsultationViewModel(messageManager: mockMessageManager)
-                let mockWebSocketManager = WebSocketManager(consultationID: 1, messageManager: mockMessageManager)
-                let mockSpeechRecognizer = SpeechRecognizer()
-                let mockWaitTime = 3
+        let mockDuringConsultationVM = DuringConsultationViewModel()
+        let speechRecognizer = SpeechRecognizer()
+        let mockWebSocketManager = WebSocketManager(consultationID: 1)
+        let mockWaitTime = 3
+
         
-        // Inicializar MessageFromDoctorView con las dependencias
-        MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: mockSpeechRecognizer)
+        MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: speechRecognizer)
     }
 }
