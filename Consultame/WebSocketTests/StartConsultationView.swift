@@ -9,17 +9,22 @@ import SwiftUI
 
 
 struct StartConsultationView: View {
+    var consultationID: Int
+
     @StateObject var messageManager = MessageManager()
         @StateObject var duringConsultationVM: DuringConsultationViewModel
         @StateObject var webSocketManager:  WebSocketManager // TODO: obtenerlo al darle click a la consulta
         
-        init() {
-            print(msgConsultation.consultationID)
+
+    init(consultationID: Int) {
+        self.consultationID = consultationID // Asigna el ID de la consulta
                     let messageManager = MessageManager()
                     _messageManager = StateObject(wrappedValue: messageManager)
                     _duringConsultationVM = StateObject(wrappedValue: DuringConsultationViewModel(messageManager: messageManager))
-            _webSocketManager = StateObject(wrappedValue: WebSocketManager(consultationID: msgConsultation.consultationID, messageManager: messageManager))
+                    _webSocketManager = StateObject(wrappedValue: WebSocketManager(consultationID: consultationID, messageManager: messageManager))
                 } // init
+    
+    
     
     
     var body: some View {
@@ -66,6 +71,6 @@ struct StartConsultationView: View {
 
 struct StartConsultationView_Previews: PreviewProvider {
     static var previews: some View {
-        StartConsultationView()
+        StartConsultationView(consultationID: 1)
     }
 }
