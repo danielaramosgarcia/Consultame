@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VaccineCoverView: View {
     var body: some View {
+        NavigationView{
             VStack{
                 Text("Vacunas")
                     .font(.system(size: 45, weight: .bold))
@@ -27,7 +28,7 @@ struct VaccineCoverView: View {
                 CustomButton(
                     buttonColor : Color("AccentColor"),
                     borderColor : Color.clear,
-                    text : "¡Vamos!",
+                    text : "Añadir",
                     textColor : Color.white,
                     destinationView: AnyView(VaccinesRegisterView())
                 )
@@ -37,7 +38,7 @@ struct VaccineCoverView: View {
                 CustomButton(
                     buttonColor : Color.clear,
                     borderColor : Color("AccentColor"),
-                    text : "Saltar",
+                    text : "Siguiente",
                     textColor : Color("AccentColor"),
                     destinationView: AnyView(MainTabView())
                 )
@@ -47,7 +48,8 @@ struct VaccineCoverView: View {
                 .navigationBarBackButtonHidden(true)
             }
             
-    }
+        }
+    } // nav
 }
 
 struct VaccineCoverView_Previews: PreviewProvider {

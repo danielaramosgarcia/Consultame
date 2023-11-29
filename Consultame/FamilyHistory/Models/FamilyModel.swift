@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct Disease : Identifiable, Decodable, Hashable {
+    var id : Int
+    var name : String
+    var description : String
+    var type_id : Int
+
+}
+
+
 struct Chronic_Disease : Identifiable, Decodable, Hashable {
     var id : Int
     var name : String
