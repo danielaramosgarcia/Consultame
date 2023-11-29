@@ -10,11 +10,7 @@ import SwiftUI
 
 
 class DuringConsultationViewModel : ObservableObject {
-    var messageManager: MessageManager
-    
-    init(messageManager: MessageManager) {
-        self.messageManager = messageManager
-    }
+    @Published var messagesArr = [MessageModel]()
     
     func createMessage(message: String, is_from_user: Bool, consultation_id: Int) async -> MessageModel? {
         guard let url = URL(string: API.baseURL + "/message") else {
@@ -46,7 +42,7 @@ class DuringConsultationViewModel : ObservableObject {
 
             // Actualizar el arreglo de mensajes en el hilo principal
             DispatchQueue.main.async {
-                self.messageManager.addMessage(decodedMessage)
+                self.messagesArr.append(decodedMessage)
             }
 
             return decodedMessage
@@ -55,9 +51,6 @@ class DuringConsultationViewModel : ObservableObject {
             return nil
         }
     } // create message
-    
-
-
 
     
     
