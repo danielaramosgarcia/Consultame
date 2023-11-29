@@ -33,16 +33,17 @@ struct AddVaccineToUserView: View {
         VStack() {
             
             VStack {
-                SearchBar(text: $searchText, placeholder: "Buscar")
-                    .padding()
+                
                 Text("Añadir nueva vacuna")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top, .trailing, .leading])
                     .font(.title)
                     .fontWeight(.bold)
                 
+                SearchBar(text: $searchText, placeholder: "Buscar vacuna")
+                    .padding(.horizontal, 30)
                 List{
-                        Picker(selection: $vaccineSelection, label: Text("Tipo de vacuna")) {
+                        Picker(selection: $vaccineSelection, label: Text("Vacunas")) {
                             ForEach(searchResults, id: \.id) { item in
                                 Text(item.name).tag(item.id)
                             } // for each
@@ -62,31 +63,34 @@ struct AddVaccineToUserView: View {
                         } // task
                     
     
-                        VStack{
-                            
-                            Button {
-                                showDatePicker.toggle()
-                                
-                            } label: {
-                                Text("+ Añadir fecha de aplicación")
-                            }
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .offset(y: datePickerOffset)
-                            
-                            
-                            if showDatePicker {
-                                
-                                DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
-                                    .datePickerStyle(.graphical)
-                                    .environment(\.locale, Locale(identifier: "es_ES"))
-                                
-                            }
-                        }
+                        
                         
                     } // List
                     .scrollContentBackground(.hidden)
                     .background(.clear)
+                
+                VStack{
+                    
+                    Button {
+                        showDatePicker.toggle()
+                        
+                    } label: {
+                        Text("+ Añadir fecha de aplicación")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .bold()
+                    .offset(y: datePickerOffset)
+                    
+                    
+                    if showDatePicker {
+                        
+                        DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
+                            .datePickerStyle(.graphical)
+                            .environment(\.locale, Locale(identifier: "es_ES"))
+                            .padding()
+                        
+                    }
+                }
                     
             } //VStack
             
