@@ -31,8 +31,14 @@ struct AddAllergyToUserView: View {
         VStack() {
             
             VStack {
-                SearchBar(text: $searchText, placeholder: "Buscar")
-                    .padding()
+                
+                Text("Añadir nueva alergia")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.top, .trailing, .leading])
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                
                 
                     HStack {
                         Text("Filtrar por tipo de alergia: ")
@@ -49,15 +55,11 @@ struct AddAllergyToUserView: View {
                         }
                     }
                 
-                
-                Text("Añadir nueva alergia")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.top, .trailing, .leading])
-                    .font(.title)
-                    .fontWeight(.bold)
+                SearchBar(text: $searchText, placeholder: "Buscar alergia")
+                    .padding(.horizontal, 30)
                 
                 List{
-                        Picker(selection: $vaccineSelection, label: Text("Tipo de alergia")) {
+                        Picker(selection: $vaccineSelection, label: Text("Alergias")) {
                             ForEach(searchResults, id: \.id) { item in
                                 Text(item.name).tag(item.id)
                             } // for each

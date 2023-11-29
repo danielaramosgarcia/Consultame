@@ -50,6 +50,7 @@ struct AppointmentNameView: View {
                         if appointmentName.isEmpty {
                             showError = true
                         } else {
+
                             do {
                                 // Usa 'try' para manejar errores lanzados por funciones asíncronas
                                 try await createConsultationVM.createConsultation(name: appointmentName)
@@ -60,6 +61,12 @@ struct AppointmentNameView: View {
                                 // Por ejemplo, puedes mostrar un mensaje de error al usuario
                                 print("Ocurrió un error: \(error)")
                             }
+
+//                            let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
+//                            ConsultationStore().createConsultation(consultation: newConsultation)
+                            
+                            
+
                         }
                 )
                 .padding(.top, 50)
