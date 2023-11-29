@@ -17,7 +17,6 @@ struct AllergiesTabView: View {
         VStack {
             HStack {
                 Text("Mis alergías")
-                    .font(.title)
                 Spacer()
                 NavigationLink(destination: AnyView(AddAllergyToUserView())) {
                     Image(systemName: "plus.circle.fill")
@@ -25,15 +24,15 @@ struct AllergiesTabView: View {
                 }
             }
             .padding()
+            .font(.title)
 
-            // Custom Picker with evenly distributed options and underline for the selected text
-            HStack(spacing: 0) {  // Set spacing to 0 to control it manually with Spacers
+            HStack(spacing: 0) {
                 ForEach(options.indices, id: \.self) { index in
                     Group {
-                        Spacer()  // Add a spacer before the text
+                        Spacer()
                         
                         Text(options[index])
-                            .font(.subheadline)  // Smaller font size here
+                            .font(.subheadline)
                             .foregroundColor(selectedTab == index ? Color("AccentColor") : .gray)
                             .overlay(
                                 selectedTab == index ?
@@ -46,7 +45,7 @@ struct AllergiesTabView: View {
                                 self.selectedTab = index
                             }
                         
-                        Spacer()  // Add a spacer after the text
+                        Spacer()
                     }
                 }
             }
@@ -66,7 +65,6 @@ struct AllergiesTabView: View {
                 print("Error: \(error)")
             }
         }
-        .padding()
     }
 }
 

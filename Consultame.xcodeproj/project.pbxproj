@@ -107,6 +107,8 @@
 		FBA540E92B07E935007E55B3 /* AllergiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA540E82B07E935007E55B3 /* AllergiesModel.swift */; };
 		FBB69AE72B167C40000ACE05 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB69AE62B167C40000ACE05 /* SideBarView.swift */; };
 		FBB69AE92B167C71000ACE05 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB69AE82B167C71000ACE05 /* SideBar.swift */; };
+		FBB69AF42B16C052000ACE05 /* LightTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB69AF32B16C052000ACE05 /* LightTextInput.swift */; };
+		FBB69AF62B16CB0C000ACE05 /* AddHabitsToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB69AF52B16CB0C000ACE05 /* AddHabitsToUserView.swift */; };
 		FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */; };
 		FBEAE9BF2AF84328006E0B3D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */; };
 		FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE9C12AF84375006E0B3D /* ContactModel.swift */; };
@@ -229,6 +231,8 @@
 		FBA540E82B07E935007E55B3 /* AllergiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesModel.swift; sourceTree = "<group>"; };
 		FBB69AE62B167C40000ACE05 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		FBB69AE82B167C71000ACE05 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		FBB69AF32B16C052000ACE05 /* LightTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTextInput.swift; sourceTree = "<group>"; };
+		FBB69AF52B16CB0C000ACE05 /* AddHabitsToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitsToUserView.swift; sourceTree = "<group>"; };
 		FBC61B1B2AF5AD0D00FAAFC5 /* BotonesInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonesInicio.swift; sourceTree = "<group>"; };
 		FBEAE9BE2AF84328006E0B3D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		FBEAE9C12AF84375006E0B3D /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
@@ -344,6 +348,7 @@
 			children = (
 				FB2890A72AF8668800EFEF35 /* HabitsListView.swift */,
 				61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */,
+				FBB69AF52B16CB0C000ACE05 /* AddHabitsToUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				5CBA39712AFC087700E27766 /* CardRectangle.swift */,
 				5C8236332B140D08003742AA /* creaConsulta.swift */,
 				F9DD69772B148C650087B729 /* ButtonNavigation.swift */,
+				FBB69AF32B16C052000ACE05 /* LightTextInput.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -990,6 +996,7 @@
 				FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */,
 				FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */,
 				FB9F773A2B0BCB9E00210384 /* MessageFromDoctorView.swift in Sources */,
+				FBB69AF42B16C052000ACE05 /* LightTextInput.swift in Sources */,
 				FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */,
 				FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */,
 				5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */,
@@ -1039,6 +1046,7 @@
 				61005E2F2B15D06F001DBAC9 /* SideMenuView.swift in Sources */,
 				FBC61B1C2AF5AD0D00FAAFC5 /* BotonesInicio.swift in Sources */,
 				FB37D25E2B15520F0067B871 /* AllergiesCoverView.swift in Sources */,
+				FBB69AF62B16CB0C000ACE05 /* AddHabitsToUserView.swift in Sources */,
 				FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */,
 				61C53AF42B12D4C00044ECD1 /* HabitsCardView.swift in Sources */,
 			);
