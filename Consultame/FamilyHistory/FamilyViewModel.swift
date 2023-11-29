@@ -6,7 +6,7 @@ struct CreateFamilyRequestBody : Codable {
     let chronic_disease_id : Int
     let relationship_id : Int
     let description : String
-    let diagnosis_date : Date
+    let diagnosis_date : String
 
 }
 
@@ -58,13 +58,17 @@ class FamilyViewModel : ObservableObject {
     }
     
     func postFamilyToUser(chronic_disease_id: Int, relationship_id: Int, diagnosis_date: Date, description: String) async throws {
-        guard let url = URL(string: API.baseURL + "/family/" ) else {
+        guard let url = URL(string: API.baseURL + "/family" ) else {
             self.familyCreatedSuccessfully = false
             print("invalid url")
             return
         }
         
-        let body = CreateFamilyRequestBody(user_id: User.user_id, chronic_disease_id: chronic_disease_id, relationship_id: relationship_id, description: description, diagnosis_date: diagnosis_date)
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "America/Mexico_City")
+        let isoDate = dateFormatter.string(from: diagnosis_date)
+        
+        let body = CreateFamilyRequestBody(user_id: User.user_id, chronic_disease_id: chronic_disease_id, relationship_id: relationship_id, description: description, diagnosis_date: isoDate)
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
