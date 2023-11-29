@@ -21,6 +21,7 @@ struct AllergiesListView: View {
             }
             Spacer()
         }
+        .padding()
     }
 }
 

@@ -71,6 +71,7 @@
 		FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB39CB632AF574C0002E5555 /* StartHistoryView.swift */; };
 		FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D14012AF5B9050013DDD4 /* TrashView.swift */; };
 		FB4820CF2B15472B00E1C250 /* VaccineCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */; };
+		FB5B67B42B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B67B32B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift */; };
 		FB5CE3CC2B1687BC00B3EFB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */; };
 		FB5CE3D32B16A4EC00B3EFB3 /* gerardoP1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */; };
 		FB5CE3D52B16A80900B3EFB3 /* gerardoP2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */; };
@@ -204,6 +205,7 @@
 		FB39CB632AF574C0002E5555 /* StartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHistoryView.swift; sourceTree = "<group>"; };
 		FB3D14012AF5B9050013DDD4 /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
 		FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCoverView.swift; sourceTree = "<group>"; };
+		FB5B67B32B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyDiseaseToUserView.swift; sourceTree = "<group>"; };
 		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Consultame/Preview Content/Constants.swift"; sourceTree = SOURCE_ROOT; };
 		FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP1.mp4; sourceTree = "<group>"; };
 		FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP2.mp4; sourceTree = "<group>"; };
@@ -797,6 +799,7 @@
 				FBED78072AF9CF0100B4F5BA /* FamilyHistoryListView.swift */,
 				F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */,
 				F97AC2E92B0AFDC20072D414 /* Models */,
+				FB5B67B32B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift */,
 			);
 			path = FamilyHistory;
 			sourceTree = "<group>";
@@ -1012,6 +1015,7 @@
 				FB39CB5F2AF2D488002E5555 /* WelcomPageView.swift in Sources */,
 				61C53B0F2B157EE20044ECD1 /* ConsultameBook.xcdatamodeld in Sources */,
 				FB7664AD2AF186440039AA0E /* CommonTextInput.swift in Sources */,
+				FB5B67B42B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift in Sources */,
 				5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */,
 				614E6DC52B0B37A900592B08 /* voice.swift in Sources */,
 				FB8ED3BA2AF1518300DE02FD /* MainTabView.swift in Sources */,

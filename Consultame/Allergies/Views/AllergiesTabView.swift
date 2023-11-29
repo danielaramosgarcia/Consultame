@@ -49,7 +49,7 @@ struct AllergiesTabView: View {
                     }
                 }
             }
-            .padding(.vertical, 10)
+            .padding()
 
             TabView(selection: $selectedTab) {
                 AllergiesListView(allergies: allergiesVM.drugAllergies).tag(0)
