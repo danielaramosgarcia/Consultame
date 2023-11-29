@@ -89,6 +89,34 @@ completion: @escaping (Result<T,APIError>) -> Void) {
             }
         }.resume()
     }
+    
+//    public func deleteJSON<T: Decodable>(
+//        urlString: String,
+//        completion: @escaping (Result<T, APIError>) -> Void
+//    ) {
+//        guard let url = URL(string: urlString) else {
+//            completion(.failure(.error(NSLocalizedString("Error: Invalid URL", comment: ""))))
+//            return
+//        }
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "DELETE"
+//        request.addValue("Bearer \(User().JWT)", forHTTPHeaderField: "Authorization")
+//
+//        URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            if let error = error {
+//                completion(.failure(.error("Error: \(error.localizedDescription)")))
+//                return
+//            }
+//
+//            guard let data = data else {
+//                completion(.failure(.error(NSLocalizedString("Error: Data is corrupt.", comment: ""))))
+//                return
+//            }
+//
+//            
+//        }.resume()
+//    }
 
 }
 

@@ -11,7 +11,7 @@ struct Allergy : Identifiable, Decodable, Hashable{
     var id: Int
     var name: String
     var description: String?
-    var allergy_type_id: Int
+    var allergy_type_id: Int?
 }
 
 struct AllergiesModel: Identifiable, Decodable, Hashable{
