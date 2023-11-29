@@ -11,7 +11,6 @@ struct AddAllergyToUserView: View {
 
     @State private var allergySelection: Int = 0
     @State private var searchText = ""
-    @State private var selectedDate = Date()
     @State private var tipoAlergia = 2
 
     @Environment(\.presentationMode) var presentationMode

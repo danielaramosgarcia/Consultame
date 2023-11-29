@@ -89,7 +89,7 @@ struct AddContactToUserView: View {
             
             Spacer()
             
-            Button("Confirmar"){
+            Button("Añadir"){
                 if name.isEmpty {
                     activeAlert = .nameAlert
                     showAlert = true

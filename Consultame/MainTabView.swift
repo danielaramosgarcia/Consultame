@@ -23,7 +23,7 @@ struct MainTabView: View {
                     switch selectedSideMenuTab{
                    
                     case 2:
-                        Text("Cerrar sesion")
+                        WelcomPageView()
                         
                     default:
                         TabView(selection: $selectedSideMenuTab) {
