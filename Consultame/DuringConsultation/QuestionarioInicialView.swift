@@ -6,7 +6,7 @@ struct AppointmentNameView: View {
     @State private var appointmentName: String = ""
     @State private var showError = false
     @State private var isLinkActive = false // Controla la activación del NavigationLink
-
+    
     var body: some View {
         VStack {
             Spacer()
@@ -25,7 +25,7 @@ struct AppointmentNameView: View {
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                     .background(Color.white)
                     .cornerRadius(8)
-
+                
                 Button(action: {
                     if appointmentName.isEmpty {
                         showError = true
@@ -49,18 +49,19 @@ struct AppointmentNameView: View {
                 }
                 .padding(.top, 50)
                 .padding(.horizontal, 25)
-
+                
                 NavigationLink(destination: StartConsultationView(consultationID: consultationID ?? -1), isActive: $isLinkActive) {
                     EmptyView()
                 }
                 .hidden()
             }
-
+            
             .alert(isPresented: $showError) {
                 Alert(title: Text("Invalido"), message: Text("Por favor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
             }
             .padding()
         }
+    }
 }
 struct AppointmentNameView_Previews: PreviewProvider {
     static var previews: some View {
