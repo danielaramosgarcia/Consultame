@@ -7,6 +7,8 @@ struct CustomButton<Content: View>: View {
     let textColor: Color
     let destinationView: Content
     var action: (() -> Void)? // Action closure is now Optional
+    var asyncAction: (() -> Void)? // Action closure is now Optional
+
     
     init(buttonColor: Color, borderColor: Color, text: String, textColor: Color, destinationView: Content, action: (() -> Void)? = nil) {
         self.buttonColor = buttonColor

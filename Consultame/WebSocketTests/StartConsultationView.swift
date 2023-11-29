@@ -14,10 +14,11 @@ struct StartConsultationView: View {
         @StateObject var webSocketManager:  WebSocketManager // TODO: obtenerlo al darle click a la consulta
         
         init() {
+            print(msgConsultation.consultationID)
                     let messageManager = MessageManager()
                     _messageManager = StateObject(wrappedValue: messageManager)
                     _duringConsultationVM = StateObject(wrappedValue: DuringConsultationViewModel(messageManager: messageManager))
-                    _webSocketManager = StateObject(wrappedValue: WebSocketManager(consultationID: 2, messageManager: messageManager))
+            _webSocketManager = StateObject(wrappedValue: WebSocketManager(consultationID: msgConsultation.consultationID, messageManager: messageManager))
                 } // init
     
     

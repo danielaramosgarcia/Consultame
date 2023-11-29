@@ -15,9 +15,11 @@
 import SwiftUI
 
 struct AppointmentNameView: View {
+    @StateObject var createConsultationVM = NewConsultationViewModel()
+    
     @State private var appointmentName: String = ""
     @State private var showError = false
-
+    
     var body: some View {
         VStack {
             
@@ -37,37 +39,43 @@ struct AppointmentNameView: View {
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                     .background(Color.white)
                     .cornerRadius(8)
-
+                
                 CustomButton(
                     buttonColor: Color("AccentColor"),
                     borderColor: Color.clear,
                     text: "Siguiente",
                     textColor: Color.white,
                     destinationView: AnyView(StartConsultationView()),
-                    action: {
+                    asyncAction: {
                         if appointmentName.isEmpty {
                             showError = true
                         } else {
-                            let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
-                            ConsultationStore().createConsultation(consultation: newConsultation)
+                            do {
+                                // Usa 'try' para manejar errores lanzados por funciones asíncronas
+                                try await createConsultationVM.createConsultation(name: appointmentName)
+                                
+                                // Continúa con cualquier lógica posterior aquí
+                            } catch {
+                                // Maneja el error aquí
+                                // Por ejemplo, puedes mostrar un mensaje de error al usuario
+                                print("Ocurrió un error: \(error)")
+                            }
                         }
-                    }
-                    
                 )
                 .padding(.top, 50)
                 .padding(.horizontal, 25)
-
-            }
-            .alert(isPresented: $showError) {
-                Alert(title: Text("Invalido"), message: Text("Porfavor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
+                    
+                }
+                .alert(isPresented: $showError) {
+                    Alert(title: Text("Invalido"), message: Text("Porfavor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
+                }
+                .padding()
+                Spacer()
             }
             .padding()
-            Spacer()
         }
-        .padding()
     }
 }
-
 struct AppointmentNameView_Previews: PreviewProvider {
     static var previews: some View {
         AppointmentNameView()

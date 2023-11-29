@@ -16,7 +16,7 @@ struct ConsultationModel: Codable, Identifiable {
     let doctor_id: Int?
     let hospital_id: Int?
     let created_at: String?
-    var processedCreatedAt: String?
+    
     
     var formatted_date: String? {
         let displayFormatter = DateFormatter()
