@@ -207,7 +207,7 @@
 		FB3D14012AF5B9050013DDD4 /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
 		FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCoverView.swift; sourceTree = "<group>"; };
 		FB5B67B32B16D2DD00C56FCB /* AddFamilyDiseaseToUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyDiseaseToUserView.swift; sourceTree = "<group>"; };
-		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Consultame/Preview Content/Constants.swift"; sourceTree = SOURCE_ROOT; };
+		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Consultame/Constants.swift; sourceTree = SOURCE_ROOT; };
 		FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP1.mp4; sourceTree = "<group>"; };
 		FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP2.mp4; sourceTree = "<group>"; };
 		FB5CE3D62B16A8E400B3EFB3 /* gerardoP3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP3.mp4; sourceTree = "<group>"; };
@@ -480,6 +480,7 @@
 				61FA75652ADEFF2C00BB6B2A /* ConsultameApp.swift */,
 				61FA75692ADEFF2E00BB6B2A /* Assets.xcassets */,
 				61FA756B2ADEFF2E00BB6B2A /* Preview Content */,
+				FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */,
 				FB3D14012AF5B9050013DDD4 /* TrashView.swift */,
 				FBB69AEA2B167C7B000ACE05 /* SideBar */,
 			);
@@ -489,7 +490,6 @@
 		61FA756B2ADEFF2E00BB6B2A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */,
 				61FA756C2ADEFF2E00BB6B2A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
