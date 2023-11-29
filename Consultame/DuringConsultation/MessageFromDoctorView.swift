@@ -18,7 +18,7 @@ struct MessageFromDoctorView: View {
     @State private var justSent = false
     
     @State private var sendCompleteMessageTimer: Timer?
-    let sendCompleteMessageWaitTime = 5
+    let sendCompleteMessageWaitTime = 3
     
     
     

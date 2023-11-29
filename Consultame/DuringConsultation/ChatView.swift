@@ -18,7 +18,7 @@ struct ChatView: View {
     @State private var actualPatientMessage = ""
     @State private var patientTimerStarted = false
     @State private var patientDebounceTimer: Timer?
-    let waitTime = 3
+    let waitTime = 1
     
     @State private var forcedSent = false
     
