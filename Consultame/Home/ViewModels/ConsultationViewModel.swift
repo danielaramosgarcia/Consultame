@@ -38,12 +38,12 @@ class ConsultationViewModel: ObservableObject {
         }
     }
     
+    
     func deleteConsultations(id: Int) async throws {
         guard let url = URL(string: API.baseURL + "/consultation/" + String(id)) else {
             print("invalid url")
             return
         }
-        
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
@@ -51,6 +51,7 @@ class ConsultationViewModel: ObservableObject {
         
         
         let (_, response) = try await URLSession.shared.data(for: request)
+        print(response)
         
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
