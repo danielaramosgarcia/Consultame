@@ -12,7 +12,7 @@ class WebSocketManager: ObservableObject {
     var messageManager: MessageManager
     
     init(consultationID: Int, messageManager: MessageManager) {
-            self.messageManager = messageManager
+        self.messageManager = messageManager
         self.consultationID = consultationID
         self.manager = SocketManager(socketURL: URL(string: API.baseURL)!, config: [.log(true), .compress])
         self.socket = manager.defaultSocket
@@ -64,10 +64,11 @@ class WebSocketManager: ObservableObject {
         socket.on("Update Message") { [weak self] (data, ack) in
             if let messageData = data[0] as? [String: Any],
                            let messageId = messageData["id"] as? Int,
-                           let updatedMessage = messageData["message"] as? String {
-                            
-               
-            self?.messageManager.updateMessage(id: messageId, newContent: updatedMessage)
+               let updatedMessage = messageData["message"] as? String {
+                
+                
+                self?.messageManager.updateMessage(id: messageId, newContent: updatedMessage)
+            }
         } // update message
         
         

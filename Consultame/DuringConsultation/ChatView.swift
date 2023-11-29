@@ -168,7 +168,7 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        / Crear instancias de las dependencias requeridas por ChatView
+        // Crear instancias de las dependencias requeridas por ChatView
                 let messageManager = MessageManager()
                 let duringConsultationVM = DuringConsultationViewModel(messageManager: messageManager)
                 let webSocketManager = WebSocketManager(consultationID: 1, messageManager: messageManager)
