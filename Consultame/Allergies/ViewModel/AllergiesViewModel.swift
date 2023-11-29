@@ -12,6 +12,11 @@ struct CreateAllergyRequestBody : Codable {
     let allergy_id : Int
 }
 
+struct DeleteAllergyFromUser : Codable {
+    let id : Int
+    let user_id : Int
+}
+
 class AllergiesViewModel : ObservableObject {
     @Published var allergies = [AllergiesModel]()
     @Published var Allalergies = [Allergy]()
@@ -99,6 +104,29 @@ class AllergiesViewModel : ObservableObject {
         
         
         self.allergyCreatedSuccessfully = true
+    }
+    
+    func deleteAllergiesFromUser(allergyId: Int) async throws {
+        guard let url = URL(string: API.baseURL + "/user_allergy") else {
+            print("invalid url")
+            return
+        }
+        
+        let body = DeleteAllergyFromUser(id: allergyId, user_id: User.user_id)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(body)
+        
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            print("response error")
+            return
+        }
     }
     
     

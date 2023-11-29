@@ -48,6 +48,7 @@ struct AllergiesTabView: View {
                             Spacer()
                         }
                     }
+                    
                 }
                 .padding()
             
@@ -80,6 +81,8 @@ struct AllergiesTabView: View {
             }
         }
     }
+    
+    
 }
 
 struct AllergiesTabView_Previews: PreviewProvider {
