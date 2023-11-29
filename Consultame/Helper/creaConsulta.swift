@@ -21,6 +21,7 @@ class ConsultationStore: ObservableObject {
                 switch result {
                 case .success(let createdConsultation):
                     self?.newConsultation = createdConsultation
+                    msgConsultation.consultationID = createdConsultation.id ?? 1
                     print("Successfully created consultation with ID \(createdConsultation.id)")
                 case .failure(let error):
                     print("Error occurred: \(error)")

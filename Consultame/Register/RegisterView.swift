@@ -15,6 +15,14 @@ struct RegisterView: View {
     @State private var contrasenaRepetida = ""
     @State var sexo = ""
     let opcionesSexo = ["Hombre", "Mujer", "No especificar"]
+    @State var showError: Int?
+    
+    // Minimo una letra mayuscula, un numero, un caracter especial y minimo 6 characteres
+    // #EstoEsParaTiProfe
+    let passwordRegex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{6,}$"
+    var passwordTest: NSPredicate{
+        NSPredicate(format: "SELF MATCHES %@", self.passwordRegex)
+    }
     
     var body: some View {
         VStack {
@@ -52,7 +60,20 @@ struct RegisterView: View {
                 borderColor : Color.clear,
                 text : "Registrarme",
                 textColor : Color.white,
-                destinationView: AnyView(StartHistoryView())
+                destinationView: AnyView(StartHistoryView()),
+                action: {
+                    if nombreCompleto.isEmpty || correo.isEmpty || contrasena.isEmpty || contrasenaRepetida.isEmpty || sexo.isEmpty {
+                        // Show error to the user indicating all fields are mandatory
+                        showError = 1
+                    } else if !correo.contains("@") || !correo.contains(".") {
+                        showError = 2
+                    } else if !passwordTest.evaluate(with: contrasena) {
+                        showError = 3
+                    } else if contrasena != contrasenaRepetida {
+                        showError = 3
+                    }
+
+                }
             )
             .padding(.top, 40)
             .padding(.horizontal, 20)
