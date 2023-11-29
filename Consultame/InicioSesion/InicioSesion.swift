@@ -13,6 +13,7 @@ struct InicioSesion: View {
     @State private var password = ""
     
     var body: some View {
+        
             VStack {
                 Text("¡Bienvenido de vuelta!")
                     .font(.system(size: 45).bold())

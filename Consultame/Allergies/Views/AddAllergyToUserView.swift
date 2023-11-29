@@ -6,122 +6,101 @@
 //
 
 import SwiftUI
-
 struct AddAllergyToUserView: View {
-    @StateObject var VaccineVM = VaccineViewModel()
-    var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
-    
-    @State private var vaccineSelection: Int = 0
+    @StateObject var AllergyVM = AllergiesViewModel()
+
+    @State private var allergySelection: Int = 0
     @State private var searchText = ""
     @State private var selectedDate = Date()
-    @State private var tipoAlergia = "Alimentos"
-    
+    @State private var tipoAlergia = 2
+
     @Environment(\.presentationMode) var presentationMode
     @State private var showAlert: Bool = false
 
-    
-    
-    
-    var searchResults : [VaccineModel] {
-        searchText.isEmpty ? vaccineArr : vaccineArr.filter{$0.name.contains(searchText)}
+    var filteredAllergies: [Allergy] {
+        let selectedCategory = tipoAlergia
+        return AllergyVM.Allalergies.filter { $0.allergy_type_id == selectedCategory}
     }
-   
     
+    var searchResults : [Allergy] {
+        searchText.isEmpty ? filteredAllergies : filteredAllergies.filter{$0.name.contains(searchText)}
+    }
+
     var body: some View {
-        VStack() {
-            
+        VStack{
             VStack {
-                
                 Text("Añadir nueva alergia")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top, .trailing, .leading])
                     .font(.title)
                     .fontWeight(.bold)
                 
+                VStack {
+                    Picker("Tipo alergia", selection: $tipoAlergia) {
+                        Text("Alimentos").tag(1)
+                        Text("Medicamentos").tag(2)
+                        Text("Otros").tag(3)
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal, 20)
+                }
                 
+                SearchBar(text: $searchText, placeholder: "Buscar")
+                    .padding()
                 
-                    HStack {
-                        Text("Filtrar por tipo de alergia: ")
-                        
-                        Picker("Tipo alergia",
-                               selection: $tipoAlergia) {
-                            Text("Alimentos")
-                                .tag("Alimentos")
-                            Text("Medicamentos")
-                                .tag("Medicamentos")
-                            Text("Otros")
-                                .tag("Otros")
-                            
+                List {
+                    Picker(selection: $allergySelection, label: Text("Alergia")) {
+                        ForEach(searchResults, id: \.id) { item in
+                            Text(item.name).tag(item.id)
                         }
                     }
-                
-                SearchBar(text: $searchText, placeholder: "Buscar alergia")
-                    .padding(.horizontal, 30)
-                
-                List{
-                        Picker(selection: $vaccineSelection, label: Text("Alergias")) {
-                            ForEach(searchResults, id: \.id) { item in
-                                Text(item.name).tag(item.id)
-                            } // for each
-                        } // Picker
-                        
-                        .pickerStyle(.inline)
-                        .task {
-                            do {
-                                try await VaccineVM.getVaccines()
-                                if vaccineArr.count > 0 {
-                                    vaccineSelection = vaccineArr[0].id
-                                }
-                                
-                            } catch {
-                                print("error")
+                    .pickerStyle(.inline)
+                    .task {
+                        do {
+                            try await AllergyVM.getAllAllergies()
+                            if AllergyVM.Allalergies.count > 0 {
+                                allergySelection = AllergyVM.Allalergies[0].id
                             }
-                        } // task
-                    
-                    } // List
-                    .scrollContentBackground(.hidden)
-                    .background(.clear)
-                    
-            } //VStack
+                        } catch {
+                            print("error")
+                        }
+                    }
+                }
+                .scrollContentBackground(.hidden)
+                .background(.clear)
+            }
             
-                
-    
             Spacer()
             
-            Button("Añadir"){
+            Button("Añadir") {
                 Task {
                     do {
-                        try await
-                        VaccineVM.setVaccineToUser(vaccineId: vaccineSelection, date: selectedDate)
+                        try await AllergyVM.postAllergyToUser(allergy_id: allergySelection)
                     } catch {
-                        print("error al crear el contacto")
+                        print("error al crear alergia")
                     }
-                } // task
-                
-            } // button
+                }
+            }
             .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
             .frame(maxWidth: .infinity)
             .font(.title2)
             .padding(.horizontal, 30)
             .padding()
-            
-        } // vstack
-        
-        .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
-                    if let success = isSuccess {
-                        if success {
-                            presentationMode.wrappedValue.dismiss()
-                        } else {
-                            showAlert = true
-                        }
-                    }
-                } // on receive
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
-                } // alert
-    
-            
-    } // Body
+        }
+
+        .onReceive(AllergyVM.$allergyCreatedSuccessfully) { isSuccess in
+            if let success = isSuccess {
+                if success {
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    showAlert = true
+                }
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
+        }
+    }
 }
 
 struct AddAllergyToUserView_Previews: PreviewProvider {
