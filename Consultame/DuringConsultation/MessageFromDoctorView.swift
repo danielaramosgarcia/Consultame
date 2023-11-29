@@ -18,7 +18,7 @@ struct MessageFromDoctorView: View {
     @State private var justSent = false
     
     @State private var sendCompleteMessageTimer: Timer?
-    let sendCompleteMessageWaitTime = 5
+    let sendCompleteMessageWaitTime = 3
     
     
     
@@ -28,7 +28,7 @@ struct MessageFromDoctorView: View {
     @State private var typingAnimation = ""
     @State private var timer: Timer? = nil
     
-    
+    @Binding var forcedSent: Bool
     
     
     var body: some View {
@@ -61,6 +61,15 @@ struct MessageFromDoctorView: View {
     
     
     func handleTextChange(message: String) {
+        if(forcedSent) {
+            forcedSent = false
+            self.justSent = true
+            self.messageTimerStarted = false
+            return;
+            
+        }
+        
+        
         // Si acabamos de enviar un mensaje completo, restablecemos el estado y no hacemos nada más
         if justSent {
             justSent = false
@@ -106,7 +115,10 @@ struct MessageFromDoctorView: View {
 } // view
 
 struct MessageFromDoctorView_Previews: PreviewProvider {
+    @State static var forcedSent = false // Usa @State para crear un Binding
+
     static var previews: some View {
+        
         // Crear instancias simuladas de las dependencias requeridas por MessageFromDoctorView
                         let mockMessageManager = MessageManager()
                         let mockDuringConsultationVM = DuringConsultationViewModel(messageManager: mockMessageManager)
@@ -115,6 +127,6 @@ struct MessageFromDoctorView_Previews: PreviewProvider {
                         let mockWaitTime = 3
 
                 // Inicializar MessageFromDoctorView con las dependencias
-                MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: mockSpeechRecognizer)
+        MessageFromDoctorView(DuringConsultationVM: mockDuringConsultationVM, webSocketManager: mockWebSocketManager, waitTime: mockWaitTime, speechRecognizer: mockSpeechRecognizer, forcedSent: $forcedSent)
     }
 }

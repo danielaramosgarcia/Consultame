@@ -10,6 +10,7 @@ import AVFoundation
 import MediaPlayer
 
 struct ChatView: View {
+    
     var messageManager: MessageManager
         var duringConsultationVM: DuringConsultationViewModel
     var webSocketManager: WebSocketManager
@@ -17,7 +18,9 @@ struct ChatView: View {
     @State private var actualPatientMessage = ""
     @State private var patientTimerStarted = false
     @State private var patientDebounceTimer: Timer?
-    let waitTime = 3
+    let waitTime = 1
+    
+    @State private var forcedSent = false
     
     @State var synthesizerDelegate = SpeechSynthesizerDelegate()
     @State var synthesizer = AVSpeechSynthesizer()
@@ -84,13 +87,23 @@ struct ChatView: View {
                             }
                             
                             Button("Text to Speech") {
-                                speechRecognizer.stopTranscribing()
-                                let utterance = AVSpeechUtterance(string: message.message)
+                                Task {
+                                    if let newMessage = await self.duringConsultationVM.createMessage(message: speechRecognizer.transcript, is_from_user: false, consultation_id: self.webSocketManager.consultationID) {
+                                        self.webSocketManager.sendCompleteMessage(newMessage)
+                                        speechRecognizer.stopTranscribing()
+                                        let utterance = AVSpeechUtterance(string: message.message)
+                                        
+                                        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.es-MX.Paulina")
+                                        utterance.pitchMultiplier = 1.2
+                                        utterance.rate = 0.55
+                                        synthesizer.speak(utterance)
+                                        forcedSent = true
+                                    } else {
+                                        print("Error al crear el mensaje")
+                                    }
+                                }
                                 
-                                utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.es-MX.Paulina")
-                                utterance.pitchMultiplier = 1.2
-                                utterance.rate = 0.55
-                                synthesizer.speak(utterance)
+
                             }
                         }
                 }
@@ -99,7 +112,9 @@ struct ChatView: View {
                     
                     webSocketManager: webSocketManager,
                     waitTime: waitTime,
-                    speechRecognizer: speechRecognizer)
+                    speechRecognizer: speechRecognizer,
+                    forcedSent: $forcedSent
+                )
                 .listRowSeparator(.hidden)
             } // list
             .listStyle(PlainListStyle())

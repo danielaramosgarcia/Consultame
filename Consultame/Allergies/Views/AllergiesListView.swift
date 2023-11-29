@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AllergiesListView: View {
-    
+    @StateObject private var allergiesVM = AllergiesViewModel()
+
     var allergies: [AllergiesModel]
 
 
@@ -19,9 +20,26 @@ struct AllergiesListView: View {
             ForEach(allergies){ allergy in
                     AllergiesCard(alergia: allergy)
             }
+            .onDelete(perform: deleteAllergy)
             Spacer()
         }
         .padding()
+    }
+    
+    func deleteAllergy(at offsets: IndexSet) {
+        let allergiesToDelete = offsets.map { allergiesVM.allergies[$0] }
+        
+        Task {
+            for allergy in allergiesToDelete {
+                do {
+                    try await allergiesVM.deleteAllergiesFromUser(allergyId: allergy.id)
+                } catch {
+                    print("error al eliminar la vacuna del usuario")
+                }
+            }
+        } // task
+        
+        allergiesVM.allergies.remove(atOffsets: offsets)
     }
 }
 
