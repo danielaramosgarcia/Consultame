@@ -9,47 +9,45 @@ import SwiftUI
 
 struct VaccineCoverView: View {
     var body: some View {
-        NavigationView{
-            VStack{
-                Text("Vacunas")
-                    .font(.system(size: 45, weight: .bold))
-                
-                
-                Text("al día de hoy")
-                    .font(.system(size: 25, weight: .light))
-                
-                
-                Image("vaccines")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 280)
-                    .padding()
-                
-                CustomButton(
-                    buttonColor : Color("AccentColor"),
-                    borderColor : Color.clear,
-                    text : "Añadir",
-                    textColor : Color.white,
-                    destinationView: AnyView(VaccinesRegisterView())
-                )
-                .padding(.top, 50)
-                .padding(.horizontal, 60)
-                
-                CustomButton(
-                    buttonColor : Color.clear,
-                    borderColor : Color("AccentColor"),
-                    text : "Siguiente",
-                    textColor : Color("AccentColor"),
-                    destinationView: AnyView(MainTabView())
-                )
-                .bold()
-                .padding(.top, 20)
-                .padding(.horizontal, 60)
-                .navigationBarBackButtonHidden(true)
-            }
+        VStack{
+            Text("Vacunas")
+                .font(.system(size: 45, weight: .bold))
             
+            
+            Text("al día de hoy")
+                .font(.system(size: 25, weight: .light))
+            
+            
+            Image("vaccines")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 280)
+                .padding()
+            
+            CustomButton(
+                buttonColor : Color("AccentColor"),
+                borderColor : Color.clear,
+                text : "Añadir",
+                textColor : Color.white,
+                destinationView: AnyView(AddVaccineToUserView())
+            )
+            .padding(.top, 50)
+            .padding(.horizontal, 60)
+            
+            CustomButton(
+                buttonColor : Color.clear,
+                borderColor : Color("AccentColor"),
+                text : "Comenzar",
+                textColor : Color("AccentColor"),
+                destinationView: AnyView(MainTabView())
+            )
+            .bold()
+            .padding(.top, 20)
+            .padding(.horizontal, 60)
+            .navigationBarBackButtonHidden(true)
         }
-    } // nav
+        
+    }
 }
 
 struct VaccineCoverView_Previews: PreviewProvider {

@@ -3,7 +3,6 @@ import SwiftUI
 enum SideBarRows: Int, CaseIterable{
     case home = 0
     case profile
-    case socio
     case logOut
     
     var title: String{
@@ -12,8 +11,6 @@ enum SideBarRows: Int, CaseIterable{
             return "Home"
         case .profile:
             return "Profile"
-        case .socio:
-            return "Dilo en Señas"
         case .logOut:
             return "Cerrar sesión"
         }
@@ -25,8 +22,6 @@ enum SideBarRows: Int, CaseIterable{
             return "house"
         case .profile:
             return "person"
-        case .socio:
-            return "hands.sparkles"
         case .logOut:
             return "rectangle.portrait.and.arrow.right"
         }

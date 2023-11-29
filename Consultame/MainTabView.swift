@@ -21,11 +21,8 @@ struct MainTabView: View {
             NavigationView(){
                 ZStack{
                     switch selectedSideMenuTab{
+                   
                     case 2:
-                        Text("Dilo en señas")
-                        
-                        
-                    case 3:
                         Text("Cerrar sesion")
                         
                     default:
