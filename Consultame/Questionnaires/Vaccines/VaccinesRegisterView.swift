@@ -100,13 +100,7 @@ struct VaccinesRegisterView: View {
     
             Spacer()
             
-            CustomButton(
-                buttonColor : Color("AccentColor"),
-                borderColor : Color.clear,
-                text : "Añadir",
-                textColor : Color.white,
-                destinationView: self
-            ){
+            Button("Añadir"){
                 Task {
                     do {
                         try await
@@ -115,31 +109,28 @@ struct VaccinesRegisterView: View {
                         print("error al crear el contacto")
                     }
                 } // task
-            }
+                
+            } // button
+            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
             .frame(maxWidth: .infinity)
             .font(.title2)
             .padding(.horizontal, 30)
             .padding()
-            .alert(isPresented: $showSuccessAlert) {
-                Alert(title: Text("¡Listo!"), message: Text("se agregó la vacuna exitosamente."), dismissButton: .default(Text("OK")))
-            }
-                    .alert(isPresented: $showAlert) {
-                        Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
-                    } // alert
             
         } // vstack
         
         .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
-            if let success = isSuccess {
-                if success {
-                    showSuccessAlert = true
-                    presentationMode.wrappedValue.dismiss()
-                }
-                else {
-                    showAlert = true
-                }
-            }
-        } // on receive
+                    if let success = isSuccess {
+                        if success {
+                            presentationMode.wrappedValue.dismiss()
+                        } else {
+                            showAlert = true
+                        }
+                    }
+                } // on receive
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
+                } // alert
         
     
             
