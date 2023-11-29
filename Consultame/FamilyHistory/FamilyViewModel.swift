@@ -58,7 +58,7 @@ class FamilyViewModel : ObservableObject {
     }
     
     func postFamilyToUser(chronic_disease_id: Int, relationship_id: Int, diagnosis_date: Date, description: String) async throws {
-        guard let url = URL(string: API.baseURL + "/family" ) else {
+        guard let url = URL(string: API.baseURL + "/family/" ) else {
             self.familyCreatedSuccessfully = false
             print("invalid url")
             return

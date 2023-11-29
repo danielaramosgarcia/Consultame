@@ -26,37 +26,51 @@ struct AllergiesTabView: View {
             .padding()
             .font(.title)
 
-            HStack(spacing: 0) {
-                ForEach(options.indices, id: \.self) { index in
-                    Group {
-                        Spacer()
-                        
-                        Text(options[index])
-                            .font(.subheadline)
-                            .foregroundColor(selectedTab == index ? Color("AccentColor") : .gray)
-                            .overlay(
-                                selectedTab == index ?
+                HStack(spacing: 0) {
+                    ForEach(options.indices, id: \.self) { index in
+                        Group {
+                            Spacer()
+                            
+                            Text(options[index])
+                                .font(.subheadline)
+                                .foregroundColor(selectedTab == index ? Color("AccentColor") : .gray)
+                                .overlay(
+                                    selectedTab == index ?
                                     Rectangle().frame(height: 2).foregroundColor(Color("AccentColor")) :
-                                    Rectangle().frame(height: 0).foregroundColor(Color("AccentColor")),
-                                alignment: .bottom
-                            )
-                            .frame(minWidth: 0, maxWidth: .infinity) // This will cause the text to take up equal space
-                            .onTapGesture {
-                                self.selectedTab = index
-                            }
-                        
-                        Spacer()
+                                        Rectangle().frame(height: 0).foregroundColor(Color("AccentColor")),
+                                    alignment: .bottom
+                                )
+                                .frame(minWidth: 0, maxWidth: .infinity) // This will cause the text to take up equal space
+                                .onTapGesture {
+                                    self.selectedTab = index
+                                }
+                            
+                            Spacer()
+                        }
                     }
                 }
-            }
-            .padding()
+                .padding()
+            
+            VStack{
+                
+                TabView(selection: $selectedTab) {
+                    ScrollView{
+                        AllergiesListView(allergies: allergiesVM.drugAllergies)
+                    }
+                    .tag(0)
 
-            TabView(selection: $selectedTab) {
-                AllergiesListView(allergies: allergiesVM.drugAllergies).tag(0)
-                AllergiesListView(allergies: allergiesVM.foodAllergies).tag(1)
-                AllergiesListView(allergies: allergiesVM.otherAllergies).tag(2)
+                    ScrollView{
+                        AllergiesListView(allergies: allergiesVM.foodAllergies)
+                    }
+                    .tag(1)
+                    
+                    ScrollView{
+                        AllergiesListView(allergies: allergiesVM.otherAllergies)
+                    }
+                    .tag(2)
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
         .task {
             do {

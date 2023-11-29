@@ -54,26 +54,32 @@ struct AddFamilyDiseaseToUserView: View {
                     .fontWeight(.bold)
                 
                 HStack {
-                    Text("Tipo de parentesco: ")
                     
-                    Picker(selection: $relationshipSelection, label: Text("Tipo de parentesco")) {
-                        ForEach(ContactsVM.relationshipsArr, id: \.id) { item in
-                            Text(item.type)
-                                .tag(item.id)
-                        } // for each
-                    } // Picker
-                    .pickerStyle(.menu)
-                    .task {
-                        do {
-                            try await ContactsVM.getRelationships()
-                            if ContactsVM.relationshipsArr.count > 0 {
-                                relationshipSelection = ContactsVM.relationshipsArr[0].id
+                    HStack{
+                        Text("Tipo de parentesco: ")
+                        
+                        Spacer()
+                        
+                        Picker(selection: $relationshipSelection, label: Text("Tipo de parentesco")) {
+                            ForEach(ContactsVM.relationshipsArr, id: \.id) { item in
+                                Text(item.type)
+                                    .tag(item.id)
+                            } // for each
+                        } // Picker
+                        .pickerStyle(.menu)
+                        .task {
+                            do {
+                                try await ContactsVM.getRelationships()
+                                if ContactsVM.relationshipsArr.count > 0 {
+                                    relationshipSelection = ContactsVM.relationshipsArr[0].id
+                                }
+                            } catch {
+                                print("error")
                             }
-                        } catch {
-                            print("error")
-                        }
-                    } // task
+                        } // task
+                    }
                 }
+                .padding(.horizontal, 50)
                 
                 DatePicker( "Fecha de diagnosis", selection: $selectedDate, displayedComponents: [.date] )
                     .datePickerStyle(.compact)

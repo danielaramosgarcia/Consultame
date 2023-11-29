@@ -29,45 +29,67 @@ struct AddContactToUserView: View {
                 Text("Agregar contacto")
                 Spacer()
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding([.top, .trailing, .leading])
             .font(.title)
-            .padding()
+            .fontWeight(.bold)
             
-            
-            TextField("Nombre", text: $name)
-                .textFieldStyle(CommonTextInput(iconImage: "person"))
-                .padding(.horizontal, 30)
-            
-            TextField("Número celular", text: $phone)
-                .keyboardType(.numberPad)
-                .textFieldStyle(CommonTextInput(iconImage: "phone"))
-                .padding(.horizontal, 30)
-            
-            TextField("Correo electrónico", text: $email)
-                .textFieldStyle(CommonTextInput(iconImage: "tray"))
-                .padding(.horizontal, 30)
-            
-            Picker(selection: $relationshipSelection, label: Text("Hello")) {
-                ForEach(ContactsVM.relationshipsArr, id: \.id) { item in
-                    Text(item.type)
-                        .tag(item.id)
-                } // for each
-            } // Picker
-            .pickerStyle(.inline)
-            .task {
-                do {
-                    try await ContactsVM.getRelationships()
-                    if ContactsVM.relationshipsArr.count > 0 {
-                        relationshipSelection = ContactsVM.relationshipsArr[0].id
+            VStack{
+                //Spacer()
+                
+                TextField("Nombre", text: $name)
+                    .textFieldStyle(CommonTextInput(iconImage: "person"))
+                    .padding(.horizontal, 30)
+                
+                TextField("Número celular", text: $phone)
+                    .keyboardType(.numberPad)
+                    .textFieldStyle(CommonTextInput(iconImage: "phone"))
+                    .padding(.horizontal, 30)
+                
+                TextField("Correo electrónico", text: $email)
+                    .textFieldStyle(CommonTextInput(iconImage: "tray"))
+                    .padding(.horizontal, 30)
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(Color ("LightGray"))
+                        .frame(height: 50)
+                    
+                    HStack{
+                        Text("Tipo de relación ")
+                            .foregroundColor(Color("TextGray"))
+                        
+                        Spacer()
+                        
+                        Picker(selection: $relationshipSelection, label: Text("Tipo de parentesco")) {
+                            ForEach(ContactsVM.relationshipsArr, id: \.id) { item in
+                                Text(item.type)
+                                    .tag(item.id)
+                            } // for each
+                        } // Picker
+                        .pickerStyle(.menu)
+                        .task {
+                            do {
+                                try await ContactsVM.getRelationships()
+                                if ContactsVM.relationshipsArr.count > 0 {
+                                    relationshipSelection = ContactsVM.relationshipsArr[0].id
+                                }
+                            } catch {
+                                print("error")
+                            }
+                        } // task
                     }
-                } catch {
-                    print("error")
+                    .padding()
                 }
-            } // task
-            
+                .padding(.horizontal, 30)
+                
+                Spacer()
+            } // Vstack
+            .padding(.top, 30)
             
             Spacer()
             
-            Button("Confirmar"){
+            Button("Añadir"){
                 if name.isEmpty {
                     activeAlert = .nameAlert
                     showAlert = true

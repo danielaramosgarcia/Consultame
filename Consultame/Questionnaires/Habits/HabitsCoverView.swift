@@ -28,9 +28,9 @@ struct HabitsCoverView: View {
             CustomButton(
                 buttonColor : Color("AccentColor"),
                 borderColor : Color.clear,
-                text : "¡Vamos!",
+                text : "Añadir",
                 textColor : Color.white,
-                destinationView: AnyView(AddVaccineToUserView())
+                destinationView: AnyView(AddHabitsToUserView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)
@@ -38,7 +38,7 @@ struct HabitsCoverView: View {
             CustomButton(
                 buttonColor : Color.clear,
                 borderColor : Color("AccentColor"),
-                text : "Saltar",
+                text : "Siguiente",
                 textColor : Color("AccentColor"),
                 destinationView: AnyView(AllergiesCoverView())
             )
