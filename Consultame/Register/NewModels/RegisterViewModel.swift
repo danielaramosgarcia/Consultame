@@ -20,18 +20,16 @@ class RegisterViewModel: ObservableObject {
         let apiService = APIService.shared
         let urlString = API.baseURL + "/user"
 
-        apiService.postJSON(urlString: urlString, requestBody: UserInfo) { (result: Result<ReceiveUserModel, APIService.APIError>) in
+        apiService.postJSON(urlString: urlString, requestBody: UserInfo) { (result: Result<baseUser, APIService.APIError>) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let createdUser):
-                    User.user_id = createdUser.user.id
-                    User.JWT = createdUser.token
-                    User.user_name = createdUser.user.name
-                    print("Successfully created User with ID \(User.user_id) and token \(User.JWT)")
+                    User.user_id = createdUser.id
+//                    User.JWT = createdUser.token
+                    User.user_name = createdUser.name ?? "Unknown"
+                    print("Successfully created User with ID \(User.user_id) and token (User.JWT)")
                 case .failure(let error):
-                    
                     print("Error occurred: \(error)")
-                    
                 }
             }
         }
