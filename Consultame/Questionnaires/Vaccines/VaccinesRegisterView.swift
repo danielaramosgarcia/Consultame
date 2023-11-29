@@ -13,6 +13,6 @@ struct VaccinesRegisterView: View {
     }
 }
 
-#Preview {
-    VaccinesRegisterView()
-}
+//#Preview {
+//    VaccinesRegisterView()
+//}

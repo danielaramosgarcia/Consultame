@@ -13,6 +13,6 @@ struct FamilyRegisterView: View {
     }
 }
 
-#Preview {
-    FamilyRegisterView()
-}
+//#Preview {
+//    FamilyRegisterView()
+//}

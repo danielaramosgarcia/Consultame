@@ -13,6 +13,6 @@ struct AllergiesRegisterView: View {
     }
 }
 
-#Preview {
-    AllergiesRegisterView()
-}
+//#Preview {
+//    AllergiesRegisterView()
+//}

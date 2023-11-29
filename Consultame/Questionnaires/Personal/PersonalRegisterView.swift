@@ -13,6 +13,6 @@ struct PersonalRegisterView: View {
     }
 }
 
-#Preview {
-    PersonalRegisterView()
-}
+//#Preview {
+//    PersonalRegisterView()
+//}

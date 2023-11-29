@@ -13,6 +13,6 @@ struct HabitsRegisterView: View {
     }
 }
 
-#Preview {
-    HabitsRegisterView()
-}
+//#Preview {
+//    HabitsRegisterView()
+//}

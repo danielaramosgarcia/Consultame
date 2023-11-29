@@ -13,6 +13,6 @@ struct ContactsRegisterView: View {
     }
 }
 
-#Preview {
-    ContactsRegisterView()
-}
+//#Preview {
+//    ContactsRegisterView()
+//}
