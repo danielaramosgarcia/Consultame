@@ -1,31 +1,16 @@
-//
-//  QuestionarioInicialView.swift
-//  Consultame
-//
-//  Created by Alberto Tamez Gonzalez on 26/11/23.
-//
-
-//
-//  QuestionarioInicialView.swift
-//  Consultame
-//
-//  Created by Alberto Tamez Gonzalez on 26/11/23.
-//
-
 import SwiftUI
 
 struct AppointmentNameView: View {
-    @StateObject var createConsultationVM = NewConsultationViewModel()
-    
+    @StateObject var createConsultationVM = ConsultationStore()
+    @State private var consultationID: Int?
     @State private var appointmentName: String = ""
     @State private var showError = false
-    
-    
+    @State private var isLinkActive = false // Controla la activación del NavigationLink
+
     var body: some View {
         VStack {
-            
             Spacer()
-            VStack() {
+            VStack {
                 Image("text")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -40,31 +25,39 @@ struct AppointmentNameView: View {
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                     .background(Color.white)
                     .cornerRadius(8)
-                
-                CustomButton(
-                    buttonColor: Color("AccentColor"),
-                    borderColor: Color.clear,
-                    text: "Siguiente",
-                    textColor: Color.white,
-                    destinationView: AnyView(StartConsultationView())
 
-
-//                            let newConsultation = ConsultationModel(id: nil, name: appointmentName, description: nil, date: nil, user_id: User.user_id, doctor_id: nil, hospital_id: nil, created_at: nil)
-//                            ConsultationStore().createConsultation(consultation: newConsultation)
-                            
-                            
-
-                        
-                )
+                Button(action: {
+                    if appointmentName.isEmpty {
+                        showError = true
+                    } else {
+                        Task {
+                            do {
+                                self.consultationID = try await createConsultationVM.createConsultation(name: appointmentName)
+                                isLinkActive = true // Activa el enlace si la consulta se crea con éxito
+                            } catch {
+                                print("Error creating consultation: \(error)")
+                            }
+                        }
+                    }
+                }) {
+                    Text("Siguiente")
+                        .foregroundColor(Color.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 55)
+                        .background(Color("AccentColor"))
+                        .cornerRadius(15)
+                }
                 .padding(.top, 50)
                 .padding(.horizontal, 25)
-                    
+
+                NavigationLink(destination: StartConsultationView(consultationID: consultationID ?? -1), isActive: $isLinkActive) {
+                    EmptyView()
                 }
-                .alert(isPresented: $showError) {
-                    Alert(title: Text("Invalido"), message: Text("Porfavor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
-                }
-                .padding()
-                Spacer()
+                .hidden()
+            }
+
+            .alert(isPresented: $showError) {
+                Alert(title: Text("Invalido"), message: Text("Por favor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
             }
             .padding()
         }
@@ -74,4 +67,3 @@ struct AppointmentNameView_Previews: PreviewProvider {
         AppointmentNameView()
     }
 }
-
