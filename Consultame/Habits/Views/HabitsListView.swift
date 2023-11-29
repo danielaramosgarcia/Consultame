@@ -14,7 +14,7 @@ struct HabitsListView: View {
             HStack {
                 Text("Hábitos")
                 Spacer()
-                NavigationLink(destination: AnyView(AddVaccineToUserView())) {
+                NavigationLink(destination: AnyView(AddHabitsToUserView())) {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(.accentColor)
                 }
@@ -32,7 +32,8 @@ struct HabitsListView: View {
                         }
                     }
                 }
-                .listStyle(InsetGroupedListStyle())
+                .scrollContentBackground(.hidden)
+                .background(.clear)
             }
             .animation(.default)
             .task {
