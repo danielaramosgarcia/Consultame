@@ -81,6 +81,7 @@ completion: @escaping (Result<T,APIError>) -> Void) {
             let decoder = JSONDecoder()
             do {
                 let decodedData = try decoder.decode(T.self, from: data)
+                completion(.success(decodedData))
             } catch let DecodingError.dataCorrupted(context) {
                 print(context.codingPath, context.debugDescription)
             } catch let DecodingError.keyNotFound(key, context) {

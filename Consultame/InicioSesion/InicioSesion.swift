@@ -15,6 +15,7 @@ struct InicioSesion: View {
 
     
     var body: some View {
+        
             VStack {
                 Text("¡Bienvenido de vuelta!")
                     .font(.system(size: 45).bold())
