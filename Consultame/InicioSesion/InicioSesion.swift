@@ -11,8 +11,11 @@ struct InicioSesion: View {
     
     @State var username = ""
     @State private var password = ""
+    @StateObject private var viewModel = InicioSesionRealViewModel()
+
     
     var body: some View {
+        
             VStack {
                 Text("¡Bienvenido de vuelta!")
                     .font(.system(size: 45).bold())
@@ -36,7 +39,10 @@ struct InicioSesion: View {
                     borderColor : Color.clear,
                     text : "Ingresar",
                     textColor : Color.white,
-                    destinationView: AnyView(MainTabView())
+                    destinationView: AnyView(MainTabView()),
+                    action: {
+                        viewModel.loginUser(email: username, password: password)
+                    }
                 )
                 .padding(.top, 40)
                 .padding(.horizontal, 100)

@@ -40,8 +40,15 @@ struct AddVaccineToUserView: View {
                     .font(.title)
                     .fontWeight(.bold)
                 
+                DatePicker( "Fecha de aplicación", selection: $selectedDate, displayedComponents: [.date] )
+                    .datePickerStyle(.compact)
+                    .environment(\.locale, Locale(identifier: "es_ES"))
+                    .padding(.horizontal, 50)
+                    .padding(.top, 15)
+                
                 SearchBar(text: $searchText, placeholder: "Buscar vacuna")
                     .padding(.horizontal, 30)
+                    .padding(.top, 15)
                 List{
                         Picker(selection: $vaccineSelection, label: Text("Vacunas")) {
                             ForEach(searchResults, id: \.id) { item in
@@ -69,28 +76,6 @@ struct AddVaccineToUserView: View {
                     .scrollContentBackground(.hidden)
                     .background(.clear)
                 
-                VStack{
-                    
-                    Button {
-                        showDatePicker.toggle()
-                        
-                    } label: {
-                        Text("+ Añadir fecha de aplicación")
-                    }
-                    .frame(maxWidth: .infinity)
-                    .bold()
-                    .offset(y: datePickerOffset)
-                    
-                    
-                    if showDatePicker {
-                        
-                        DatePicker( "Fecha de Aplicación", selection: $selectedDate, displayedComponents: [.date] )
-                            .datePickerStyle(.graphical)
-                            .environment(\.locale, Locale(identifier: "es_ES"))
-                            .padding()
-                        
-                    }
-                }
                     
             } //VStack
             

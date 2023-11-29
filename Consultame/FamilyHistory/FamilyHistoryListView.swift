@@ -39,7 +39,10 @@ struct FamilyHistoryListView: View {
 //                            let color = Color(randomColor)
                             FamilyDiseaseCard(relationship: family.relationship.type, chronic_disease: family.chronic_disease.name, diagnosis_date: family.diagnosis_date, description: family.description)
                         }
+                        .onDelete(perform: deleteFamily)
+
                         .listRowSeparator(.hidden)
+
 // for each
                     } // list
                     .listStyle(.plain)
@@ -57,6 +60,23 @@ struct FamilyHistoryListView: View {
 
         }
     }
+    
+    func deleteFamily(at offsets: IndexSet) {
+        let familyToDelete = offsets.map { FamilyVM.familyArray[$0] }
+        
+        Task {
+            for family in familyToDelete {
+                do {
+                    try await FamilyVM.deleteFamilyFromUser(familyId: family.id)
+                } catch {
+                    print("error al eliminar la vacuna del usuario")
+                }
+            }
+        } // task
+        
+        FamilyVM.familyArray.remove(atOffsets: offsets)
+    }
+
     
 }
 struct FamilyHistoryListView_Previews: PreviewProvider {

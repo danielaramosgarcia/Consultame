@@ -60,12 +60,8 @@ struct AppointmentNameView: View {
                 Alert(title: Text("Invalido"), message: Text("Por favor ingresa el motivo de tu cita"), dismissButton: .default(Text("OK")))
             }
             .padding()
-            Spacer()
         }
-        .padding()
-    }
 }
-
 struct AppointmentNameView_Previews: PreviewProvider {
     static var previews: some View {
         AppointmentNameView()
