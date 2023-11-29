@@ -32,6 +32,7 @@ struct AddContactToUserView: View {
             .font(.title)
             .padding()
             
+            
             TextField("Nombre", text: $name)
                 .textFieldStyle(CommonTextInput(iconImage: "person"))
                 .padding(.horizontal, 30)
@@ -84,7 +85,10 @@ struct AddContactToUserView: View {
                 
             } // button
             .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
-            .padding(.bottom, 30)
+            .frame(maxWidth: .infinity)
+            .font(.title2)
+            .padding(.horizontal, 30)
+            .padding()
             
             
             

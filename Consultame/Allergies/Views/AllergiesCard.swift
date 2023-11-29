@@ -6,40 +6,44 @@
 //
 
 import SwiftUI
-
 struct AllergiesCard: View {
-    var rectangle = CardRectangle(cardHeight: 70)
-
+    var alergia: AllergiesModel  // Pass the Allergy object
     
-    var body: some View {
+    var randomColor = Utils.colors.randomElement() ?? "DefaulColor"
+    var backgroundColor : Color{
+        Color(randomColor)
+    }
+    var body: some View
 
-        ZStack {
-            rectangle
+    {
+        VStack(alignment: .leading) {
+            HStack {
+                Text(alergia.allergy.name)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
+            } // HStack
+            .foregroundColor(.black)
             VStack(alignment: .leading){
+            Text("Descripcion: ")
                 HStack {
-                    Text("Nombre de la alergia")
-                        .font(.headline)
-                        .foregroundColor(Color("DarkGray2"))
+                    
+                    Text(alergia.allergy.description!)
                     Spacer()
-                }.padding(.leading, 10)
-                
-                HStack{
-                    Text("Descripcion")
-                        .font(.subheadline)
-                        .foregroundColor(Color("DarkGray2"))
-                    Spacer()
-                }.padding(.leading, 10)
-                
-            }
+                }
         }
-    
+        }
+        .padding(.leading, 5)
+// VStack
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(backgroundColor)
+        .cornerRadius(15)
     }
 }
 
-
-
 struct AllergiesCard_Previews: PreviewProvider {
     static var previews: some View {
-        AllergiesCard()
+        AllergiesCard(alergia: AllergiesModel(id: 1, user_id: 1, allergy: Allergy(id: 1, name: "Allergy 1", description: "Description 1", allergy_type_id: 1)))
     }
 }

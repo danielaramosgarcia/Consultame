@@ -18,7 +18,7 @@ struct FamilyHistoryListView: View {
             HStack {
                 Text("Antecedentes Familiares")
                 Spacer()
-                NavigationLink(destination: AnyView(AddVaccineToUserView())) {
+                NavigationLink(destination: AnyView(AddFamilyDiseaseToUserView())) {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(.accentColor)
                 }

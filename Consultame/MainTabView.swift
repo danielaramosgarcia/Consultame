@@ -20,25 +20,35 @@ struct MainTabView: View {
 
             NavigationView(){
                 ZStack{
-                    TabView(selection: $selectedSideMenuTab) {
-                        VStack {
-                            HomeView(presentSideMenu: $presentSideMenu)
-                            
-                            Spacer()
-                            
-                        }
-                        .tabItem{
-                            Label("Inicio", systemImage: "house")
-                                .font(.title)
-                        }
-                        .tag(0)
+                    switch selectedSideMenuTab{
+                    case 2:
+                        Text("Dilo en señas")
                         
-                        ProfileView(presentSideMenu: $presentSideMenu)
-                            .tabItem{
-                                Label("Perfil", systemImage: "person")
+                        
+                    case 3:
+                        Text("Cerrar sesion")
+                        
+                    default:
+                        TabView(selection: $selectedSideMenuTab) {
+                            VStack {
+                                HomeView(presentSideMenu: $presentSideMenu)
+                                
+                                Spacer()
+                                
                             }
-                            .tag(1)
-                        
+                            .tabItem{
+                                Label("Inicio", systemImage: "house")
+                                    .font(.title)
+                            }
+                            .tag(0)
+                            
+                            ProfileView(presentSideMenu: $presentSideMenu)
+                                .tabItem{
+                                    Label("Perfil", systemImage: "person")
+                                }
+                                .tag(1)
+                            
+                        }
                     }
                     
                         SideBar(isShowing: $presentSideMenu, content: AnyView(SideBarView(selectedSideMenuTab: $selectedSideMenuTab, presentSideMenu: $presentSideMenu)))

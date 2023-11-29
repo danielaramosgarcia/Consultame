@@ -33,23 +33,21 @@ struct AddVaccineToUserView: View {
         VStack() {
             
             VStack {
+                SearchBar(text: $searchText, placeholder: "Buscar")
+                    .padding()
                 Text("Añadir nueva vacuna")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top, .trailing, .leading])
                     .font(.title)
                     .fontWeight(.bold)
                 
-                
-                SearchBar(text: $searchText, placeholder: "Buscar")
-                    .padding()
-                
-                    List{
-                        
+                List{
                         Picker(selection: $vaccineSelection, label: Text("Tipo de vacuna")) {
                             ForEach(searchResults, id: \.id) { item in
                                 Text(item.name).tag(item.id)
                             } // for each
                         } // Picker
+                        
                         .pickerStyle(.inline)
                         .task {
                             do {
@@ -62,7 +60,8 @@ struct AddVaccineToUserView: View {
                                 print("error")
                             }
                         } // task
-                        
+                    
+    
                         VStack{
                             
                             Button {
@@ -85,16 +84,17 @@ struct AddVaccineToUserView: View {
                             }
                         }
                         
-                        
-                        
                     } // List
+                    .scrollContentBackground(.hidden)
+                    .background(.clear)
                     
             } //VStack
+            
                 
     
             Spacer()
             
-            Button("Confirmar"){
+            Button("Añadir"){
                 Task {
                     do {
                         try await
@@ -112,6 +112,7 @@ struct AddVaccineToUserView: View {
             .padding()
             
         } // vstack
+        
         .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
                     if let success = isSuccess {
                         if success {

@@ -24,17 +24,18 @@ struct CitasPrevias: View {
                             Spacer()
                         }
                         
-                        ScrollView {
-                            VStack{
-                                if citasArray.consultations.isEmpty {
-                                    ProgressView()
-                                } else {
-                                    ForEach(citasArray.consultations) { cita in
-                                        CitasPreviasCards(cita: cita)
-                                    }
-                                }
+                        List {
+                            ForEach(citasArray.consultations) { cita in
+                                CitasPreviasCards(cita: cita)
                             }
+                            .onDelete(perform: deleteConsultation)
+                            .padding(.vertical,-4)
+                            .padding(.horizontal,-18)
+                            
+                            
                         }
+                        .listStyle(PlainListStyle())
+
                     }
                 )
                 .onAppear {
@@ -47,10 +48,23 @@ struct CitasPrevias: View {
                         }
                     }
                 }
-            }
         }
     }
 
+    func deleteConsultation(at offsets: IndexSet) {
+        let idsToDelete = offsets.map { citasArray.consultations[$0].id! }
+        
+        Task {
+            for id in idsToDelete {
+                do {
+                    try await citasArray.deleteConsultations(id: id)
+                } catch {
+                    print("Error deleting consultation: \(error)")
+                }
+            }
+        }
+    }
+}
 
 struct CitasPrevias_Previews: PreviewProvider {
     static var previews: some View {

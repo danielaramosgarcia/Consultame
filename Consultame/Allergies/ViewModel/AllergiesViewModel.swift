@@ -10,11 +10,11 @@ import Foundation
 class AllergiesViewModel : ObservableObject {
     @Published var alergies = [AllergiesModel]()
     var drugAllergies: [AllergiesModel] {
-        return alergies.filter { $0.allergy.allergy_type_id == 1 }
+        return alergies.filter { $0.allergy.allergy_type_id == 2 }
     }
 
     var foodAllergies: [AllergiesModel] {
-        return alergies.filter { $0.allergy.allergy_type_id == 2 }
+        return alergies.filter { $0.allergy.allergy_type_id == 1 }
     }
 
     var otherAllergies: [AllergiesModel] {
