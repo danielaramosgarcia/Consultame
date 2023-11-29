@@ -71,11 +71,15 @@
 		FB39CB642AF574C0002E5555 /* StartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB39CB632AF574C0002E5555 /* StartHistoryView.swift */; };
 		FB3D14022AF5B9050013DDD4 /* TrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D14012AF5B9050013DDD4 /* TrashView.swift */; };
 		FB4820CF2B15472B00E1C250 /* VaccineCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */; };
+<<<<<<< Updated upstream
 		FB5CE3CC2B1687BC00B3EFB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */; };
 		FB5CE3D32B16A4EC00B3EFB3 /* gerardoP1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */; };
 		FB5CE3D52B16A80900B3EFB3 /* gerardoP2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */; };
 		FB5CE3D72B16A8E400B3EFB3 /* gerardoP3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D62B16A8E400B3EFB3 /* gerardoP3.mp4 */; };
 		FB5CE3D92B16AA0600B3EFB3 /* gerardoP4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FB5CE3D82B16AA0600B3EFB3 /* gerardoP4.mp4 */; };
+=======
+		FB6418462B16A49D00C201FD /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6418452B16A49D00C201FD /* MessageManager.swift */; };
+>>>>>>> Stashed changes
 		FB76649D2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
 		FB76649E2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
 		FB76649F2AF1739F0039AA0E /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76649C2AF1739F0039AA0E /* SectionCard.swift */; };
@@ -93,9 +97,6 @@
 		FB8ED3C52AF1581200DE02FD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8ED3C22AF1581200DE02FD /* ProfileView.swift */; };
 		FB9CA1182ADF0629008ACA54 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */; };
 		FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */; };
-		FB9F77272B0B47EB00210384 /* WebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77262B0B47EB00210384 /* WebSocketTests.swift */; };
-		FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */; };
-		FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */; };
 		FB9F772E2B0B49D100210384 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F772D2B0B49D100210384 /* ChatView.swift */; };
 		FB9F77312B0B4A2D00210384 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77302B0B4A2D00210384 /* MessageModel.swift */; };
 		FB9F77332B0B4C7100210384 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F77322B0B4C7100210384 /* MessageRowView.swift */; };
@@ -201,11 +202,15 @@
 		FB39CB632AF574C0002E5555 /* StartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartHistoryView.swift; sourceTree = "<group>"; };
 		FB3D14012AF5B9050013DDD4 /* TrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashView.swift; sourceTree = "<group>"; };
 		FB4820CE2B15472B00E1C250 /* VaccineCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCoverView.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		FB5CE3CA2B1687BC00B3EFB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Consultame/Preview Content/Constants.swift"; sourceTree = SOURCE_ROOT; };
 		FB5CE3D22B16A4EB00B3EFB3 /* gerardoP1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP1.mp4; sourceTree = "<group>"; };
 		FB5CE3D42B16A80900B3EFB3 /* gerardoP2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP2.mp4; sourceTree = "<group>"; };
 		FB5CE3D62B16A8E400B3EFB3 /* gerardoP3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP3.mp4; sourceTree = "<group>"; };
 		FB5CE3D82B16AA0600B3EFB3 /* gerardoP4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gerardoP4.mp4; sourceTree = "<group>"; };
+=======
+		FB6418452B16A49D00C201FD /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		FB76649C2AF1739F0039AA0E /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionCard.swift; path = Consultame/Profile/SectionCard.swift; sourceTree = SOURCE_ROOT; };
 		FB7664A02AF17AB10039AA0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Consultame/Register/Models/UserModel.swift; sourceTree = SOURCE_ROOT; };
 		FB7664AC2AF186440039AA0E /* CommonTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommonTextInput.swift; path = Consultame/Helper/CommonTextInput.swift; sourceTree = SOURCE_ROOT; };
@@ -215,9 +220,6 @@
 		FB8ED3C22AF1581200DE02FD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Consultame/Profile/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1172ADF0629008ACA54 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineModel.swift; path = Consultame/Vaccine/Models/VaccineModel.swift; sourceTree = SOURCE_ROOT; };
 		FB9CA1192ADF0B71008ACA54 /* VaccineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VaccineViewModel.swift; path = Consultame/Vaccine/ViewModels/VaccineViewModel.swift; sourceTree = SOURCE_ROOT; };
-		FB9F77262B0B47EB00210384 /* WebSocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTests.swift; sourceTree = "<group>"; };
-		FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechTestView.swift; sourceTree = "<group>"; };
-		FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextTestView.swift; sourceTree = "<group>"; };
 		FB9F772D2B0B49D100210384 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		FB9F77302B0B4A2D00210384 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		FB9F77322B0B4C7100210384 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 			children = (
 				FB9F77352B0B525100210384 /* DuringConsultationViewModel.swift */,
 				FB2C5E902AFAD46A00441D14 /* WebSocketManager.swift */,
+				FB6418452B16A49D00C201FD /* MessageManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -806,9 +809,6 @@
 			isa = PBXGroup;
 			children = (
 				FB2C5E922AFAD66100441D14 /* StartConsultationView.swift */,
-				FB9F77262B0B47EB00210384 /* WebSocketTests.swift */,
-				FB9F77282B0B482500210384 /* TextToSpeechTestView.swift */,
-				FB9F772A2B0B488400210384 /* SpeechToTextTestView.swift */,
 			);
 			path = WebSocketTests;
 			sourceTree = "<group>";
@@ -965,7 +965,6 @@
 				FBA540E72B07DBDD007E55B3 /* AllergiesCard.swift in Sources */,
 				FBED78082AF9CF0100B4F5BA /* FamilyHistoryListView.swift in Sources */,
 				61C53AF92B131F460044ECD1 /* AllergiesViewModel.swift in Sources */,
-				FB9F772B2B0B488400210384 /* SpeechToTextTestView.swift in Sources */,
 				5C0142A82B16292A00C1E3F4 /* ChatHistory.swift in Sources */,
 				5C8236322B1408AD003742AA /* QuestionarioInicialView.swift in Sources */,
 				5CBA39682AFAB1A100E27766 /* BotonEmpezarCita.swift in Sources */,
@@ -1016,13 +1015,11 @@
 				FB2890A82AF8668800EFEF35 /* HabitsListView.swift in Sources */,
 				61CE9AA82B0AFB1B001FCF8D /* SpeechRecognizer.swift in Sources */,
 				61C53B0C2B157EC10044ECD1 /* DataController.swift in Sources */,
-				FB9F77292B0B482500210384 /* TextToSpeechTestView.swift in Sources */,
 				FB77DC9F2AF5A72B0065878B /* InicioSesion.swift in Sources */,
 				F9DD697A2B1495A30087B729 /* FamilyCoverView.swift in Sources */,
 				FB9CA11A2ADF0B71008ACA54 /* VaccineViewModel.swift in Sources */,
 				FB8ED3BF2AF1580100DE02FD /* HomeView.swift in Sources */,
 				F9DD69782B148C650087B729 /* ButtonNavigation.swift in Sources */,
-				FB9F77272B0B47EB00210384 /* WebSocketTests.swift in Sources */,
 				FBEAE9C22AF84375006E0B3D /* ContactModel.swift in Sources */,
 				FB2C5E932AFAD66100441D14 /* StartConsultationView.swift in Sources */,
 				FBED780B2AF9CF8A00B4F5BA /* PersonalView.swift in Sources */,
@@ -1041,6 +1038,7 @@
 				FB37D25E2B15520F0067B871 /* AllergiesCoverView.swift in Sources */,
 				FB39CB612AF2D4BC002E5555 /* RectangleInfo.swift in Sources */,
 				61C53AF42B12D4C00044ECD1 /* HabitsCardView.swift in Sources */,
+				FB6418462B16A49D00C201FD /* MessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
