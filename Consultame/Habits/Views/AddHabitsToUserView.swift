@@ -33,16 +33,18 @@ struct AddHabitsToUserView: View {
         VStack() {
             
             VStack {
-                SearchBar(text: $searchText, placeholder: "Buscar")
-                    .padding()
+                
                 Text("Añadir nuevo hábito")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top, .trailing, .leading])
                     .font(.title)
                     .fontWeight(.bold)
                 
+                SearchBar(text: $searchText, placeholder: "Buscar hábito")
+                    .padding(.horizontal, 30)
+                
                 List{
-                        Picker(selection: $vaccineSelection, label: Text("Tipo de hábito")) {
+                        Picker(selection: $vaccineSelection, label: Text("Hábitos")) {
                             ForEach(searchResults, id: \.id) { item in
                                 Text(item.name).tag(item.id)
                             } // for each

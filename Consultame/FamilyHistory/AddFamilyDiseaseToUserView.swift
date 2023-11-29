@@ -47,8 +47,7 @@ struct AddFamilyDiseaseToUserView: View {
         VStack() {
             
             VStack {
-                SearchBar(text: $searchText, placeholder: "Buscar")
-                    .padding()
+                
                 Text("Añadir antescedentes médicos familiares")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.top, .trailing, .leading])
@@ -76,11 +75,13 @@ struct AddFamilyDiseaseToUserView: View {
                         }
                     } // task
                 }
-
                 
+                SearchBar(text: $searchText, placeholder: "Buscar enfermedad")
+                    .padding(.horizontal, 30)
                 
                 List{
-                        Picker(selection: $vaccineSelection, label: Text("Tipo de enfermedad")) {
+                    
+                        Picker(selection: $vaccineSelection, label: Text("Enfermedades")) {
                             ForEach(searchResults, id: \.id) { item in
                                 Text(item.name).tag(item.id)
                             } // for each
@@ -107,6 +108,28 @@ struct AddFamilyDiseaseToUserView: View {
                 .scrollContentBackground(.hidden)
                 .background(.clear)
     
+                VStack{
+                    
+                    Button {
+                        showDatePicker.toggle()
+                        
+                    } label: {
+                        Text("+ Añadir fecha de diagnosis")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .bold()
+                    .offset(y: datePickerOffset)
+                    
+                    
+                    if showDatePicker {
+                        
+                        DatePicker( "Fecha de diagnosis", selection: $selectedDate, displayedComponents: [.date] )
+                            .datePickerStyle(.graphical)
+                            .environment(\.locale, Locale(identifier: "es_ES"))
+                            .padding()
+                        
+                    }
+                }
                
                         
                     
