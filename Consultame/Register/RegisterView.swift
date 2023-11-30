@@ -86,7 +86,7 @@ struct RegisterView: View {
                         showError = true
                     } else {
                         showError = false
-                        var userOp = RegisterViewModel(UserInfo: userModel)
+                        let userOp = RegisterViewModel(UserInfo: userModel)
                         userOp.createUser()
                     }
 
