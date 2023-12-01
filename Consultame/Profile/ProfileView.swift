@@ -83,13 +83,13 @@ struct ProfileView: View {
                     .font(.title)
                 
                 HStack(spacing: 0) {
-                    ColumnView(number: ProfileVM.profile.age, label: "Edad")
+                    ColumnView(string: ProfileVM.profile.age ?? "--", label: "Edad")
                     Divider().background(Color.gray)
-                    ColumnView(string: ProfileVM.profile.height, label: "Altura (cm)")
+                    ColumnView(string: ProfileVM.profile.height ?? "--", label: "Altura (cm)")
                     Divider().background(Color.gray)
-                    ColumnView(string: ProfileVM.profile.weight, label: "Peso (kg)")
+                    ColumnView(string: ProfileVM.profile.weight ?? "--", label: "Peso (kg)")
                     Divider().background(Color.gray)
-                    ColumnView(string: ProfileVM.profile.blood_type.type, label: "Sangre")
+                    ColumnView(string: ProfileVM.profile.blood_type?.type ?? "--", label: "Sangre")
                 }
                 .padding(10)
                 .frame(height: 100)
