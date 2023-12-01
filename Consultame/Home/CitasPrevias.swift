@@ -23,18 +23,26 @@ struct CitasPrevias: View {
                                 .font(.title)
                             Spacer()
                         }
-                        
-                        List {
-                            ForEach(citasArray.consultations) { cita in
-                                CitasPreviasCards(cita: cita)
-                            }
-                            .onDelete(perform: deleteConsultation)
-                            .padding(.vertical,-4)
-                            .padding(.horizontal,-18)
+                        if citasArray.consultations.isEmpty {
+                            Spacer()
+                            Text("No haz creado ninguna cita, crea una!")
+                                .italic()
                             
+                            Spacer()
+                            
+                        } else {
+                            List {
+                                ForEach(citasArray.consultations) { cita in
+                                    CitasPreviasCards(cita: cita)
+                                }
+                                .onDelete(perform: deleteConsultation)
+                                .padding(.vertical,-4)
+                                .padding(.horizontal,-18)
+                                
+                            }
+                            .listStyle(PlainListStyle())
                             
                         }
-                        .listStyle(PlainListStyle())
 
                     }
                 )
