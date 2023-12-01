@@ -22,6 +22,7 @@ struct HabitsListView: View {
             } // hstack
             .padding()
             .font(.title)
+            
             VStack{
                 List {
                     ForEach(groupedHabits, id: \.0) { type, habit in
@@ -31,6 +32,7 @@ struct HabitsListView: View {
                             }
                         }
                     }
+                    .onDelete(perform: deleteHabits)
                 }
                 .scrollContentBackground(.hidden)
                 .background(.clear)
@@ -45,6 +47,24 @@ struct HabitsListView: View {
             }
         }
     }
+    
+    func deleteHabits(at offsets: IndexSet) {
+        let habitsToDelte = offsets.map { HabitsVM.habitsArray[$0] }
+        
+        Task {
+            for habit in habitsToDelte {
+                do {
+                    try await HabitsVM.deleteHabitsToUser(habitId: habit.id)
+                } catch {
+                    print("error al eliminar la vacuna del usuario")
+                }
+            }
+        } // task
+        
+        HabitsVM.habitsArray.remove(atOffsets: offsets)
+    }
+    
+    
     private var groupedHabits: [(String, [HabitsModel])] {
         Dictionary(grouping: HabitsVM.habitsArray, by: { $0.habit.type_id == 2 ? "Saludables" : "No saludables" })
             .sorted { $0.key < $1.key }

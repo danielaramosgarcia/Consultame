@@ -1,5 +1,4 @@
 //
-//  AddVaccineToUserFormView.swift
 //  Consultame
 //
 //  Created by Alumno on 17/10/23.
@@ -8,13 +7,13 @@
 import SwiftUI
 
 struct AddHabitsToUserView: View {
-    @StateObject var VaccineVM = VaccineViewModel()
-    var vaccineArr : [VaccineModel] { VaccineVM.vaccineArr }
+    @StateObject var HabitsVM = HabitsViewModel()
+    var habitsArray : [HabitsModel] { HabitsVM.habitsArray }
     
     @State private var showDatePicker = false
     @State private var datePickerOffset: CGFloat = 0
     
-    @State private var vaccineSelection: Int = 0
+    @State private var habitSelection: Int?
     @State private var searchText = ""
     @State private var selectedDate = Date()
     
@@ -24,8 +23,8 @@ struct AddHabitsToUserView: View {
     
     
     
-    var searchResults : [VaccineModel] {
-        searchText.isEmpty ? vaccineArr : vaccineArr.filter{$0.name.contains(searchText)}
+    var searchResults : [Habit] {
+        searchText.isEmpty ? HabitsVM.habits : HabitsVM.habits.filter{$0.name.contains(searchText)}
     }
    
     
@@ -44,66 +43,67 @@ struct AddHabitsToUserView: View {
                     .padding(.horizontal, 30)
                 
                 List{
-                        Picker(selection: $vaccineSelection, label: Text("Hábitos")) {
-                            ForEach(searchResults, id: \.id) { item in
-                                Text(item.name).tag(item.id)
-                            } // for each
-                        } // Picker
-                        
-                        .pickerStyle(.inline)
-                        .task {
-                            do {
-                                try await VaccineVM.getVaccines()
-                                if vaccineArr.count > 0 {
-                                    vaccineSelection = vaccineArr[0].id
-                                }
-                                
-                            } catch {
-                                print("error")
+                    Picker(selection: $habitSelection, label: Text("Hábitos")) {
+                        ForEach(searchResults, id: \.id) { item in
+                            Text(item.name).tag(item.id)
+                        }
+                    }
+                    
+                    .pickerStyle(.inline)
+                    .task {
+                        do {
+                            try await HabitsVM.getAllHabits()
+                            if habitsArray.count > 0 {
+                                habitSelection = HabitsVM.habitsArray[0].id
                             }
-                        } // task
+                            
+                        } catch {
+                            print("error")
+                        }
+                    } // task
                     
-                    } // List
-                    .scrollContentBackground(.hidden)
-                    .background(.clear)
-                    
+                } // List
+                .scrollContentBackground(.hidden)
+                .background(.clear)
+                
             } //VStack
             
             Spacer()
             
-            Button("Añadir"){
-                Task {
-                    do {
-                        try await
-                        VaccineVM.setVaccineToUser(vaccineId: vaccineSelection, date: selectedDate)
-                    } catch {
-                        print("error al crear el contacto")
-                    }
-                } // task
-                
-            } // button
-            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
-            .frame(maxWidth: .infinity)
-            .font(.title2)
-            .padding(.horizontal, 30)
-            .padding()
+            //            Button("Añadir"){
+            //                Task {
+            //                    do {
+            //                        try await
+            //                        HabitsVM.postHabitsToUser(habit_id: habitSelection.id)
+            //
+            //                    } catch {
+            //                        print("error al crear el contacto")
+            //                    }
+            //                } // task
+            //
+            //            } // button
+            //            .buttonStyle(BotonesInicio(buttonColor: Color("AccentColor")))
+            //            .frame(maxWidth: .infinity)
+            //            .font(.title2)
+            //            .padding(.horizontal, 30)
+            //            .padding()
+            //
+            //        } // vstack
+            //
+            //        .onReceive(HabitsVM.$habitCreatedSuccessfully) { isSuccess in
+            //            if let success = isSuccess {
+            //                if success {
+            //                    presentationMode.wrappedValue.dismiss()
+            //                } else {
+            //                    showAlert = true
+            //                }
+            //            }
+            //        } // on receive
+            //        .alert(isPresented: $showAlert) {
+            //            Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
+            //        } // alert
             
-        } // vstack
-        
-        .onReceive(VaccineVM.$isVaccineSetToUserSuccesful) { isSuccess in
-                    if let success = isSuccess {
-                        if success {
-                            presentationMode.wrappedValue.dismiss()
-                        } else {
-                            showAlert = true
-                        }
-                    }
-                } // on receive
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Error"), message: Text("Hubo un error al agregar la vacuna."), dismissButton: .default(Text("OK")))
-                } // alert
-    
-            
+        }
     } // Body
 }
 

@@ -49,6 +49,7 @@
 		61FA75812ADEFF2F00BB6B2A /* ConsultameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */; };
 		61FA75832ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */; };
 		849A16962AF995F50061A8A9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A16952AF995F50061A8A9 /* RegisterView.swift */; };
+		F94461822B19B9BF00D0AD7F /* HabitsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94461812B19B9BF00D0AD7F /* HabitsCard.swift */; };
 		F95DAD6A2B175959001F7B9B /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DAD692B175959001F7B9B /* ListItemView.swift */; };
 		F97AC2E42B0AFC6C0072D414 /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */; };
 		F97AC2E62B0AFCD50072D414 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */; };
@@ -188,6 +189,7 @@
 		61FA75802ADEFF2F00BB6B2A /* ConsultameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITests.swift; sourceTree = "<group>"; };
 		61FA75822ADEFF2F00BB6B2A /* ConsultameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		849A16952AF995F50061A8A9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F94461812B19B9BF00D0AD7F /* HabitsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsCard.swift; sourceTree = "<group>"; };
 		F95DAD692B175959001F7B9B /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		F97AC2E32B0AFC6C0072D414 /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
 		F97AC2E52B0AFCD50072D414 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				FB2890A72AF8668800EFEF35 /* HabitsListView.swift */,
 				61C53AF32B12D4C00044ECD1 /* HabitsCardView.swift */,
 				FBB69AF52B16CB0C000ACE05 /* AddHabitsToUserView.swift */,
+				F94461812B19B9BF00D0AD7F /* HabitsCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1039,6 +1042,7 @@
 				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,
 				FBBC02F42B17051200496705 /* NewConsultationViewModel.swift in Sources */,
 				FB2890A52AF84DB900EFEF35 /* AddContactToUserView.swift in Sources */,
+				F94461822B19B9BF00D0AD7F /* HabitsCard.swift in Sources */,
 				FB35D2332ADF772D00803EB0 /* SearchBar.swift in Sources */,
 				61752F312AFB437D007B95C1 /* APIservice.swift in Sources */,
 				FB9F77382B0B56C500210384 /* CreateMessageModel.swift in Sources */,

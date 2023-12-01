@@ -1,15 +1,15 @@
 import Foundation
 
 struct API {
-    static let baseURL = "http://localhost:3000"
-//    static let baseURL = "https://consultame-api.onrender.com"
+//    static let baseURL = "http://localhost:3000"
+    static let baseURL = "https://consultame-api.onrender.com"
     static let wsURL = "ws://consultame-api.onrender.com"
 }
 
 
 
 struct User: Decodable{
-    static var user_id = 123
+    static var user_id = 1
     static var user_name = "Jhon Doe"
     static var JWT = "Faik"
     static var gender = "Hombre"
