@@ -15,6 +15,7 @@ struct RegisterView: View {
     let opcionesSexo = ["Hombre", "Mujer", "No especificar"]
     @State var showError =  false
     @State var errorMessage: String?
+    @State private var registrationSuccessful = false
 
     
 
@@ -56,7 +57,9 @@ struct RegisterView: View {
                     Text(self.opcionesSexo[index]).tag(index+1)
                 }
             }
-            
+            NavigationLink(destination: StartHistoryView(), isActive: $registrationSuccessful) {
+                EmptyView()
+            }
             CustomButton(
                 buttonColor : Color("AccentColor"),
                 borderColor : Color.clear,
@@ -86,6 +89,7 @@ struct RegisterView: View {
                         showError = true
                     } else {
                         showError = false
+                        registrationSuccessful = true
                         let userOp = RegisterViewModel(UserInfo: userModel)
                         userOp.createUser()
                     }
