@@ -59,7 +59,7 @@ class HabitsViewModel : ObservableObject {
     }
     
     func postHabitsToUser(habit_id: Int) async throws {
-        guard let url = URL(string: API.baseURL + "/family" ) else {
+        guard let url = URL(string: API.baseURL + "/user_habit/" + String(User.user_id) ) else {
             self.habitCreatedSuccessfully = false
             print("invalid url")
             return
@@ -85,6 +85,7 @@ class HabitsViewModel : ObservableObject {
         
         self.habitCreatedSuccessfully = true
     }
+    
     func deleteHabitsToUser(habitId: Int) async throws {
         guard let url = URL(string: API.baseURL + "/user_habit/" + String(habitId)) else {
             print("invalid url")

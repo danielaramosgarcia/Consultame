@@ -46,22 +46,6 @@ struct ChatView: View {
                         .font(.caption)
                         .foregroundColor(.black)
                 }
-                .onAppear {
-                    synthesizer.delegate = synthesizerDelegate
-                                        synthesizerDelegate.onDidFinish = {
-                                            speechRecognizer.transcribe()
-                                        }
-                    // Iniciar la reproducción de audio
-                    player.seek(to: .zero)
-                    player.play()
-                    
-                    // Iniciar la transcripción de voz
-                    speechRecognizer.stopTranscribing()
-                    speechRecognizer.transcribe()
-                }
-                .onDisappear{
-                    speechRecognizer.stopTranscribing()
-                }
                 
                 Spacer()
             }
@@ -146,7 +130,22 @@ struct ChatView: View {
             }
             .padding()
         } // vstack
-        
+        .onAppear {
+            synthesizer.delegate = synthesizerDelegate
+                                synthesizerDelegate.onDidFinish = {
+                                    speechRecognizer.transcribe()
+                                }
+            // Iniciar la reproducción de audio
+//            player.seek(to: .zero)
+//            player.play()
+            
+//             Iniciar la transcripción de voz
+//            speechRecognizer.stopTranscribing()
+            speechRecognizer.transcribe()
+        }
+        .onDisappear{
+            speechRecognizer.stopTranscribing()
+        }
     } // body
     
     private func sendMessage() async {
