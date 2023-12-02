@@ -1,10 +1,17 @@
+//
+//  ListItemView.swift
+//  Consultame
+//
+//  Created by Alumno on 29/11/23.
+//
+
 import SwiftUI
 
 struct ListItemView: View {
     var label: String
-    @Binding var value: String
+    @State var value: String
     var showEditButton: Bool
-    @Binding var isEditing: Bool
+    @State private var isEditing = false
 
     var body: some View {
         HStack {
@@ -28,3 +35,8 @@ struct ListItemView: View {
     }
 }
 
+struct ListItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListItemView(label: "Linea calle 1", value: "",showEditButton: true)
+    }
+}

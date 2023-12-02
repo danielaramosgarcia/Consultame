@@ -8,30 +8,11 @@
 import Foundation
 
 class PersonalViewModel : ObservableObject {
+
+    struct EditWeightFromUser : Codable {
+        let weight : String
+    }
     
-    @Published var isPersonalInfoEditing = false
-    @Published var isMedicalInfoEditing = false
-    @Published var isLocationInfoEditing = false
-
-
-    func togglePersonalInfoEditing() {
-        isPersonalInfoEditing.toggle()
-        isMedicalInfoEditing = false
-        isLocationInfoEditing = false
-    }
-
-    func toggleMedicalInfoEditing() {
-        isMedicalInfoEditing.toggle()
-        isPersonalInfoEditing = false
-        isLocationInfoEditing = false
-    }
-
-    func toggleLocationInfoEditing() {
-        isLocationInfoEditing.toggle()
-        isPersonalInfoEditing = false
-        isMedicalInfoEditing = false
-    }
-
     @Published var personal = PersonalModel(
         id: 1,
         email: "dummy@email.com",
@@ -64,5 +45,27 @@ class PersonalViewModel : ObservableObject {
         }
     }
     
+    func editWeightToUser(weightId: String) async throws {
+        guard let url = URL(string: API.baseURL + "user/weight/" + String(User.user_id)) else {
+            print("invalid url")
+            return
+        }
+        
+        let body = EditWeightFromUser(weight: weightId)
+
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            print("response error")
+            return
+        }
+    }
     
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
-import SwiftUI
 
+//ho
 struct PersonalView: View {
     @StateObject private var personalVM = PersonalViewModel()
 
@@ -14,81 +14,35 @@ struct PersonalView: View {
     var body: some View {
         VStack {
             List {
-            
+                // Sección de Información Personal
                 Section(header: Text("Información Personal").font(.headline)) {
-                    VStack{
-                        ListItemView(label: "Nombre", value: $personalVM.personal.name, showEditButton: false, isEditing: $personalVM.isPersonalInfoEditing)
-                        ListItemView(label: "Correo Electrónico", value: $personalVM.personal.email, showEditButton: false, isEditing: $personalVM.isPersonalInfoEditing)
-                        ListItemView(label: "Teléfono", value: $personalVM.personal.phone_number, showEditButton: false, isEditing: $personalVM.isPersonalInfoEditing)
-                        ListItemView(label: "Fecha de nacimiento:", value: $personalVM.personal.birth_date, showEditButton: false, isEditing: $personalVM.isPersonalInfoEditing)
-                    }
-                    .padding()
+                    ListItemView(label: "Nombre", value: personalVM.personal.name, showEditButton: false)
+                    ListItemView(label: "Correo Electrónico", value: personalVM.personal.email, showEditButton: false)
+                    ListItemView(label: "Fecha de Nacimiento", value: formattedBirthDate, showEditButton: false)
+                    ListItemView(label: "Número de Teléfono", value: personalVM.personal.phone_number, showEditButton: false)
                 }
-                .textCase(nil)
-                .listRowInsets(EdgeInsets())
-            
 
                 // Sección de Datos Médicos
                 Section(header: Text("Datos Médicos").font(.headline)) {
-                    VStack{
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                personalVM.toggleLocationInfoEditing()
-                            }) {
-                                HStack {
-                                    Image(systemName: "square.and.pencil")
-                                }
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                            }
-                            .padding()
-                            .foregroundColor(.black)
+                    ListItemView(label: "Tipo de Sangre", value: personalVM.personal.blood_type.type, showEditButton: true)
+                    ListItemView(label: "Peso", value: "\(personalVM.personal.weight) kg", showEditButton: true)
+                    ListItemView(label: "Altura", value: "\(personalVM.personal.height) cm", showEditButton: true)
+                }
+
+                // Sección de Información de Ubicación
+                Section(header: Text("Información de Ubicación").font(.headline)) {
+                    ForEach(personalVM.personal.addresses, id: \.id) { address in
+                        VStack(alignment: .leading, spacing: 5) {
+                            ListItemView(label: "Línea de Calle 1", value: address.street_line_1, showEditButton: true)
+                            ListItemView(label: "Línea de Calle 2", value: address.street_line_2 ?? "", showEditButton: true)
+                            ListItemView(label: "Ciudad", value: address.city ?? "", showEditButton: true)
+                            ListItemView(label: "Estado/Provincia", value: address.state_province_region, showEditButton: true)
+                            ListItemView(label: "Código Postal", value: address.postal_code ?? "", showEditButton: true)
+                            ListItemView(label: "País", value: address.country, showEditButton: true)
+                            ListItemView(label: "Información Adicional", value: address.additional_info ?? "", showEditButton: true)
                         }
                     }
-                    VStack(alignment: .leading, spacing: 10) {
-                        ListItemView(label: "Tipo de sangre", value: $personalVM.personal.blood_type.type, showEditButton: false, isEditing: $personalVM.isMedicalInfoEditing)
-                        ListItemView(label: "Peso:", value: $personalVM.personal.weight, showEditButton: false, isEditing: $personalVM.isMedicalInfoEditing)
-                        ListItemView(label: "Altura:", value: $personalVM.personal.height, showEditButton: false, isEditing: $personalVM.isMedicalInfoEditing)
-                    }
-                    .padding()
                 }
-                .textCase(nil)
-                .listRowInsets(EdgeInsets())
-                
-                // Sección de Información de Ubicación
-//                Section(header: Text("Información de Ubicación").font(.headline)) {
-//                VStack{
-//                    HStack {
-//                        Spacer()
-//                        Button(action: {
-//                            personalVM.toggleLocationInfoEditing()
-//                        }) {
-//                            HStack {
-//                                Image(systemName: "square.and.pencil")
-//                            }
-//                            .frame(maxWidth: .infinity, alignment: .trailing)
-//                        }
-//                        .padding()
-//                        .foregroundColor(.black)
-//                    }
-//                }
-//
-//                    ForEach(personalVM.personal.addresses, id: \.id) { address in
-//                        VStack(alignment: .leading, spacing: 5) {
-//                            ListItemView(label: "Nombre", value: address.street_line_1, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Correo Electrónico", value: address.street_line_2, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Nombre", value: address.city, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Correo Electrónico", value: address.state_province_region, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Nombre", value: address.postal_code, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Correo Electrónico", value: address.country, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                            ListItemView(label: "Correo Electrónico", value: address.additional_info, showEditButton: false, isEditing: $personalVM.isLocationInfoEditing)
-//                        }
-//                        .padding()
-//                    }
-//                }
-//
-//                .textCase(nil)
-//                .listRowInsets(EdgeInsets())
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Información Personal")
@@ -115,3 +69,4 @@ struct PersonalView_Previews: PreviewProvider {
         PersonalView()
     }
 }
+
