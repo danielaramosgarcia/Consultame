@@ -18,7 +18,7 @@ class RegisterViewModel: ObservableObject {
     
     func createUser() {
         let apiService = APIService.shared
-        let urlString = API.baseURL + "/user"
+        let urlString = API.baseURL + "/user/register"
 
         apiService.postJSON(urlString: urlString, requestBody: UserInfo) { (result: Result<ReceiveUserModel, APIService.APIError>) in
             DispatchQueue.main.async {
@@ -28,7 +28,7 @@ class RegisterViewModel: ObservableObject {
                     User.user_id = createdUser.user_id
                     User.JWT = createdUser.token
                 case .failure(let error):
-                    print("Error occurred: \(error)")
+                    print("Error occurred at Register: \(error)")
                 }
             }
         }
