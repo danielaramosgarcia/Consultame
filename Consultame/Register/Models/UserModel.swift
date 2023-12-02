@@ -5,7 +5,7 @@ struct SendUserModel : Decodable, Encodable {
     var name: String
     var email : String
     var password : String
-    var sexo : Int
+    var sex : Int
 }
 
 
@@ -15,3 +15,9 @@ struct ReceiveUserModel: Decodable {
     var token: String
 }
 
+
+struct ErrorModel: Codable{
+    var message: String?
+    var error_string: String?
+    
+}

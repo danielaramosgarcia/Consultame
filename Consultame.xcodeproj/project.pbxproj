@@ -24,6 +24,7 @@
 		5CBA396C2AFAD23E00E27766 /* CitasPreviasCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */; };
 		5CBA396E2AFC057E00E27766 /* ColorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA396D2AFC057E00E27766 /* ColorServices.swift */; };
 		5CBA39722AFC087700E27766 /* CardRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBA39712AFC087700E27766 /* CardRectangle.swift */; };
+		5CD2D65C2B1A810600E4FED9 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD2D65B2B1A810600E4FED9 /* LoginModel.swift */; };
 		61005E2F2B15D06F001DBAC9 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61005E2E2B15D06F001DBAC9 /* SideMenuView.swift */; };
 		614E6DC52B0B37A900592B08 /* voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E6DC42B0B37A900592B08 /* voice.swift */; };
 		61752F312AFB437D007B95C1 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61752F302AFB437D007B95C1 /* APIservice.swift */; };
@@ -160,6 +161,7 @@
 		5CBA396B2AFAD23E00E27766 /* CitasPreviasCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitasPreviasCards.swift; sourceTree = "<group>"; };
 		5CBA396D2AFC057E00E27766 /* ColorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorServices.swift; sourceTree = "<group>"; };
 		5CBA39712AFC087700E27766 /* CardRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRectangle.swift; sourceTree = "<group>"; };
+		5CD2D65B2B1A810600E4FED9 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		61005E2E2B15D06F001DBAC9 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		614E6DC42B0B37A900592B08 /* voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voice.swift; sourceTree = "<group>"; };
 		61752F302AFB437D007B95C1 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
@@ -303,12 +305,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5C0142AD2B16BEED00C1E3F4 /* NewModels */ = {
+		5C0142AD2B16BEED00C1E3F4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				5C0142AE2B16BF0500C1E3F4 /* RegisterViewModel.swift */,
 			);
-			path = NewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		5C2596E12AFDD049007CE889 /* Models */ = {
@@ -341,6 +343,14 @@
 				5C0142B42B172BF100C1E3F4 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5CD2D65A2B1A80FA00E4FED9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CD2D65B2B1A810600E4FED9 /* LoginModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		614E6DC32B0B2F3200592B08 /* TextToSpeech */ = {
@@ -720,7 +730,7 @@
 		FB7664AA2AF181110039AA0E /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				5C0142AD2B16BEED00C1E3F4 /* NewModels */,
+				5C0142AD2B16BEED00C1E3F4 /* ViewModels */,
 				FB7664AB2AF181210039AA0E /* Models */,
 				849A16952AF995F50061A8A9 /* RegisterView.swift */,
 			);
@@ -754,6 +764,7 @@
 		FB77DCA02AF5A72F0065878B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5CD2D65A2B1A80FA00E4FED9 /* Model */,
 				5CD2D6582B198C7D00E4FED9 /* ViewModel */,
 				FB77DC9E2AF5A72B0065878B /* LoginView.swift */,
 			);
@@ -1037,6 +1048,7 @@
 				FB921F172B16E11F00C582C1 /* SpeechSynthesizerDelegate.swift in Sources */,
 				FB37D2622B1552330067B871 /* ContactsCoverView.swift in Sources */,
 				FBB69AE72B167C40000ACE05 /* SideBarView.swift in Sources */,
+				5CD2D65C2B1A810600E4FED9 /* LoginModel.swift in Sources */,
 				FB8A79652B16E00200DA1BB7 /* MessageManager.swift in Sources */,
 				FB2C5E912AFAD46A00441D14 /* WebSocketManager.swift in Sources */,
 				FB8ED3C32AF1581200DE02FD /* ProfileView.swift in Sources */,

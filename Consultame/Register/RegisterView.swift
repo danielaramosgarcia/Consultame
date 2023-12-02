@@ -10,7 +10,7 @@ import SwiftUI
 struct RegisterView: View {
     
     
-    @State var userModel = SendUserModel(user_id: 0, name: "", email: "", password: "", sexo: -1)
+    @State var userModel = SendUserModel(user_id: 0, name: "", email: "", password: "", sex: -1)
     @State var contraseñaRepetida = ""
     let opcionesSexo = ["Hombre", "Mujer", "No especificar"]
     @State var showError =  false
@@ -51,7 +51,7 @@ struct RegisterView: View {
             SecureField("Repetir contraseña", text: $contraseñaRepetida)
                 .textFieldStyle(CommonTextInput(iconImage: "lock"))
                 .padding(.horizontal, 30)
-            Picker("Sexo", selection: $userModel.sexo) {
+            Picker("Sexo", selection: $userModel.sex) {
                 Text("Selecciona tu sexo").tag(-1) // This can be hidden from UI if needed
                 ForEach(0..<opcionesSexo.count, id: \.self) { index in
                     Text(self.opcionesSexo[index]).tag(index+1)
@@ -67,13 +67,13 @@ struct RegisterView: View {
                 textColor : Color.white,
                 destinationView: AnyView(StartHistoryView()),
                 action: {
-                    if userModel.name.isEmpty || userModel.email.isEmpty || userModel.password.isEmpty || contraseñaRepetida.isEmpty || userModel.sexo == -1 {
+                    if userModel.name.isEmpty || userModel.email.isEmpty || userModel.password.isEmpty || contraseñaRepetida.isEmpty || userModel.sex == -1 {
                         var errorMsg = "Error, por favor, completa: "
                         errorMsg += userModel.name.isEmpty ? "Nombre Completo, " : ""
                         errorMsg += userModel.email.isEmpty ? "Correo, " : ""
                         errorMsg += userModel.password.isEmpty ? "Contraseña, " : ""
                         errorMsg += contraseñaRepetida.isEmpty ? "Repetir Contraseña, " : ""
-                        errorMsg += userModel.sexo == -1 ? "Sexo, " : ""
+                        errorMsg += userModel.sex == -1 ? "Sexo, " : ""
                         errorMsg = String(errorMsg.dropLast(2)) // Removes the last comma and space
                         errorMessage = errorMsg
 
