@@ -2,9 +2,9 @@ import SwiftUI
 
 struct ListItemView: View {
     var label: String
-    @State var value: String
+    @Binding var value: String
     var showEditButton: Bool
-    @State private var isEditing = false
+    @Binding var isEditing: Bool
 
     var body: some View {
         HStack {
@@ -28,8 +28,3 @@ struct ListItemView: View {
     }
 }
 
-struct ListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListItemView(label: "Linea calle 1", value: "",showEditButton: true)
-    }
-}

@@ -13,6 +13,10 @@ struct CreateHabitRequestBody : Codable {
 
 }
 
+struct DeleteHabitFromUser : Codable {
+    let habit_id : Int
+}
+
 class HabitsViewModel : ObservableObject {
     @Published var habitsArray = [HabitsModel]()
     @Published var habitCreatedSuccessfully: Bool? = nil
@@ -87,10 +91,13 @@ class HabitsViewModel : ObservableObject {
     }
     
     func deleteHabitsToUser(habitId: Int) async throws {
-        guard let url = URL(string: API.baseURL + "/user_habit/" + String(habitId)) else {
+        guard let url = URL(string: API.baseURL + "/user_habit/" + String(User.user_id)) else {
             print("invalid url")
             return
         }
+        
+        let body = DeleteHabitFromUser(habit_id: habitId)
+
         
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"

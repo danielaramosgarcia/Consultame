@@ -8,6 +8,30 @@
 import Foundation
 
 class PersonalViewModel : ObservableObject {
+    
+    @Published var isPersonalInfoEditing = false
+    @Published var isMedicalInfoEditing = false
+    @Published var isLocationInfoEditing = false
+
+
+    func togglePersonalInfoEditing() {
+        isPersonalInfoEditing.toggle()
+        isMedicalInfoEditing = false
+        isLocationInfoEditing = false
+    }
+
+    func toggleMedicalInfoEditing() {
+        isMedicalInfoEditing.toggle()
+        isPersonalInfoEditing = false
+        isLocationInfoEditing = false
+    }
+
+    func toggleLocationInfoEditing() {
+        isLocationInfoEditing.toggle()
+        isPersonalInfoEditing = false
+        isMedicalInfoEditing = false
+    }
+
     @Published var personal = PersonalModel(
         id: 1,
         email: "dummy@email.com",

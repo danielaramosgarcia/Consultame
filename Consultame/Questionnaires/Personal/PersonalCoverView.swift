@@ -30,7 +30,7 @@ struct PersonalCoverView: View {
                 borderColor : Color.clear,
                 text : "Añadir",
                 textColor : Color.white,
-                destinationView: AnyView(AddVaccineToUserView())
+                destinationView: AnyView(PersonalView())
             )
             .padding(.top, 50)
             .padding(.horizontal, 60)
